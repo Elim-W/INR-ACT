@@ -13,4 +13,17 @@ python benchmark/run_experiment.py  --config configs/experiments/image_fitting/s
 python benchmark/run_experiment.py --config configs/experiments/shape_occupancy/siren.yaml 
 
 synthetic signals
-python benchmark/run_bandlimit.py
+bash scripts/run_2dbandlimited.sh
+bash scripts/run_2dsierpinski.sh
+bash scripts/run_2dsphere.sh
+bash scripts/run_2dstartarget.sh
+bash scripts/run_3dbandlimited.sh
+bash scripts/run_3dsphere.sh
+
+github链接
+https://github.com/Elim-W/INR-ACT
+
+以后修改代码后直接
+git add .
+git commit -m "记录修改了什么"
+git push
