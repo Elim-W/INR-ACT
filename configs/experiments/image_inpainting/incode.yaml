@@ -1,0 +1,36 @@
+task: image_inpainting
+method: incode
+dataset: kodak
+data_root: data/kodak
+image_indices: [1]
+device: auto
+
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 3
+  outermost_linear: true
+  first_omega_0: 30.0
+  hidden_omega_0: 30.0
+  backbone: resnet18
+  truncate_at: 6
+  feat_channels: 128
+  mlp_hidden_channels: [64, 32, 4]
+  mlp_bias: 0.3120
+
+training:
+  lr: 1.5e-4
+  num_epochs: 2000
+  batch_size: 8192
+  scheduler: lambda
+  lambda_decay: 0.25
+  log_every: 100
+  save_every: 500
+  sampling_ratio: 0.2
+  mask_seed: 0
+
+output:
+  save_dir: results/image_inpainting/incode
+  save_model: true
+  save_images: true

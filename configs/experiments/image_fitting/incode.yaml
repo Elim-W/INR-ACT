@@ -1,0 +1,34 @@
+task: image_fitting
+method: incode
+dataset: kodak
+data_root: data/kodak
+image_indices: null   # null=all 24; [1] = only kodim01; [1,3,5] = subset
+device: auto
+
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 3
+  outermost_linear: true
+  first_omega_0: 30.0
+  hidden_omega_0: 30.0
+  # Harmonizer (image-feature extractor) settings
+  backbone: resnet18     # torchvision backbone (weights=None → random init)
+  truncate_at: 6         # keep first 6 children: conv1,bn1,relu,maxpool,layer1,layer2
+  feat_channels: 128     # channels output by the truncated backbone (resnet18 layer2=128)
+  mlp_hidden_channels: [64, 32, 4]   # harmonizer MLP; last dim MUST be 4
+  mlp_bias: 0.1
+
+training:
+  lr: 1.0e-4
+  num_epochs: 2000
+  batch_size: -1
+  scheduler: cosine
+  log_every: 100
+  save_every: 500
+
+output:
+  save_dir: results/image_fitting/incode
+  save_model: true
+  save_images: true

@@ -1,0 +1,27 @@
+task: image_fitting
+method: pemlp
+dataset: kodak
+data_root: data/kodak
+image_indices: null   # null=all 24; [1] = only kodim01; [1,3,5] = subset
+device: auto
+
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 4
+  out_features: 3
+  N_freqs: 10      # number of frequency bands in positional encoding
+  logscale: true   # true → 2^0 … 2^(N-1); false → linear spacing
+
+training:
+  lr: 5.0e-4
+  num_epochs: 2000
+  batch_size: -1
+  scheduler: cosine
+  log_every: 100
+  save_every: 500
+
+output:
+  save_dir: results/image_fitting/pemlp
+  save_model: true
+  save_images: true

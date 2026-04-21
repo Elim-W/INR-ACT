@@ -1,0 +1,16 @@
+module load python/3.11.5
+cd /scratch/liyues_root/liyues/shared_data/yiting_donghua
+source .venv/bin/activate
+
+
+下面是fitting
+python benchmark/run_experiment.py  --config configs/experiments/image_fitting/siren.yaml
+python benchmark/run_experiment.py  --config configs/experiments/image_fitting/sl2a.yaml
+python benchmark/run_experiment.py  --config configs/experiments/image_fitting/staf.yaml
+
+
+这里是3d
+python benchmark/run_experiment.py --config configs/experiments/shape_occupancy/siren.yaml 
+
+synthetic signals
+python benchmark/run_bandlimit.py

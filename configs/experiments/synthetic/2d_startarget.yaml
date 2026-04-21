@@ -1,0 +1,65 @@
+signal: 2d_startarget
+seeds:
+- 1234
+iters: 30000
+eval_every: 100
+batch_size: 65536
+methods:
+  siren:
+    lr: 0.0027797867966391997
+    first_omega_0: 59.64172850284146
+    hidden_omega_0: 14.161611487876119
+    scheduler: cosine
+  wire:
+    lr: 0.0015638681218153856
+    first_omega_0: 11.908547446195698
+    hidden_omega_0: 22.804748457895805
+    scale: 28.577532289612993
+    scheduler: cosine
+  gauss:
+    lr: 0.0024152762596652256
+    scale: 29.714424626735102
+    scheduler: cosine
+  finer:
+    lr: 0.0016860827075274427
+    first_omega_0: 56.67007474036097
+    hidden_omega_0: 10.958122380999
+    scheduler: cosine
+  gf:
+    lr: 0.0006587542355827943
+    scale: 3.4868339582947634
+    omega: 22.3082160838731
+    first_bias_scale: 1.2952413944323864
+    scheduler: cosine
+  wf:
+    hidden_features: 300
+    hidden_layers: 3
+    scale: 2.0
+    omega_w: 4.0
+    omega: 5.0
+    first_bias_scale: 1.0
+    lr: 0.0001
+    scheduler: lambda
+  staf:
+    hidden_features: 256
+    hidden_layers: 3
+    first_omega_0: 30.0
+    hidden_omega_0: 30.0
+    tau: 5
+    skip_conn: false
+    lr: 0.0001
+    scheduler: lambda
+  pemlp:
+    lr: 0.0025590936110501334
+    scheduler: cosine
+  incode:
+    hidden_features: 256
+    hidden_layers: 3
+    lr: 0.0001
+    scheduler: lambda
+  sl2a:
+    lr: 0.0027258463969359295
+    degree: 128
+    rank: 128
+    nonlinearity: relu
+    scheduler: lambda

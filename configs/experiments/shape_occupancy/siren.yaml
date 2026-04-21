@@ -1,0 +1,35 @@
+task: shape_occupancy
+method: siren
+dataset: stanford_3d
+data_root: data/stanford_3d_models
+# mesh_ids: [bunny, dragon]   # null/omit → bunny + dragon by default
+mesh_ids: [dragon]   # null/omit → bunny + dragon by default
+device: auto
+
+# Optional Stanford3D kwargs
+dataset_kwargs:
+  grid_res: 128              # 64³ = 262k points.  Use 32 for a quick test, 128 for high quality.
+  chunk_points: 4096        # trimesh.contains() batch (controls preprocessing RAM)
+
+model:
+  in_features: 3            # 3D coordinates
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 1           # scalar occupancy
+  outermost_linear: true
+  first_omega_0: 30.0
+  hidden_omega_0: 30.0
+
+training:
+  lr: 5.0e-4
+  num_epochs: 300
+  batch_size: 65536         # mini-batch over voxels per optimiser step
+  scheduler: cosine
+  log_every: 20
+  iou_threshold: 0.5
+
+output:
+  save_dir: results/shape_occupancy/siren
+  save_model: true
+  save_images: true         # saves predicted-volume .npz and an .obj mesh
+  render_views: 1           # 0 = off; N viewpoints via matplotlib (headless)

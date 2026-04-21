@@ -1,0 +1,13 @@
+data/
+third_party/
+
+*.zip
+*.tar.gz
+*.csv
+*.npy
+
+.venv/
+.claude/
+results/
+__pycache__/
+*.pyc

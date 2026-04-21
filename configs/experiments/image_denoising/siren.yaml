@@ -1,0 +1,34 @@
+task: image_denoising
+method: siren
+dataset: kodak
+data_root: data/kodak
+image_indices: [1]
+device: auto
+
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 3
+  outermost_linear: true
+  first_omega_0: 30.0
+  hidden_omega_0: 30.0
+
+training:
+  lr: 1.0e-4
+  num_epochs: 2000
+  batch_size: -1
+  scheduler: cosine
+  log_every: 100
+  save_every: 500
+  # Noise: 'gaussian' (default) or 'poisson_gaussian' (INCODE-style sensor noise)
+  noise_type: gaussian
+  noise_sigma: 0.1        # used when noise_type=gaussian
+  noise_tau: 40.0         # used when noise_type=poisson_gaussian
+  noise_readout_snr: 2.0  # used when noise_type=poisson_gaussian
+  noise_seed: 0
+
+output:
+  save_dir: results/image_denoising/siren
+  save_model: true
+  save_images: true

@@ -1,0 +1,90 @@
+signal: 3d_sphere
+seeds: [1234]
+iters: 1000
+eval_every: 100
+batch_size: 65536        # mini-batch for all methods
+
+methods:
+  siren:
+    hidden_features: 256
+    hidden_layers: 5
+    first_omega_0: 30.0
+    hidden_omega_0: 30.0
+    lr: 1.0e-4
+    scheduler: cosine
+
+  wire:
+    hidden_features: 300
+    hidden_layers: 3
+    first_omega_0: 20.0
+    hidden_omega_0: 20.0
+    scale: 10.0
+    lr: 5.0e-3
+    scheduler: lambda
+
+  gauss:
+    hidden_features: 256
+    hidden_layers: 3
+    scale: 10.0
+    lr: 1.0e-3
+    scheduler: cosine
+
+  finer:
+    hidden_features: 256
+    hidden_layers: 3
+    first_omega_0: 30.0
+    hidden_omega_0: 30.0
+    lr: 1.0e-4
+    scheduler: cosine
+
+  gf:
+    hidden_features: 256
+    hidden_layers: 3
+    scale: 3.0
+    omega: 10.0
+    first_bias_scale: 1.0
+    lr: 1.0e-3
+    scheduler: cosine
+
+  wf:
+    hidden_features: 300
+    hidden_layers: 3
+    scale: 2.0
+    omega_w: 4.0
+    omega: 5.0
+    first_bias_scale: 1.0
+    lr: 1.0e-3
+    scheduler: cosine
+
+  staf:
+    hidden_features: 256
+    hidden_layers: 3
+    first_omega_0: 30.0
+    hidden_omega_0: 30.0
+    tau: 5
+    skip_conn: false
+    lr: 1.0e-4
+    scheduler: cosine
+
+  pemlp:
+    hidden_features: 256
+    hidden_layers: 4
+    lr: 5.0e-4
+    scheduler: cosine
+
+  incode:
+    hidden_features: 256
+    hidden_layers: 3
+    lr: 1.0e-4
+    scheduler: cosine
+
+  sl2a:
+    hidden_features: 256
+    hidden_layers: 3
+    degree: 256
+    rank: 128
+    init_method: xavier_uniform
+    linear_init_type: kaiming_uniform
+    nonlinearity: relu
+    lr: 1.0e-3
+    scheduler: cosine
