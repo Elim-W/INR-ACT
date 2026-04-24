@@ -273,22 +273,21 @@ def main():
 
         best_params_per_method[method] = best.params
 
-    # Save results JSON — one combined file, plus per-method files (for parallel jobs)
-    results_dir = os.path.join(_ROOT, 'results', 'hparam_search')
-    os.makedirs(results_dir, exist_ok=True)
-
-    for method, params in best_params_per_method.items():
+        # Save immediately after each method completes
+        results_dir = os.path.join(_ROOT, 'results', 'hparam_search')
+        os.makedirs(results_dir, exist_ok=True)
         per_method_path = os.path.join(results_dir, f'{args.signal}_best_params_{method}.json')
         with open(per_method_path, 'w') as f:
-            json.dump({method: params}, f, indent=2)
+            json.dump({method: best.params}, f, indent=2)
+        save_best_to_yaml(args.signal, {method: best.params})
 
+    # Save combined JSON at the end
+    results_dir = os.path.join(_ROOT, 'results', 'hparam_search')
+    os.makedirs(results_dir, exist_ok=True)
     json_path = os.path.join(results_dir, f'{args.signal}_best_params.json')
     with open(json_path, 'w') as f:
         json.dump(best_params_per_method, f, indent=2)
     print(f'\n[saved] {json_path}')
-
-    # Write best params back to signal YAML
-    save_best_to_yaml(args.signal, best_params_per_method)
 
 
 if __name__ == '__main__':

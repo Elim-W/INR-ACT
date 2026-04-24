@@ -1,9 +1,7 @@
 import torch
 import torch.nn as nn
 import math
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../third_party/SL2A-INR-main'))
-from ChebyKANLayer import ChebyKANLayer
+from .ChebyKANlayer import ChebyKANLayer
 
 class ChebyLayer(nn.Module):
     def __init__(self, in_features, out_features, deg, init_method):
