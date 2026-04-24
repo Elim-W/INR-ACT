@@ -1,0 +1,70 @@
+siren best PSNR: 77.22 dB
+      params: {'lr': 0.00021451493896648, 'first_omega_0': 51.31226830824572, 'hidden_omega_0': 48.1381904241856}
+
+wire best PSNR: 59.19 dB
+      params: {'lr': 0.010174826285977283, 'first_omega_0': 12.85104165118, 'hidden_omega_0': 10.596399503456492, 'scale': 7.642949741189166}
+
+gauss best PSNR: 62.04 dB
+      params: {'lr': 0.0005501758328845987, 'scale': 6.744578511276775}
+
+finer best PSNR: 77.15 dB
+      params: {'lr': 0.00022244710347058629, 'first_omega_0': 17.71466206198091, 'hidden_omega_0': 41.76408185460942}
+
+gf best PSNR: 60.29 dB
+      params: {'lr': 0.0008544469599950802, 'scale': 2.2341027351682725, 'omega': 6.015988147932204, 'first_bias_scale': 0.13737775275681993}
+
+wf best PSNR: 66.87 dB
+      params: {'lr': 0.0002753230219895569, 'scale': 8.27973753430486, 'omega_w': 6.310845604467354, 'omega': 1.308527867553146, 'first_bias_scale': 0.3490091602791372}
+
+staf best PSNR: 64.20 dB
+      params: {'lr': 0.00023056005425344634, 'first_omega_0': 24.783188517035136, 'hidden_omega_0': 9.147799440378737, 'tau': 4, 'skip_conn': True}
+
+pemlp best PSNR: 24.77 dB
+      params: {'lr': 0.002531318108062903}
+
+incode best PSNR: 77.96 dB
+      params: {'lr': 0.0002494207250635992, 'first_omega_0': 39.26791095809397, 'hidden_omega_0': 53.18115097310768}
+
+sl2a best PSNR: 65.74 dB
+      params: {'lr': 0.0033939009451406177, 'degree': 64, 'rank': 128}
+
+
+
+
+
+
+3d：
+  >>> siren best PSNR: 75.78 dB
+      params: {'lr': 8.461660654108171e-05, 'first_omega_0': 20.497068915339533, 'hidden_omega_0': 51.57866169792782}
+
+  >>> wire best PSNR: 57.36 dB
+      params: {'lr': 0.008592194149378448, 'first_omega_0': 11.606806566135305, 'hidden_omega_0': 11.388693771097575, 'scale': 8.642210933778493}
+
+  >>> gauss best PSNR: 63.58 dB
+      params: {'lr': 0.0021022721960476465, 'scale': 4.034201959653068}
+  
+  >>> finer best PSNR: 76.92 dB
+      params: {'lr': 0.00012736614540714364, 'first_omega_0': 5.40942395434765, 'hidden_omega_0': 44.33377393931699}
+
+  >>> gf best PSNR: 52.80 dB
+      params: {'lr': 0.0008120786312608792, 'scale': 4.7255752678697345, 'omega': 5.51473028709464, 'first_bias_scale': 0.13853331319016965}
+
+  >>> wf best PSNR: 53.00 dB
+      params: {'lr': 0.0005141912668404989, 'scale': 2.4629006522303456, 'omega_w': 5.7134051584169825, 'omega': 12.572777207071443, 'first_bias_scale': 2.1259798362150994}
+
+  >>> staf best PSNR: 63.18 dB
+      params: {'lr': 0.0010954874733844564, 'first_omega_0': 6.7310822804833705, 'hidden_omega_0': 10.59201090898334, 'tau': 5, 'skip_conn': False}    
+
+  >>> pemlp best PSNR: 50.96 dB
+      params: {'lr': 0.001722830456172326}
+
+  >>> sl2a best PSNR: 68.44 dB
+      params: {'lr': 0.0016217067256007038, 'degree': 128, 'rank': 128}
+incode的resnet是2d的
+
+{
+  "cosmo": {
+    "lr": 0.001926318572649933,
+    "beta0": 0.10528732311771717
+  }
+}

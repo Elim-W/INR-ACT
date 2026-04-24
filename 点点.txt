@@ -27,3 +27,5 @@ https://github.com/Elim-W/INR-ACT
 git add .
 git commit -m "记录修改了什么"
 git push
+
+bash benchmark/search_hyper/run_two_images.sh

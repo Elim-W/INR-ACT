@@ -1,0 +1,28 @@
+task:            image_denoising
+method:          incode
+tag:             den_div2k_img2_g0p10
+image:           0002  (464x512)
+noise_type       gaussian
+noise_seed       0
+noise_sigma      0.1
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-24 05:34:08
+best_psnr:       27.6314 dB
+best_trial_#:    24
+n_params:        892,455
+
+searched params (found by Optuna):
+  lr: 6.116690926245673e-05
+  first_omega_0: 5.124870147154897
+  hidden_omega_0: 38.07354245829114
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.noise_type: gaussian
+  training.noise_seed: 0
+  training.noise_sigma: 0.1
+  training.scheduler: cosine

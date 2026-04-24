@@ -1,0 +1,267 @@
+{
+  "siren": {
+    "best_psnr": 26.570606231689453,
+    "n_params": 198915,
+    "searched": {
+      "lr": 2.614382953654815e-05,
+      "first_omega_0": 42.56035889929487,
+      "hidden_omega_0": 40.581338122554
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 42.56035889929487,
+      "hidden_omega_0": 40.581338122554,
+      "outermost_linear": true
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 2.614382953654815e-05,
+      "scheduler": "cosine"
+    }
+  },
+  "wire": {
+    "best_psnr": 24.229753494262695,
+    "n_params": 199287,
+    "searched": {
+      "lr": 0.008421112498735622,
+      "first_omega_0": 15.193778073262653,
+      "hidden_omega_0": 5.730922158682246,
+      "scale": 17.817716276926546
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 15.193778073262653,
+      "hidden_omega_0": 5.730922158682246,
+      "scale": 17.817716276926546
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.008421112498735622,
+      "scheduler": "cosine"
+    }
+  },
+  "gauss": {
+    "best_psnr": 26.363487243652344,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.00024156772025296256,
+      "scale": 8.29717191136948
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "scale": 8.29717191136948
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.00024156772025296256,
+      "scheduler": "cosine"
+    }
+  },
+  "finer": {
+    "best_psnr": 26.555755615234375,
+    "n_params": 198915,
+    "searched": {
+      "lr": 2.8213821822255002e-05,
+      "first_omega_0": 37.32892712190047,
+      "hidden_omega_0": 53.233334399190554
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 37.32892712190047,
+      "hidden_omega_0": 53.233334399190554
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 2.8213821822255002e-05,
+      "scheduler": "cosine"
+    }
+  },
+  "gf": {
+    "best_psnr": 25.89980125427246,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.0006290854810614692,
+      "scale": 0.7962592437785023,
+      "omega": 3.1490323058726575,
+      "first_bias_scale": 3.067514956440881
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "scale": 0.7962592437785023,
+      "omega": 3.1490323058726575,
+      "first_bias_scale": 3.067514956440881
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.0006290854810614692,
+      "scheduler": "cosine"
+    }
+  },
+  "wf": {
+    "best_psnr": 26.4554386138916,
+    "n_params": 199287,
+    "searched": {
+      "lr": 0.00016741279038560018,
+      "scale": 6.268340209075603,
+      "omega_w": 8.92322500270744,
+      "omega": 1.094696867860039,
+      "first_bias_scale": 3.125464373141056
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "scale": 6.268340209075603,
+      "omega_w": 8.92322500270744,
+      "omega": 1.094696867860039,
+      "first_bias_scale": 3.125464373141056
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.00016741279038560018,
+      "scheduler": "cosine"
+    }
+  },
+  "staf": {
+    "best_psnr": 26.511507034301758,
+    "n_params": 198975,
+    "searched": {
+      "lr": 0.00048260137861767664,
+      "first_omega_0": 32.66957409192953,
+      "hidden_omega_0": 5.757264727487524
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 32.66957409192953,
+      "hidden_omega_0": 5.757264727487524,
+      "tau": 5,
+      "skip_conn": false
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.00048260137861767664,
+      "scheduler": "cosine"
+    }
+  },
+  "pemlp": {
+    "best_psnr": 24.770061492919922,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.0036303760732131728
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.0036303760732131728,
+      "scheduler": "cosine"
+    }
+  },
+  "incode": {
+    "best_psnr": 26.553552627563477,
+    "n_params": 892455,
+    "searched": {
+      "lr": 0.00013385592696225205,
+      "first_omega_0": 36.09820038415238,
+      "hidden_omega_0": 46.488977265631526
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 36.09820038415238,
+      "hidden_omega_0": 46.488977265631526
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.00013385592696225205,
+      "scheduler": "cosine"
+    }
+  },
+  "sl2a": {
+    "best_psnr": 26.02616310119629,
+    "n_params": 264707,
+    "searched": {
+      "lr": 0.000228869213120423
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "degree": 128,
+      "rank": 128,
+      "init_method": "xavier_uniform",
+      "linear_init_type": "kaiming_uniform",
+      "nonlinearity": "relu"
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.000228869213120423,
+      "scheduler": "cosine"
+    }
+  },
+  "cosmo": {
+    "best_psnr": 23.106489181518555,
+    "n_params": 1090734,
+    "searched": {
+      "lr": 0.014233276734601447,
+      "beta0": 0.0642295332412363
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "beta0": 0.0642295332412363,
+      "T_range": [
+        0.5,
+        5.0
+      ],
+      "c_range": [
+        0.0,
+        3.0
+      ]
+    },
+    "training": {
+      "scale_factor": 4,
+      "eval_epoch": 0,
+      "lr": 0.014233276734601447,
+      "scheduler": "cosine"
+    }
+  }
+}

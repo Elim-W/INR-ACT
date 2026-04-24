@@ -1,0 +1,28 @@
+task:            image_super_resolution
+method:          staf
+tag:             sr_div2k_img2_x4
+image:           0002  (464x512)
+scale_factor:    4
+eval_epoch:      0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 14:53:17
+best_psnr(HR):   26.5115 dB
+best_trial_#:    5
+n_params:        198,975
+
+searched params (found by Optuna):
+  lr: 0.00048260137861767664
+  first_omega_0: 32.66957409192953
+  hidden_omega_0: 5.757264727487524
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.tau: 5
+  model.skip_conn: False
+  training.scale_factor: 4
+  training.eval_epoch: 0
+  training.scheduler: cosine

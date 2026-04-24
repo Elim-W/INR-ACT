@@ -1,0 +1,26 @@
+task:            image_inpainting
+method:          incode
+tag:             inp_div2k_img127_r0p20
+image:           0127  (340x512)
+sampling_ratio:  0.2
+mask_seed:       0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 05:28:31
+best_psnr:       25.0738 dB
+best_trial_#:    16
+n_params:        892,455
+
+searched params (found by Optuna):
+  lr: 1.0155477779841564e-05
+  first_omega_0: 17.017443346082338
+  hidden_omega_0: 51.92848009109654
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

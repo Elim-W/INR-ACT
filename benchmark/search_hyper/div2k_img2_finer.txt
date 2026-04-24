@@ -1,0 +1,21 @@
+method:          finer
+tag:             div2k_img2
+image:           0002  (464x512)
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 02:42:44
+best_psnr:       41.4593 dB
+best_trial_#:    24
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 0.0004479669818096752
+  first_omega_0: 27.86525071959602
+  hidden_omega_0: 50.65501719268494
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.scheduler: cosine

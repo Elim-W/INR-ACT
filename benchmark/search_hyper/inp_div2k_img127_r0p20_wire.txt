@@ -1,0 +1,27 @@
+task:            image_inpainting
+method:          wire
+tag:             inp_div2k_img127_r0p20
+image:           0127  (340x512)
+sampling_ratio:  0.2
+mask_seed:       0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 03:17:44
+best_psnr:       24.1158 dB
+best_trial_#:    27
+n_params:        199,287
+
+searched params (found by Optuna):
+  lr: 0.008421112498735622
+  first_omega_0: 15.193778073262653
+  hidden_omega_0: 5.730922158682246
+  scale: 17.817716276926546
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

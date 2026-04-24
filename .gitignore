@@ -11,3 +11,6 @@ third_party/
 results/
 __pycache__/
 *.pyc
+
+
+.venv_nerf/

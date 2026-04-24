@@ -1,0 +1,25 @@
+task:            image_inpainting
+method:          gauss
+tag:             inp_div2k_img127_r0p20
+image:           0127  (340x512)
+sampling_ratio:  0.2
+mask_seed:       0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 03:29:51
+best_psnr:       25.2619 dB
+best_trial_#:    23
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 0.0006511253229962022
+  scale: 5.998045413701237
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

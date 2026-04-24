@@ -56,14 +56,18 @@ def _add_poisson_gaussian_noise(clean, tau, readout_snr, generator=None):
 def _make_noisy(clean, cfg_train):
     ntype = cfg_train.get('noise_type', 'gaussian')
     seed = cfg_train.get('noise_seed', None)
-    g = None
-    if seed is not None:
-        g = torch.Generator(device='cpu').manual_seed(int(seed))
     if ntype == 'gaussian':
+        # Generator device must match `clean` for torch.randn(generator=...)
+        g = (torch.Generator(device=clean.device).manual_seed(int(seed))
+             if seed is not None else None)
         sigma = cfg_train.get('noise_sigma', 0.1)
         return _add_gaussian_noise(clean, sigma, generator=g), \
                {'noise_type': 'gaussian', 'sigma': sigma}
     elif ntype == 'poisson_gaussian':
+        # The Gaussian readout in poisson_gaussian path runs on CPU (numpy
+        # roundtrip), so its generator must be cpu.
+        g = (torch.Generator(device='cpu').manual_seed(int(seed))
+             if seed is not None else None)
         tau = cfg_train.get('noise_tau', 40.0)
         readout = cfg_train.get('noise_readout_snr', 2.0)
         return _add_poisson_gaussian_noise(clean, tau, readout, generator=g), \

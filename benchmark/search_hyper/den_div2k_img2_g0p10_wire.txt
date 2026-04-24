@@ -1,0 +1,29 @@
+task:            image_denoising
+method:          wire
+tag:             den_div2k_img2_g0p10
+image:           0002  (464x512)
+noise_type       gaussian
+noise_seed       0
+noise_sigma      0.1
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 17:13:09
+best_psnr:       27.2559 dB
+best_trial_#:    21
+n_params:        199,287
+
+searched params (found by Optuna):
+  lr: 0.015376449028163054
+  first_omega_0: 8.755967556726112
+  hidden_omega_0: 11.038701741235311
+  scale: 7.566929549487691
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.noise_type: gaussian
+  training.noise_seed: 0
+  training.noise_sigma: 0.1
+  training.scheduler: cosine

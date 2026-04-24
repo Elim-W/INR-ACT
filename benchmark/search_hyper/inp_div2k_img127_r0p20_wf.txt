@@ -1,0 +1,28 @@
+task:            image_inpainting
+method:          wf
+tag:             inp_div2k_img127_r0p20
+image:           0127  (340x512)
+sampling_ratio:  0.2
+mask_seed:       0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 04:26:10
+best_psnr:       25.3412 dB
+best_trial_#:    15
+n_params:        199,287
+
+searched params (found by Optuna):
+  lr: 0.00010533581982987855
+  scale: 2.568638813657437
+  omega_w: 2.7260687628480076
+  omega: 2.038586451294555
+  first_bias_scale: 3.200807389846563
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

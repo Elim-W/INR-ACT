@@ -44,32 +44,27 @@ SEARCH_SPACES = {
         'lr':             ('float_log', 1e-5, 1e-2),
         'first_omega_0':  ('float', 5.0, 60.0),
         'hidden_omega_0': ('float', 5.0, 60.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'wire': {
         'lr':             ('float_log', 1e-4, 1e-1),
         'first_omega_0':  ('float', 5.0, 40.0),
         'hidden_omega_0': ('float', 5.0, 40.0),
         'scale':          ('float_log', 1.0, 30.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'gauss': {
         'lr':             ('float_log', 1e-4, 1e-2),
         'scale':          ('float_log', 1.0, 30.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'finer': {
         'lr':             ('float_log', 1e-5, 1e-2),
         'first_omega_0':  ('float', 5.0, 60.0),
         'hidden_omega_0': ('float', 5.0, 60.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'gf': {
         'lr':             ('float_log', 1e-4, 1e-2),
         'scale':          ('float', 0.5, 10.0),
         'omega':          ('float', 1.0, 30.0),
         'first_bias_scale':('float', 0.1, 5.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'wf': {
         'lr':             ('float_log', 1e-4, 1e-2),
@@ -77,7 +72,6 @@ SEARCH_SPACES = {
         'omega_w':        ('float', 1.0, 15.0),
         'omega':          ('float', 1.0, 15.0),
         'first_bias_scale':('float', 0.1, 5.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'staf': {
         'lr':             ('float_log', 1e-5, 1e-2),
@@ -85,29 +79,23 @@ SEARCH_SPACES = {
         'hidden_omega_0': ('float', 5.0, 60.0),
         'tau':            ('int', 1, 10),
         'skip_conn':      ('categorical', [True, False]),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'pemlp': {
         'lr':             ('float_log', 1e-4, 1e-2),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'incode': {
         'lr':             ('float_log', 1e-5, 1e-2),
         'first_omega_0':  ('float', 5.0, 60.0),
         'hidden_omega_0': ('float', 5.0, 60.0),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'sl2a': {
         'lr':             ('float_log', 1e-4, 1e-2),
         'degree':         ('categorical', [64, 128, 256]),
         'rank':           ('categorical', [32, 64, 128]),
-        'nonlinearity':   ('categorical', ['relu', 'gelu', 'silu']),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
     'cosmo': {
         'lr':             ('float_log', 1e-3, 1e-1),
         'beta0':          ('float', 0.01, 0.5),
-        'scheduler':      ('categorical', ['cosine', 'lambda']),
     },
 }
 
@@ -125,6 +113,7 @@ def suggest_params(trial, method):
             params[name] = trial.suggest_int(name, spec[1], spec[2])
         elif kind == 'categorical':
             params[name] = trial.suggest_categorical(name, spec[1])
+    params['scheduler'] = 'cosine'
     return params
 
 
@@ -153,11 +142,14 @@ def run_trial(method, params, signal, coords, device, iters, batch_size, seed):
         **model_kw,
     ).to(device)
 
-    # incode / cosmo need GT image for their Harmonizer
+    # incode / cosmo need GT image for their Harmonizer (2D ResNet, expects [1,3,H,W])
     if hasattr(model, 'set_gt'):
         gt_t = torch.from_numpy(signal)
         if gt_t.dim() == 2:
             gt_t = gt_t[None, None].expand(1, 3, -1, -1)
+        elif gt_t.dim() == 3:
+            mid = gt_t.shape[0] // 2
+            gt_t = gt_t[mid][None, None].expand(1, 3, -1, -1)
         model.set_gt(gt_t.to(device))
 
     signal_flat = torch.from_numpy(signal).reshape(-1).to(device)

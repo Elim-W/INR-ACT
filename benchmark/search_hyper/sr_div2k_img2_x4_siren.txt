@@ -1,0 +1,27 @@
+task:            image_super_resolution
+method:          siren
+tag:             sr_div2k_img2_x4
+image:           0002  (464x512)
+scale_factor:    4
+eval_epoch:      0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 13:54:18
+best_psnr(HR):   26.5706 dB
+best_trial_#:    24
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 2.614382953654815e-05
+  first_omega_0: 42.56035889929487
+  hidden_omega_0: 40.581338122554
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.outermost_linear: True
+  training.scale_factor: 4
+  training.eval_epoch: 0
+  training.scheduler: cosine

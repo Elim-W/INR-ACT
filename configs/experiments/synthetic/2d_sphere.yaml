@@ -1,90 +1,50 @@
 signal: 2d_sphere
-seeds: [1234]
-iters: 1000
+seeds:
+- 1234
+iters: 30000
 eval_every: 100
-batch_size: 65536        # mini-batch for all methods
-
+batch_size: 65536
 methods:
   siren:
-    hidden_features: 256
-    hidden_layers: 5
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 1.0e-4
-    scheduler: cosine
-
+    lr: 0.00036737070501857206
+    first_omega_0: 52.5988365573753
+    hidden_omega_0: 45.16054842913085
   wire:
-    hidden_features: 300
-    hidden_layers: 3
-    first_omega_0: 20.0
-    hidden_omega_0: 20.0
-    scale: 10.0
-    lr: 5.0e-3
-    scheduler: lambda
-
+    lr: 0.0003136398228154866
+    first_omega_0: 38.12002746953122
+    hidden_omega_0: 6.570619417026366
+    scale: 24.144091948725322
   gauss:
-    hidden_features: 256
-    hidden_layers: 3
-    scale: 10.0
-    lr: 1.0e-3
-    scheduler: cosine
-
+    lr: 0.00212438654178004
+    scale: 25.47495723547705
   finer:
-    hidden_features: 256
-    hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 1.0e-4
-    scheduler: cosine
-
+    lr: 0.0005269479602501555
+    first_omega_0: 50.004008759592544
+    hidden_omega_0: 52.82865140627242
   gf:
-    hidden_features: 256
-    hidden_layers: 3
-    scale: 3.0
-    omega: 10.0
-    first_bias_scale: 1.0
-    lr: 1.0e-3
-    scheduler: cosine
-
+    lr: 0.0004694762341207121
+    scale: 4.631150997699976
+    omega: 18.629139148331664
+    first_bias_scale: 2.493296396715469
   wf:
-    hidden_features: 300
-    hidden_layers: 3
-    scale: 2.0
-    omega_w: 4.0
-    omega: 5.0
-    first_bias_scale: 1.0
-    lr: 1.0e-3
-    scheduler: cosine
-
+    lr: 0.0001037874093882825
+    scale: 5.584776075936802
+    omega_w: 4.582856479577171
+    omega: 9.274964708932238
+    first_bias_scale: 4.586960081071163
   staf:
-    hidden_features: 256
-    hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    tau: 5
+    lr: 0.00087938368326117
+    first_omega_0: 48.96027993897051
+    hidden_omega_0: 24.01218235900086
+    tau: 8
     skip_conn: false
-    lr: 1.0e-4
-    scheduler: cosine
-
   pemlp:
-    hidden_features: 256
-    hidden_layers: 4
-    lr: 5.0e-4
-    scheduler: cosine
-
+    lr: 0.003316993142162355
   incode:
-    hidden_features: 256
-    hidden_layers: 3
-    lr: 1.0e-4
-    scheduler: cosine
-
+    lr: 0.0005866303795832299
+    first_omega_0: 55.43697333176538
+    hidden_omega_0: 27.31239430018701
   sl2a:
-    hidden_features: 256
-    hidden_layers: 3
+    lr: 0.007861854844227906
     degree: 256
-    rank: 128
-    init_method: xavier_uniform
-    linear_init_type: kaiming_uniform
-    nonlinearity: relu
-    lr: 1.0e-3
-    scheduler: cosine
+    rank: 64

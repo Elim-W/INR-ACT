@@ -1,0 +1,19 @@
+method:          pemlp
+tag:             div2k_img2
+image:           0002  (464x512)
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-22 20:04:55
+best_psnr:       24.8551 dB
+best_trial_#:    27
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 0.004218922609621385
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.scheduler: cosine

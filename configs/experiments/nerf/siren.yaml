@@ -1,0 +1,39 @@
+task: nerf
+method: siren
+dataset: blender_nerf
+data_root: data/blender_nerf
+scenes: [lego]              # can list multiple: [lego, drums, chair, ...]
+device: auto
+
+# Override any torch-ngp 'opt' field here (scale, bound, min_near, etc.)
+dataset_kwargs:
+  downscale: 4              # 4 → 200×200 (WIRE/FINER protocol); 1 → 800×800 (full res)
+  trainskip: 4              # use every 4th training frame → 25 images (WIRE protocol)
+
+model:
+  num_layers: 4
+  hidden_dim: 182
+  geo_feat_dim: 182
+  num_layers_color: 4
+  hidden_dim_color: 182
+  first_omega_0: 30.0
+  hidden_omega_0: 30.0
+
+training:
+  lr: 2.0e-4
+  num_iters: 30000
+  num_rays: 4096
+  fp16: true
+  cuda_ray: true
+  eval_interval: 50         # run validation every N epochs
+  scale: 0.8
+  bound: 1.0
+  dt_gamma: 0.0             # 0 = disable adaptive ray marching (better quality)
+  min_near: 0.2
+  density_thresh: 10
+  bg_radius: -1
+
+output:
+  save_dir: results/nerf/siren
+  save_model: true
+  save_images: true

@@ -1,0 +1,31 @@
+task:            image_denoising
+method:          sl2a
+tag:             den_div2k_img2_g0p10
+image:           0002  (464x512)
+noise_type       gaussian
+noise_seed       0
+noise_sigma      0.1
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-24 06:39:05
+best_psnr:       27.0958 dB
+best_trial_#:    23
+n_params:        264,707
+
+searched params (found by Optuna):
+  lr: 0.00848307763667934
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.degree: 128
+  model.rank: 128
+  model.init_method: xavier_uniform
+  model.linear_init_type: kaiming_uniform
+  model.nonlinearity: relu
+  training.noise_type: gaussian
+  training.noise_seed: 0
+  training.noise_sigma: 0.1
+  training.scheduler: cosine

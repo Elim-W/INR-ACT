@@ -1,0 +1,24 @@
+task:            image_super_resolution
+method:          pemlp
+tag:             sr_div2k_img2_x4
+image:           0002  (464x512)
+scale_factor:    4
+eval_epoch:      0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 14:58:55
+best_psnr(HR):   24.7701 dB
+best_trial_#:    4
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 0.0036303760732131728
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.scale_factor: 4
+  training.eval_epoch: 0
+  training.scheduler: cosine

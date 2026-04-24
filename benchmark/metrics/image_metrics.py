@@ -25,6 +25,10 @@ def ssim(pred, target):
     pred, target: (H, W, C) or (H, W) numpy arrays in [0, 1],
                   or (N, C)/(H, W, C) torch tensors → converted internally.
     Returns scalar float.
+
+    Uses 11x11 Gaussian window (sigma=1.5) to match the MATLAB reference
+    implementation / pytorch_msssim used by INCODE, so numbers are
+    directly comparable to published INR benchmarks.
     """
     if isinstance(pred, torch.Tensor):
         pred = pred.detach().cpu().numpy()
@@ -34,10 +38,17 @@ def ssim(pred, target):
     pred = pred.clip(0, 1)
     target = target.clip(0, 1)
 
+    kw = dict(
+        data_range=1.0,
+        gaussian_weights=True,
+        sigma=1.5,
+        use_sample_covariance=False,
+        win_size=11,
+    )
     if pred.ndim == 2:
-        return skimage_ssim(pred, target, data_range=1.0)
+        return skimage_ssim(pred, target, **kw)
     # (H, W, C) → channel_axis=-1
-    return skimage_ssim(pred, target, data_range=1.0, channel_axis=-1)
+    return skimage_ssim(pred, target, channel_axis=-1, **kw)
 
 
 def compute_all(pred, target, max_val=1.0):

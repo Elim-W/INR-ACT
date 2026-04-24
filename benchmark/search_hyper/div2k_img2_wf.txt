@@ -1,0 +1,23 @@
+method:          wf
+tag:             div2k_img2
+image:           0002  (464x512)
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 03:04:24
+best_psnr:       39.6169 dB
+best_trial_#:    23
+n_params:        199,287
+
+searched params (found by Optuna):
+  lr: 0.000291571123810266
+  scale: 8.840975299986551
+  omega_w: 7.877537366232965
+  omega: 4.678878900105737
+  first_bias_scale: 1.0072765473476128
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.scheduler: cosine

@@ -1,0 +1,27 @@
+task:            image_inpainting
+method:          siren
+tag:             inp_div2k_img127_r0p20
+image:           0127  (340x512)
+sampling_ratio:  0.2
+mask_seed:       0
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 02:56:20
+best_psnr:       25.3252 dB
+best_trial_#:    12
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 0.00010138781100302768
+  first_omega_0: 34.4065993955568
+  hidden_omega_0: 8.513297906713202
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.outermost_linear: True
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

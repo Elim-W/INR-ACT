@@ -15,7 +15,6 @@ cd "$(dirname "$0")/.."
 
 SIGNAL="${1:?Usage: $0 <signal> [extra args]}"
 shift || true
-EXTRA_ARGS="$@"
 
 # --- SLURM defaults (edit as needed) ---
 PARTITION="${SLURM_PARTITION:-vvh-l40s}"
@@ -25,7 +24,22 @@ MEM="${SLURM_MEM:-32G}"
 TIME="${SLURM_TIME:-04:00:00}"
 # ----------------------------------------
 
-METHODS=(siren wire gauss finer gf wf staf pemlp incode sl2a)
+# Parse --methods from args; remaining args passed through to Python
+METHODS=(siren wire gauss finer gf wf staf pemlp incode sl2a cosmo)
+EXTRA_ARGS=()
+while [[ $# -gt 0 ]]; do
+    if [[ "$1" == "--methods" ]]; then
+        shift
+        METHODS=()
+        while [[ $# -gt 0 && "$1" != --* ]]; do
+            METHODS+=("$1")
+            shift
+        done
+    else
+        EXTRA_ARGS+=("$1")
+        shift
+    fi
+done
 
 LOG_DIR="results/hparam_search/logs"
 mkdir -p "$LOG_DIR"
@@ -47,11 +61,11 @@ for METHOD in "${METHODS[@]}"; do
         --wrap="
 module load python/3.11.5 2>/dev/null || true
 source .venv/bin/activate
-python benchmark/hparam_search.py \
+python -u benchmark/hparam_search.py \
     --signal $SIGNAL \
     --methods $METHOD \
     --study_dir results/hparam_search/optuna_db \
-    $EXTRA_ARGS
+    ${EXTRA_ARGS[*]}
 ")
     echo "Submitted $JOB_NAME → job $JOB_ID  (log: $LOG)"
     JOBS+=("$JOB_ID")

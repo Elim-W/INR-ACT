@@ -32,34 +32,34 @@ methods:
     first_bias_scale: 1.2952413944323864
     scheduler: cosine
   wf:
-    hidden_features: 300
-    hidden_layers: 3
-    scale: 2.0
-    omega_w: 4.0
-    omega: 5.0
-    first_bias_scale: 1.0
-    lr: 0.0001
-    scheduler: lambda
+    lr: 0.0002610803867288326
+    scale: 6.690403029807663
+    omega_w: 9.963779819760031
+    omega: 3.541803220678445
+    first_bias_scale: 4.301079842589401
+    scheduler: cosine
   staf:
-    hidden_features: 256
-    hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    tau: 5
+    lr: 0.000618252613672973
+    first_omega_0: 53.479002565851836
+    hidden_omega_0: 43.04720040556094
+    tau: 3
     skip_conn: false
-    lr: 0.0001
-    scheduler: lambda
+    scheduler: cosine
   pemlp:
     lr: 0.0025590936110501334
     scheduler: cosine
   incode:
-    hidden_features: 256
-    hidden_layers: 3
-    lr: 0.0001
-    scheduler: lambda
+    lr: 0.0010131088239734992
+    first_omega_0: 58.91509049743779
+    hidden_omega_0: 54.16121227969755
+    scheduler: cosine
   sl2a:
     lr: 0.0027258463969359295
     degree: 128
     rank: 128
     nonlinearity: relu
     scheduler: lambda
+  cosmo:
+    lr: 0.002660301220072908
+    beta0: 0.05475511475262285
+    scheduler: cosine

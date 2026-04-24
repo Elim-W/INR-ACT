@@ -1,0 +1,22 @@
+method:          cosmo
+tag:             div2k_img2
+image:           0002  (464x512)
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-24 10:54:39
+best_psnr:       35.1772 dB
+best_trial_#:    13
+n_params:        1,090,734
+
+searched params (found by Optuna):
+  lr: 0.0027358843178728483
+  beta0: 0.19040744177597796
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.T_range: (0.5, 5.0)
+  model.c_range: (0.0, 3.0)
+  training.scheduler: cosine

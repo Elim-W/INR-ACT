@@ -1,0 +1,24 @@
+method:          sl2a
+tag:             div2k_img2
+image:           0002  (464x512)
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 04:31:11
+best_psnr:       38.3009 dB
+best_trial_#:    22
+n_params:        264,707
+
+searched params (found by Optuna):
+  lr: 0.0027340487643555053
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.degree: 128
+  model.rank: 128
+  model.init_method: xavier_uniform
+  model.linear_init_type: kaiming_uniform
+  model.nonlinearity: relu
+  training.scheduler: cosine

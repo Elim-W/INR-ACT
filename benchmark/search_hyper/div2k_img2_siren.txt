@@ -1,0 +1,22 @@
+method:          siren
+tag:             div2k_img2
+image:           0002  (464x512)
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-23 01:45:10
+best_psnr:       40.5565 dB
+best_trial_#:    22
+n_params:        198,915
+
+searched params (found by Optuna):
+  lr: 0.000618252613672973
+  first_omega_0: 36.94116732730189
+  hidden_omega_0: 52.26655587459307
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.outermost_linear: True
+  training.scheduler: cosine

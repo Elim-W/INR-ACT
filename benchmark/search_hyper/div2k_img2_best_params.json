@@ -1,0 +1,133 @@
+{
+  "staf": {
+    "best_psnr": 39.67934036254883,
+    "n_params": 198975,
+    "searched": {
+      "lr": 0.00978493342754557,
+      "first_omega_0": 28.07951697936898,
+      "hidden_omega_0": 33.02011313874121
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 28.07951697936898,
+      "hidden_omega_0": 33.02011313874121,
+      "tau": 5,
+      "skip_conn": false
+    },
+    "training": {
+      "lr": 0.00978493342754557,
+      "scheduler": "cosine"
+    }
+  },
+  "pemlp": {
+    "best_psnr": 24.855077743530273,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.004218922609621385
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3
+    },
+    "training": {
+      "lr": 0.004218922609621385,
+      "scheduler": "cosine"
+    }
+  },
+  "incode": {
+    "best_psnr": 41.62274169921875,
+    "n_params": 892455,
+    "searched": {
+      "lr": 0.00018545353975938376,
+      "first_omega_0": 54.455196721615444,
+      "hidden_omega_0": 47.8462049259078
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 54.455196721615444,
+      "hidden_omega_0": 47.8462049259078
+    },
+    "training": {
+      "lr": 0.00018545353975938376,
+      "scheduler": "cosine"
+    }
+  },
+  "siren": {
+    "best_psnr": 40.55651092529297,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.000618252613672973,
+      "first_omega_0": 36.94116732730189,
+      "hidden_omega_0": 52.26655587459307
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 36.94116732730189,
+      "hidden_omega_0": 52.26655587459307,
+      "outermost_linear": true
+    },
+    "training": {
+      "lr": 0.000618252613672973,
+      "scheduler": "cosine"
+    }
+  },
+  "finer": {
+    "best_psnr": 41.45933532714844,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.0004479669818096752,
+      "first_omega_0": 27.86525071959602,
+      "hidden_omega_0": 50.65501719268494
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 27.86525071959602,
+      "hidden_omega_0": 50.65501719268494
+    },
+    "training": {
+      "lr": 0.0004479669818096752,
+      "scheduler": "cosine"
+    }
+  },
+  "cosmo": {
+    "best_psnr": 35.177181243896484,
+    "n_params": 1090734,
+    "searched": {
+      "lr": 0.0027358843178728483,
+      "beta0": 0.19040744177597796
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "beta0": 0.19040744177597796,
+      "T_range": [
+        0.5,
+        5.0
+      ],
+      "c_range": [
+        0.0,
+        3.0
+      ]
+    },
+    "training": {
+      "lr": 0.0027358843178728483,
+      "scheduler": "cosine"
+    }
+  }
+}
