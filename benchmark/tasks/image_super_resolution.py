@@ -104,7 +104,7 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
     psnr_curve, ssim_curve, epochs_curve = [], [], []
     total_time = 0.0
     best_psnr = -float('inf')
-    best_state = None
+    best_ssim = -float('inf')
 
     for epoch in range(1, num_epochs + 1):
         t0 = time.time()
@@ -150,7 +150,8 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
             if epoch >= eval_epoch and psnr_val > best_psnr:
                 best_psnr = psnr_val
-                best_state = {k: v.cpu() for k, v in model.state_dict().items()}
+            if epoch >= eval_epoch and ssim_val > best_ssim:
+                best_ssim = ssim_val
 
             tag = 'HR' if epoch >= eval_epoch else 'LR'
             print(f"  [{meta['name']}] epoch {epoch:5d}/{num_epochs}"
@@ -163,11 +164,8 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
             _save_image(pred_hr, H, W, C,
                         os.path.join(save_dir, f"{meta['name']}_ep{epoch:05d}.png"))
 
-    # If HR eval was deferred for the entire run, use the final weights
-    if best_state is None:
-        best_state = {k: v.cpu() for k, v in model.state_dict().items()}
-
-    model.load_state_dict(best_state)
+    # Use the LAST-iter weights so the saved model can be resumed / fine-tuned.
+    final_state = {k: v.cpu() for k, v in model.state_dict().items()}
     with torch.no_grad():
         pred_hr = _forward_all(model, hr_coords, batch_size, device).clamp(0, 1)
     pred_img = pred_hr.reshape(H, W, C)
@@ -177,7 +175,7 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
     if save_dir is not None:
         _save_image(pred_hr, H, W, C,
-                    os.path.join(save_dir, f"{meta['name']}_best_HR.png"))
+                    os.path.join(save_dir, f"{meta['name']}_final_HR.png"))
         _save_image(lr_pixels, H_lr, W_lr, C,
                     os.path.join(save_dir, f"{meta['name']}_input_LR.png"))
         _save_image(hr_pixels, H, W, C,
@@ -190,8 +188,10 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
         'epochs_curve':  epochs_curve,
         'final_psnr':    final_psnr,
         'final_ssim':    final_ssim,
+        'best_psnr':     best_psnr,
+        'best_ssim':     best_ssim,
         'total_time_s':  total_time,
-        'model_state':   best_state,
+        'model_state':   final_state,
         'scale_factor':  scale,
         'H_hr': H, 'W_hr': W,
         'H_lr': H_lr, 'W_lr': W_lr,

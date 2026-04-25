@@ -32,7 +32,7 @@ class DIV2KDataset:
     _SUBDIRS = ['', 'train', 'val', 'DIV2K_train_HR', 'DIV2K_valid_HR']
 
     def __init__(self, data_root, indices=None, normalize=True,
-                 max_size=None):
+                 max_size=None, downscale=None):
         """
         Args:
             data_root:  path to the DIV2K folder
@@ -41,10 +41,17 @@ class DIV2KDataset:
             max_size:   if set, longer side is resized to this many pixels
                         (DIV2K images are ~2040 px, which can OOM on CPU —
                         set e.g. 512 for quick tests)
+            downscale:  if set, W and H are each divided by this factor
+                        with BICUBIC (default DIV2K convention for ×N SR
+                        experiments; e.g. downscale=4 → each dim /4).
+                        Takes precedence over max_size.
         """
+        if downscale is not None and downscale < 1:
+            raise ValueError(f"downscale must be >= 1, got {downscale}")
         self.data_root = data_root
         self.normalize = normalize
         self.max_size = max_size
+        self.downscale = downscale
         self.paths = self._discover(data_root, indices)
         if len(self.paths) == 0:
             raise FileNotFoundError(
@@ -87,7 +94,11 @@ class DIV2KDataset:
         path = self.paths[idx]
         img = Image.open(path).convert('RGB')
 
-        if self.max_size is not None:
+        if self.downscale is not None and self.downscale > 1:
+            w, h = img.size
+            new_wh = (max(1, w // self.downscale), max(1, h // self.downscale))
+            img = img.resize(new_wh, Image.BICUBIC)
+        elif self.max_size is not None:
             w, h = img.size
             longer = max(w, h)
             if longer > self.max_size:

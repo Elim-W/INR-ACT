@@ -63,6 +63,70 @@ def _bandlimit_filter(data, cutoff_low, cutoff_high):
 
 _CUTOFFS = _generate_bandlimits(0.0015, 0.7, 9, base=300)
 
+# --------------- Fourier analysis helpers ----------------------------------
+
+_MAX_RADIUS_2D = np.sqrt(2) / 2  # max radial freq for unit-sampled 2D FFT
+
+
+def _radial_freq_mask_2d(shape, r_low, r_high):
+    fy = fft.fftfreq(shape[0])[:, None]
+    fx = fft.fftfreq(shape[1])[None, :]
+    radius = np.sqrt(fy ** 2 + fx ** 2)
+    return (r_low <= radius) & (radius < r_high)
+
+
+def compute_freq_band_errors(gt_norm, pred):
+    """
+    MSE and relative error in low (0-20%), mid (20-50%), high (50-100%) Fourier bands.
+    Returns dict with gt_energy_{band}, err_{band}, rel_err_{band} for each band.
+    rel_err = err / gt_energy normalises out the fact that high-freq GT energy is
+    naturally smaller, so bands are comparable on the same scale.
+    """
+    max_r = _MAX_RADIUS_2D
+    gt_f  = fft.fft2(gt_norm)
+    err_f = gt_f - fft.fft2(pred)
+    out = {}
+    for name, (r0, r1) in [('low',  (0.0,          0.20 * max_r)),
+                            ('mid',  (0.20 * max_r, 0.50 * max_r)),
+                            ('high', (0.50 * max_r, max_r + 1e-9))]:
+        mask = _radial_freq_mask_2d(gt_norm.shape, r0, r1)
+        n = mask.sum()
+        gt_e  = float((np.abs(gt_f[mask]) ** 2).mean())  if n else 0.0
+        err_e = float((np.abs(err_f[mask]) ** 2).mean()) if n else 0.0
+        out[f'gt_energy_{name}'] = gt_e
+        out[f'err_{name}']       = err_e
+        out[f'rel_err_{name}']   = err_e / (gt_e + 1e-12)
+    return out
+
+
+def _compute_radial_spectrum(arr_2d, n_bins=200):
+    """Radial mean power spectrum. Returns (centers, mean_power) arrays."""
+    power = np.abs(fft.fft2(arr_2d)) ** 2
+    H, W = arr_2d.shape
+    fy = fft.fftfreq(H)[:, None]
+    fx = fft.fftfreq(W)[None, :]
+    radius = np.sqrt(fy ** 2 + fx ** 2)
+    bins = np.linspace(0, _MAX_RADIUS_2D, n_bins + 1)
+    centers = (bins[:-1] + bins[1:]) / 2
+    mean_power = np.zeros(n_bins)
+    for i in range(n_bins):
+        mask = (bins[i] <= radius) & (radius < bins[i + 1])
+        if mask.any():
+            mean_power[i] = power[mask].mean()
+    return centers, mean_power
+
+
+def compute_oob_leakage(pred, bandwidth_label):
+    """
+    Fraction of prediction's Fourier energy outside the GT bandwidth cutoff.
+    The GT signal was constructed with cutoff radius = _CUTOFFS[idx] / sqrt(2).
+    """
+    idx = int(round(bandwidth_label * 10)) - 1
+    cutoff_r = _CUTOFFS[idx] / np.sqrt(2)
+    power = np.abs(fft.fft2(pred)) ** 2
+    in_band = _radial_freq_mask_2d(pred.shape, 0.0, cutoff_r + 1e-10)
+    return float(power[~in_band].sum() / (power.sum() + 1e-12))
+
 
 # --------------- 2D bandlimited --------------------------------------------
 
@@ -185,29 +249,29 @@ def make_sphere_3d(length, bandwidth_label, seed, occupied_fraction=0.1):
 SIGNALS = {
     '2d_bandlimited': dict(
         fn=make_bandlimited_2d, length=1000, ndim=2,
-        has_bw=True, desc='2-D bandlimited noise (length=1000)',
+        has_bw=True, fourier_bw=True, desc='2-D bandlimited noise (length=1000)',
     ),
     '2d_sierpinski': dict(
         fn=lambda length, bandwidth_label, seed: make_sierpinski_2d(bandwidth_label),
-        length=1000, ndim=2, has_bw=True,
+        length=1000, ndim=2, has_bw=True, fourier_bw=False,
         desc='2-D Sierpinski triangle (depth=0–8)',
     ),
     '2d_sphere': dict(
         fn=make_sphere_2d, length=1000, ndim=2,
-        has_bw=True, desc='2-D sparse circles (vectorized)',
+        has_bw=True, fourier_bw=False, desc='2-D sparse circles (vectorized)',
     ),
     '2d_startarget': dict(
         fn=lambda length, bandwidth_label, seed: make_startarget_2d(img_size=length),
-        length=1000, ndim=2, has_bw=False,
+        length=1000, ndim=2, has_bw=False, fourier_bw=False,
         desc='2-D star resolution target (40 triangles)',
     ),
     '3d_bandlimited': dict(
         fn=make_bandlimited_3d, length=100, ndim=3,
-        has_bw=True, desc='3-D bandlimited noise (length=100)',
+        has_bw=True, fourier_bw=True, desc='3-D bandlimited noise (length=100)',
     ),
     '3d_sphere': dict(
         fn=make_sphere_3d, length=100, ndim=3,
-        has_bw=True, desc='3-D sparse spheres (vectorized)',
+        has_bw=True, fourier_bw=False, desc='3-D sparse spheres (vectorized)',
     ),
 }
 
@@ -261,11 +325,11 @@ def _chunked_forward(model, coords, chunk_size):
 
 
 def train_one(model, coords, signal_flat, signal_shape, train_cfg,
-              num_iters, eval_every, device, save_dir, is_3d, batch_size=0):
+              num_iters, eval_every, device, save_dir, is_3d, batch_size=262144):
     """
     Train for num_iters steps.
-    batch_size=0  → full-batch (default)
-    batch_size>0  → mini-batch; eval uses same chunk size to avoid OOM
+    batch_size=0   → full-batch (only reasonable for very small signals)
+    batch_size>0   → mini-batch training; eval uses 4× chunk (no grad → less memory)
     Returns (best_psnr, best_ssim_or_None, elapsed_s, iter_list, psnr_list, best_output).
     """
     optimizer = torch.optim.Adam(model.parameters(), lr=train_cfg['lr'])
@@ -276,6 +340,8 @@ def train_one(model, coords, signal_flat, signal_shape, train_cfg,
     t0 = time.time()
     N = coords.shape[0]
     use_minibatch = batch_size > 0 and batch_size < N
+    # eval doesn't need gradients → can use a larger chunk without extra memory
+    eval_chunk = min(N, batch_size * 4) if use_minibatch else N
 
     sig_min = signal_flat.min()
     sig_range = (signal_flat.max() - sig_min).clamp(min=1e-12)
@@ -299,8 +365,7 @@ def train_one(model, coords, signal_flat, signal_shape, train_cfg,
         if it % eval_every == 0 or it == num_iters:
             with torch.no_grad():
                 model.eval()
-                chunk = batch_size if use_minibatch else N
-                out = _chunked_forward(model, coords, chunk)
+                out = _chunked_forward(model, coords, eval_chunk)
                 mse_val = loss_fn(out, gt_norm).item()
                 psnr_val = -10.0 * np.log10(mse_val + 1e-12)
             iter_list.append(it)
@@ -346,7 +411,9 @@ def save_gt_image(signal_arr, path, is_3d):
 def save_psnr_curve(iter_list, psnr_list, best_psnr, path):
     plt.figure(figsize=(5, 3))
     plt.plot(iter_list, psnr_list, marker='o', markersize=3)
-    plt.ylim([0, 50])
+    lo = max(0, min(psnr_list) - 2)
+    hi = best_psnr + 2
+    plt.ylim([lo, hi])
     plt.xlabel('iteration')
     plt.ylabel('PSNR (dB)')
     plt.title(f'best PSNR: {best_psnr:.2f} dB')
@@ -384,8 +451,8 @@ def parse_args():
                    help='Override signal grid size per side')
     p.add_argument('--iters', type=int, default=1000)
     p.add_argument('--eval_every', type=int, default=100)
-    p.add_argument('--batch_size', type=int, default=0,
-                   help='Mini-batch size (0 = full-batch). Use e.g. 65536 for OOM models like staf.')
+    p.add_argument('--batch_size', type=int, default=65536,
+                   help='Mini-batch size per training step (0 = full-batch, slow for large signals).')
     p.add_argument('--device', default='auto')
     p.add_argument('--out_dir', default=None,
                    help='Output directory (default: results/<signal>)')
@@ -462,6 +529,20 @@ def main():
                     if has_bw else ['method', 'seed', 'iteration', 'psnr'])
     iters_exists = os.path.exists(iters_path)
 
+    # Frequency analysis CSV (2D bandlimited only)
+    freq_path = os.path.join(args.out_dir, 'freq_analysis.csv')
+    freq_fields = ['method', 'bandwidth', 'seed',
+                   'gt_energy_low', 'gt_energy_mid', 'gt_energy_high',
+                   'err_low', 'err_mid', 'err_high',
+                   'rel_err_low', 'rel_err_mid', 'rel_err_high',
+                   'oob_leakage']
+    freq_done = set()
+    if os.path.exists(freq_path):
+        with open(freq_path, newline='') as f:
+            for row in csv.DictReader(f):
+                freq_done.add((row['method'], float(row.get('bandwidth', 0)), int(row['seed'])))
+    freq_exists = os.path.exists(freq_path)
+
     # Pre-generate deterministic signals (Sierpinski, StarTarget)
     sig_cache = {}
     if not cfg['has_bw']:
@@ -469,14 +550,18 @@ def main():
         sig_cache[None] = cfg['fn'](length=L, bandwidth_label=0.1, seed=args.seeds[0])
 
     with open(summary_path, 'a', newline='') as sum_f, \
-         open(iters_path, 'a', newline='') as iter_f:
+         open(iters_path, 'a', newline='') as iter_f, \
+         open(freq_path, 'a', newline='') as freq_f:
 
         sum_writer = csv.DictWriter(sum_f, fieldnames=summary_fields)
         iter_writer = csv.DictWriter(iter_f, fieldnames=iters_fields)
+        freq_writer = csv.DictWriter(freq_f, fieldnames=freq_fields)
         if os.path.getsize(summary_path) == 0:
             sum_writer.writeheader()
         if not iters_exists:
             iter_writer.writeheader()
+        if not freq_exists:
+            freq_writer.writeheader()
 
         for method in args.methods:
             if method not in effective_defaults:
@@ -547,7 +632,7 @@ def main():
                             gt_t = gt_t[None].expand(1, 3, -1, -1)
                         model.set_gt(gt_t.to(device))
 
-                    best_psnr, best_ssim, elapsed, iter_list, psnr_list, _ = train_one(
+                    best_psnr, best_ssim, elapsed, iter_list, psnr_list, best_output = train_one(
                         model, coords, signal_flat, signal_shape,
                         train_cfg, args.iters, args.eval_every, device, run_dir, is_3d,
                         batch_size=method_batch_size,
@@ -555,6 +640,17 @@ def main():
 
                     save_psnr_curve(iter_list, psnr_list, best_psnr,
                                     os.path.join(run_dir, 'psnr_curve.png'))
+
+                    # Save best reconstruction as numpy for later analysis
+                    np.save(os.path.join(run_dir, 'best_recon.npy'), best_output)
+
+                    # Save normalized GT alongside prediction (same value range)
+                    if not is_3d:
+                        gt_norm_2d = ((sig - sig.min())
+                                      / (sig.max() - sig.min() + 1e-12))
+                        gt_npy = os.path.join(run_dir, 'gt_norm.npy')
+                        if not os.path.exists(gt_npy):
+                            np.save(gt_npy, gt_norm_2d)
 
                     ssim_str = f'  SSIM={best_ssim:.4f}' if best_ssim is not None else ''
                     print(f'  → PSNR={best_psnr:.2f}{ssim_str}  time={elapsed:.1f}s')
@@ -576,6 +672,33 @@ def main():
                             irow['bandwidth'] = bw
                         iter_writer.writerow(irow)
                     iter_f.flush()
+
+                    # Frequency analysis (2D signals with bandwidth only)
+                    if not is_3d and bw is not None and key not in freq_done:
+                        fm = compute_freq_band_errors(gt_norm_2d, best_output)
+                        # OOB leakage is only meaningful when bandwidth_label maps
+                        # to a Fourier cutoff (bandlimited signals); for sphere /
+                        # sierpinski the label is not a frequency parameter.
+                        if cfg['fourier_bw']:
+                            fm['oob_leakage'] = compute_oob_leakage(best_output, bw)
+                        else:
+                            fm['oob_leakage'] = float('nan')
+                        frow = {'method': method, 'bandwidth': bw, 'seed': seed}
+                        for k, v in fm.items():
+                            frow[k] = f'{v:.6e}'
+                        freq_writer.writerow(frow)
+                        freq_f.flush()
+
+                        # Radial power spectrum: GT / pred / residual
+                        centers, gt_power   = _compute_radial_spectrum(gt_norm_2d)
+                        _,       pred_power = _compute_radial_spectrum(best_output)
+                        residual = gt_norm_2d - best_output
+                        _,       res_power  = _compute_radial_spectrum(residual)
+                        np.savez(os.path.join(run_dir, 'radial_spectrum.npz'),
+                                 centers=centers,
+                                 gt_power=gt_power,
+                                 pred_power=pred_power,
+                                 residual_power=res_power)
 
     print(f'\n[run_synthetic] Done → {args.out_dir}')
 

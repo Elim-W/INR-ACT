@@ -1,90 +1,53 @@
 signal: 2d_sierpinski
-seeds: [1234]
+seeds:
+- 1234
 iters: 20000
 eval_every: 100
-batch_size: 65536        # mini-batch for all methods
-
+batch_size: 65536
 methods:
   siren:
-    hidden_features: 256
-    hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.0003379056378974541
+    first_omega_0: 51.134761073659774
+    hidden_omega_0: 55.46072495005441
   wire:
-    hidden_features: 300
-    hidden_layers: 2
-    first_omega_0: 15.0
-    hidden_omega_0: 15.0
-    scale: 10.0
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.0004532901866195531
+    first_omega_0: 37.37036700154478
+    hidden_omega_0: 20.47492643914618
+    scale: 22.037885902852185
   gauss:
-    hidden_features: 256
-    hidden_layers: 3
-    scale: 10.0
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.0022556704466268553
+    scale: 27.77682224683751
   finer:
-    hidden_features: 256
-    hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.00017569022952400188
+    first_omega_0: 58.946907718774206
+    hidden_omega_0: 46.0621344906743
   gf:
-    hidden_features: 256
-    hidden_layers: 3
-    scale: 3.0
-    omega: 10.0
-    first_bias_scale: 1.0
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.00035770875189482286
+    scale: 4.542485733931991
+    omega: 8.369828322215437
+    first_bias_scale: 2.236000505216514
   wf:
-    hidden_features: 300
-    hidden_layers: 3
-    scale: 2.0
-    omega_w: 4.0
-    omega: 5.0
-    first_bias_scale: 1.0
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.000536749894569821
+    scale: 6.34626369511819
+    omega_w: 2.055337383001672
+    omega: 6.163536084027643
+    first_bias_scale: 4.672386499714356
   staf:
-    hidden_features: 256
-    hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
+    lr: 0.00022775437649752653
+    first_omega_0: 46.80828208833116
+    hidden_omega_0: 44.505878211347465
     tau: 5
-    skip_conn: false
-    lr: 1.0e-4
-    scheduler: lambda
-
+    skip_conn: true
   pemlp:
-    hidden_features: 256
-    hidden_layers: 3
-    lr: 5.0e-4
-    scheduler: lambda
-
+    lr: 0.0018909422854294226
   incode:
-    hidden_features: 256
-    hidden_layers: 3
-    lr: 1.0e-4
-    scheduler: lambda
-
+    lr: 0.0001857379457248754
+    first_omega_0: 58.379590817357254
+    hidden_omega_0: 44.56169132321112
   sl2a:
-    hidden_features: 256
-    hidden_layers: 3
+    lr: 0.0025910923893069314
     degree: 256
     rank: 128
-    init_method: xavier_uniform
-    linear_init_type: kaiming_uniform
-    nonlinearity: relu
-    lr: 1.0e-4
-    scheduler: lambda
+  cosmo:
+    lr: 0.0020447770826346194
+    beta0: 0.08454302951953105

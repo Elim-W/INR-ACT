@@ -1,0 +1,101 @@
+{
+  "pemlp": {
+    "best_psnr": 24.94473648071289,
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.0038140365303490154
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3
+    },
+    "training": {
+      "noise_type": "gaussian",
+      "noise_seed": 0,
+      "noise_sigma": 0.1,
+      "lr": 0.0038140365303490154,
+      "scheduler": "cosine"
+    }
+  },
+  "incode": {
+    "best_psnr": 27.631366729736328,
+    "n_params": 892455,
+    "searched": {
+      "lr": 6.116690926245673e-05,
+      "first_omega_0": 5.124870147154897,
+      "hidden_omega_0": 38.07354245829114
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 5.124870147154897,
+      "hidden_omega_0": 38.07354245829114
+    },
+    "training": {
+      "noise_type": "gaussian",
+      "noise_seed": 0,
+      "noise_sigma": 0.1,
+      "lr": 6.116690926245673e-05,
+      "scheduler": "cosine"
+    }
+  },
+  "sl2a": {
+    "best_psnr": 27.09581756591797,
+    "n_params": 264707,
+    "searched": {
+      "lr": 0.00848307763667934
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "degree": 128,
+      "rank": 128,
+      "init_method": "xavier_uniform",
+      "linear_init_type": "kaiming_uniform",
+      "nonlinearity": "relu"
+    },
+    "training": {
+      "noise_type": "gaussian",
+      "noise_seed": 0,
+      "noise_sigma": 0.1,
+      "lr": 0.00848307763667934,
+      "scheduler": "cosine"
+    }
+  },
+  "cosmo": {
+    "best_psnr": 25.79372787475586,
+    "n_params": 1090734,
+    "searched": {
+      "lr": 0.011247837825288005,
+      "beta0": 0.46588602956535907
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "beta0": 0.46588602956535907,
+      "T_range": [
+        0.5,
+        5.0
+      ],
+      "c_range": [
+        0.0,
+        3.0
+      ]
+    },
+    "training": {
+      "noise_type": "gaussian",
+      "noise_seed": 0,
+      "noise_sigma": 0.1,
+      "lr": 0.011247837825288005,
+      "scheduler": "cosine"
+    }
+  }
+}

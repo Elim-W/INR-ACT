@@ -1,9 +1,11 @@
 signal: 2d_bandlimited
 seeds:
 - 1234
-iters: 1000
+- 2024
+- 42
+iters: 10000
 eval_every: 100
-batch_size: 65536
+batch_size: 262144
 methods:
   siren:
     hidden_features: 256

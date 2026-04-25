@@ -1,0 +1,29 @@
+task:            image_denoising
+method:          cosmo
+tag:             den_div2k_img2_g0p10
+image:           0002  (464x512)
+noise_type       gaussian
+noise_seed       0
+noise_sigma      0.1
+n_trials:        30
+iters_per_trial: 4000
+timestamp:       2026-04-24 17:46:54
+best_psnr:       25.7937 dB
+best_trial_#:    27
+n_params:        1,090,734
+
+searched params (found by Optuna):
+  lr: 0.011247837825288005
+  beta0: 0.46588602956535907
+
+fixed params (from BENCHMARK_DEFAULTS, not searched):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.T_range: (0.5, 5.0)
+  model.c_range: (0.0, 3.0)
+  training.noise_type: gaussian
+  training.noise_seed: 0
+  training.noise_sigma: 0.1
+  training.scheduler: cosine

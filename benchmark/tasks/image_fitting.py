@@ -71,8 +71,9 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
     psnr_curve, ssim_curve, epochs_curve = [], [], []
     total_time = 0.0
+    # tracked for logging only; weights saved are final, not best
     best_psnr = -float('inf')
-    best_state = None
+    best_ssim = -float('inf')
 
     for epoch in range(1, num_epochs + 1):
         t0 = time.time()
@@ -111,7 +112,8 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
             if psnr_val > best_psnr:
                 best_psnr = psnr_val
-                best_state = {k: v.cpu() for k, v in model.state_dict().items()}
+            if ssim_val > best_ssim:
+                best_ssim = ssim_val
 
             print(f"  [{meta['name']}] epoch {epoch:5d}/{num_epochs}"
                   f"  loss={loss.item():.6f}"
@@ -124,8 +126,9 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
             _save_image(pred_full, H, W, C,
                         os.path.join(save_dir, f"{meta['name']}_ep{epoch:05d}.png"))
 
-    # Final evaluation
-    model.load_state_dict(best_state)
+    # Final evaluation — use the LAST-iter weights (not the best seen), so a
+    # saved model can be resumed / fine-tuned from exactly where training stopped.
+    final_state = {k: v.cpu() for k, v in model.state_dict().items()}
     with torch.no_grad():
         pred_full = model(coords).clamp(0, 1)
     pred_img = pred_full.reshape(H, W, C)
@@ -135,17 +138,19 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
     if save_dir is not None:
         _save_image(pred_full, H, W, C,
-                    os.path.join(save_dir, f"{meta['name']}_best.png"))
+                    os.path.join(save_dir, f"{meta['name']}_final.png"))
 
     return {
         'name':          meta['name'],
         'psnr_curve':    psnr_curve,
         'ssim_curve':    ssim_curve,
         'epochs_curve':  epochs_curve,
-        'final_psnr':    final_psnr,
-        'final_ssim':    final_ssim,
+        'final_psnr':    final_psnr,      # PSNR of LAST-iter weights
+        'final_ssim':    final_ssim,      # SSIM of LAST-iter weights
+        'best_psnr':     best_psnr,       # max PSNR seen during training
+        'best_ssim':     best_ssim,       # max SSIM seen during training
         'total_time_s':  total_time,
-        'model_state':   best_state,
+        'model_state':   final_state,     # FINAL iter weights (for resuming training)
     }
 
 

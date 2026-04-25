@@ -1,7 +1,7 @@
 signal: 3d_bandlimited
 seeds:
 - 1234
-iters: 1000
+iters: 30000
 eval_every: 100
 batch_size: 65536
 methods:

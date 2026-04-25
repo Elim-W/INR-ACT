@@ -88,9 +88,8 @@ BENCHMARK_DEFAULTS = {
         lr=5e-4, scheduler='cosine',
     ),
     'pemlp': dict(
-        # Alias of 'relu' entry above — the registry exposes both names.
-        # Must exist here or hparam_search_image silently skips pemlp.
         hidden_features=256, hidden_layers=3,
+        use_pe=True, N_freqs=10,
         lr=5e-4, scheduler='cosine',
     ),
     'incode': dict(

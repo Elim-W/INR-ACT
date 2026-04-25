@@ -138,7 +138,7 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
     psnr_curve, ssim_curve, epochs_curve = [], [], []
     total_time = 0.0
     best_psnr = -float('inf')
-    best_state = None
+    best_ssim = -float('inf')
 
     for epoch in range(1, num_epochs + 1):
         t0 = time.time()
@@ -175,7 +175,8 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
             if psnr_val > best_psnr:
                 best_psnr = psnr_val
-                best_state = {k: v.cpu() for k, v in model.state_dict().items()}
+            if ssim_val > best_ssim:
+                best_ssim = ssim_val
 
             print(f"  [{meta['name']}] epoch {epoch:5d}/{num_epochs}"
                   f"  loss={loss.item():.6f}"
@@ -187,8 +188,8 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
             _save_image(pred_full, H, W, C,
                         os.path.join(save_dir, f"{meta['name']}_ep{epoch:05d}.png"))
 
-    # Final eval from best checkpoint
-    model.load_state_dict(best_state)
+    # Final eval from the LAST-iter weights (so the saved model can be resumed)
+    final_state = {k: v.cpu() for k, v in model.state_dict().items()}
     with torch.no_grad():
         pred_full = model(coords).clamp(0, 1)
     pred_img = pred_full.reshape(H, W, C)
@@ -198,7 +199,7 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
     if save_dir is not None:
         _save_image(pred_full, H, W, C,
-                    os.path.join(save_dir, f"{meta['name']}_best.png"))
+                    os.path.join(save_dir, f"{meta['name']}_final.png"))
         _save_image(noisy.clamp(0, 1), H, W, C,
                     os.path.join(save_dir, f"{meta['name']}_noisy.png"))
         _save_image(clean, H, W, C,
@@ -211,8 +212,10 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
         'epochs_curve':  epochs_curve,
         'final_psnr':    final_psnr,
         'final_ssim':    final_ssim,
+        'best_psnr':     best_psnr,
+        'best_ssim':     best_ssim,
         'total_time_s':  total_time,
-        'model_state':   best_state,
+        'model_state':   final_state,
         'noise_info':    noise_info,
         'noisy_input_psnr': noisy_psnr,
     }
