@@ -1,7 +1,9 @@
 signal: 2d_sphere
 seeds:
 - 1234
-iters: 30000
+- 2024
+- 42
+iters: 10000
 eval_every: 100
 batch_size: 65536
 methods:
