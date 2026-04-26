@@ -1,68 +1,68 @@
 signal: 3d_bandlimited
 seeds:
 - 1234
-iters: 30000
+iters: 10000
 eval_every: 100
 batch_size: 65536
 methods:
   siren:
     hidden_features: 256
     hidden_layers: 5
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 0.0001
+    lr: 8.461660654108171e-05
+    first_omega_0: 20.497068915339533
+    hidden_omega_0: 51.57866169792782
     scheduler: cosine
   wire:
     hidden_features: 300
     hidden_layers: 3
-    first_omega_0: 20.0
-    hidden_omega_0: 20.0
-    scale: 10.0
-    lr: 0.005
+    lr: 0.008592194149378448
+    first_omega_0: 11.606806566135305
+    hidden_omega_0: 11.388693771097575
+    scale: 8.642210933778493
     scheduler: lambda
   gauss:
     hidden_features: 256
     hidden_layers: 3
-    scale: 10.0
-    lr: 0.001
+    lr: 0.0021022721960476465
+    scale: 4.034201959653068
     scheduler: cosine
   finer:
     hidden_features: 256
     hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 0.0001
+    lr: 0.00012736614540714364
+    first_omega_0: 5.40942395434765
+    hidden_omega_0: 44.33377393931699
     scheduler: cosine
   gf:
     hidden_features: 256
     hidden_layers: 3
-    scale: 3.0
-    omega: 10.0
-    first_bias_scale: 1.0
-    lr: 0.001
+    lr: 0.0008120786312608792
+    scale: 4.7255752678697345
+    omega: 5.51473028709464
+    first_bias_scale: 0.13853331319016965
     scheduler: cosine
   wf:
     hidden_features: 300
     hidden_layers: 3
-    scale: 2.0
-    omega_w: 4.0
-    omega: 5.0
-    first_bias_scale: 1.0
-    lr: 0.001
+    lr: 0.0005141912668404989
+    scale: 2.4629006522303456
+    omega_w: 5.7134051584169825
+    omega: 12.572777207071443
+    first_bias_scale: 2.1259798362150994
     scheduler: cosine
   staf:
     hidden_features: 256
     hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
+    lr: 0.0010954874733844564
+    first_omega_0: 6.7310822804833705
+    hidden_omega_0: 10.59201090898334
     tau: 5
     skip_conn: false
-    lr: 0.0001
     scheduler: cosine
   pemlp:
     hidden_features: 256
     hidden_layers: 4
-    lr: 0.0005
+    lr: 0.001722830456172326
     scheduler: cosine
   incode:
     hidden_features: 256
@@ -72,12 +72,12 @@ methods:
   sl2a:
     hidden_features: 256
     hidden_layers: 3
-    degree: 256
+    degree: 128
     rank: 128
     init_method: xavier_uniform
     linear_init_type: kaiming_uniform
     nonlinearity: relu
-    lr: 0.001
+    lr: 0.0016217067256007038
     scheduler: cosine
   cosmo:
     lr: 0.001926318572649933

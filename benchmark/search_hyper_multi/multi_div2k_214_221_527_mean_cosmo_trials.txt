@@ -1,0 +1,11 @@
+# task:         image_fitting (multi-image)
+# method:       cosmo
+# tag:          multi_div2k_214_221_527_mean
+# images:       ['0214', '0221', '0527']
+# agg:          mean
+# iters/trial:  4000
+# started:      2026-04-26 00:32:52
+# columns: trial, score, then per-image PSNRs, then searched params
+trial	score	psnr_0214	psnr_0221	psnr_0527	lr	beta0
+0	34.5472	33.8730	32.9052	36.8635	0.00241568	0.314833
+1	30.5003	28.8015	30.3196	32.3798	0.00750681	0.394826

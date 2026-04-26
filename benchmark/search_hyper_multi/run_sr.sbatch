@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=multi_sr
 #SBATCH --nodes=1
-#SBATCH --partition=liyues-a100
+#SBATCH --partition=vvh-l40s
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=96G

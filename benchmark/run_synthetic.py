@@ -65,31 +65,27 @@ _CUTOFFS = _generate_bandlimits(0.0015, 0.7, 9, base=300)
 
 # --------------- Fourier analysis helpers ----------------------------------
 
-_MAX_RADIUS_2D = np.sqrt(2) / 2  # max radial freq for unit-sampled 2D FFT
-
-
-def _radial_freq_mask_2d(shape, r_low, r_high):
-    fy = fft.fftfreq(shape[0])[:, None]
-    fx = fft.fftfreq(shape[1])[None, :]
-    radius = np.sqrt(fy ** 2 + fx ** 2)
+def _radial_freq_mask_nd(shape, r_low, r_high):
+    grids = np.meshgrid(*[fft.fftfreq(n) for n in shape], indexing='ij')
+    radius = np.sqrt(sum(g ** 2 for g in grids))
     return (r_low <= radius) & (radius < r_high)
 
 
 def compute_freq_band_errors(gt_norm, pred):
     """
     MSE and relative error in low (0-20%), mid (20-50%), high (50-100%) Fourier bands.
-    Returns dict with gt_energy_{band}, err_{band}, rel_err_{band} for each band.
+    Works for N-D arrays (2D and 3D). max_r = sqrt(ndim)/2.
     rel_err = err / gt_energy normalises out the fact that high-freq GT energy is
     naturally smaller, so bands are comparable on the same scale.
     """
-    max_r = _MAX_RADIUS_2D
-    gt_f  = fft.fft2(gt_norm)
-    err_f = gt_f - fft.fft2(pred)
+    max_r = np.sqrt(gt_norm.ndim) / 2
+    gt_f  = fft.fftn(gt_norm)
+    err_f = gt_f - fft.fftn(pred)
     out = {}
     for name, (r0, r1) in [('low',  (0.0,          0.20 * max_r)),
                             ('mid',  (0.20 * max_r, 0.50 * max_r)),
                             ('high', (0.50 * max_r, max_r + 1e-9))]:
-        mask = _radial_freq_mask_2d(gt_norm.shape, r0, r1)
+        mask = _radial_freq_mask_nd(gt_norm.shape, r0, r1)
         n = mask.sum()
         gt_e  = float((np.abs(gt_f[mask]) ** 2).mean())  if n else 0.0
         err_e = float((np.abs(err_f[mask]) ** 2).mean()) if n else 0.0
@@ -99,14 +95,13 @@ def compute_freq_band_errors(gt_norm, pred):
     return out
 
 
-def _compute_radial_spectrum(arr_2d, n_bins=200):
-    """Radial mean power spectrum. Returns (centers, mean_power) arrays."""
-    power = np.abs(fft.fft2(arr_2d)) ** 2
-    H, W = arr_2d.shape
-    fy = fft.fftfreq(H)[:, None]
-    fx = fft.fftfreq(W)[None, :]
-    radius = np.sqrt(fy ** 2 + fx ** 2)
-    bins = np.linspace(0, _MAX_RADIUS_2D, n_bins + 1)
+def _compute_radial_spectrum_nd(arr, n_bins=200):
+    """Radial mean power spectrum for N-D arrays. Returns (centers, mean_power)."""
+    power = np.abs(fft.fftn(arr)) ** 2
+    grids = np.meshgrid(*[fft.fftfreq(n) for n in arr.shape], indexing='ij')
+    radius = np.sqrt(sum(g ** 2 for g in grids))
+    max_r = np.sqrt(arr.ndim) / 2  # max radius for unit-sampled ND FFT
+    bins = np.linspace(0, max_r, n_bins + 1)
     centers = (bins[:-1] + bins[1:]) / 2
     mean_power = np.zeros(n_bins)
     for i in range(n_bins):
@@ -119,12 +114,13 @@ def _compute_radial_spectrum(arr_2d, n_bins=200):
 def compute_oob_leakage(pred, bandwidth_label):
     """
     Fraction of prediction's Fourier energy outside the GT bandwidth cutoff.
-    The GT signal was constructed with cutoff radius = _CUTOFFS[idx] / sqrt(2).
+    Works for N-D arrays. GT was constructed with cutoff radius = _CUTOFFS[idx] / sqrt(2)
+    (the sqrt(2) factor comes from _bandlimit_filter, which uses the same divisor for all dims).
     """
     idx = int(round(bandwidth_label * 10)) - 1
     cutoff_r = _CUTOFFS[idx] / np.sqrt(2)
-    power = np.abs(fft.fft2(pred)) ** 2
-    in_band = _radial_freq_mask_2d(pred.shape, 0.0, cutoff_r + 1e-10)
+    power = np.abs(fft.fftn(pred)) ** 2
+    in_band = _radial_freq_mask_nd(pred.shape, 0.0, cutoff_r + 1e-10)
     return float(power[~in_band].sum() / (power.sum() + 1e-12))
 
 
@@ -645,13 +641,12 @@ def main():
                     # Save best reconstruction as numpy for later analysis
                     np.save(os.path.join(run_dir, 'best_recon.npy'), best_output)
 
-                    # Save normalized GT alongside prediction (same value range)
-                    if not is_3d:
-                        gt_norm_2d = ((sig - sig.min())
-                                      / (sig.max() - sig.min() + 1e-12))
-                        gt_npy = os.path.join(run_dir, 'gt_norm.npy')
-                        if not os.path.exists(gt_npy):
-                            np.save(gt_npy, gt_norm_2d)
+                    # Save normalized GT alongside prediction (same value range, 2D and 3D)
+                    gt_norm_np = ((sig - sig.min())
+                                  / (sig.max() - sig.min() + 1e-12))
+                    gt_npy = os.path.join(run_dir, 'gt_norm.npy')
+                    if not os.path.exists(gt_npy):
+                        np.save(gt_npy, gt_norm_np)
 
                     ssim_str = f'  SSIM={best_ssim:.4f}' if best_ssim is not None else ''
                     print(f'  → PSNR={best_psnr:.2f}{ssim_str}  time={elapsed:.1f}s')
@@ -674,9 +669,9 @@ def main():
                         iter_writer.writerow(irow)
                     iter_f.flush()
 
-                    # Frequency analysis (2D signals with bandwidth only)
-                    if not is_3d and bw is not None and key not in freq_done:
-                        fm = compute_freq_band_errors(gt_norm_2d, best_output)
+                    # Frequency analysis (signals with bandwidth only)
+                    if bw is not None and key not in freq_done:
+                        fm = compute_freq_band_errors(gt_norm_np, best_output)
                         # OOB leakage is only meaningful when bandwidth_label maps
                         # to a Fourier cutoff (bandlimited signals); for sphere /
                         # sierpinski the label is not a frequency parameter.
@@ -690,11 +685,11 @@ def main():
                         freq_writer.writerow(frow)
                         freq_f.flush()
 
-                        # Radial power spectrum: GT / pred / residual
-                        centers, gt_power   = _compute_radial_spectrum(gt_norm_2d)
-                        _,       pred_power = _compute_radial_spectrum(best_output)
-                        residual = gt_norm_2d - best_output
-                        _,       res_power  = _compute_radial_spectrum(residual)
+                        # Radial power spectrum: GT / pred / residual (ND)
+                        centers, gt_power   = _compute_radial_spectrum_nd(gt_norm_np)
+                        _,       pred_power = _compute_radial_spectrum_nd(best_output)
+                        residual = gt_norm_np - best_output
+                        _,       res_power  = _compute_radial_spectrum_nd(residual)
                         np.savez(os.path.join(run_dir, 'radial_spectrum.npz'),
                                  centers=centers,
                                  gt_power=gt_power,
