@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=run_synthetic
-#SBATCH --partition=liyues-a100
+#SBATCH --partition=vvh-l40s
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32G

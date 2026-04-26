@@ -2,18 +2,20 @@ from . import image_fitting
 from . import image_denoising
 from . import image_inpainting
 from . import image_super_resolution
+from . import image_ct_reconstruction
 from . import shape_occupancy
 from . import sdf
 # `nerf` is imported lazily in get_task() because it requires torch-ngp's
 # CUDA extensions to be compiled, which we only do on GPU compute nodes.
 
 _task_dict = {
-    'image_fitting':          image_fitting,
-    'image_denoising':        image_denoising,
-    'image_inpainting':       image_inpainting,
-    'image_super_resolution': image_super_resolution,
-    'shape_occupancy':        shape_occupancy,
-    'sdf':                    sdf,
+    'image_fitting':            image_fitting,
+    'image_denoising':          image_denoising,
+    'image_inpainting':         image_inpainting,
+    'image_super_resolution':   image_super_resolution,
+    'image_ct_reconstruction':  image_ct_reconstruction,
+    'shape_occupancy':          shape_occupancy,
+    'sdf':                      sdf,
 }
 
 

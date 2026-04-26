@@ -479,11 +479,12 @@ def main():
     # Load per-signal YAML config; CLI flags override YAML which overrides BENCHMARK_DEFAULTS
     yaml_cfg = _load_signal_yaml(args.signal)
     yaml_methods = yaml_cfg.get('methods', {})
+    _ARG_DEFAULTS = {'iters': 1000, 'eval_every': 100, 'batch_size': 65536}
     if yaml_cfg:
         print(f'[config] loaded configs/experiments/synthetic/{args.signal}.yaml')
         # Apply top-level training overrides from YAML (only if not set via CLI)
         for key in ('iters', 'eval_every', 'batch_size'):
-            if key in yaml_cfg and getattr(args, key) == getattr(parse_args(), key):
+            if key in yaml_cfg and getattr(args, key) == _ARG_DEFAULTS[key]:
                 setattr(args, key, yaml_cfg[key])
 
     # Build effective per-method defaults: BENCHMARK_DEFAULTS ← YAML override

@@ -1,0 +1,27 @@
+task:            image_fitting
+method:          wire
+tag:             multi_div2k_214_221_527_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=34.1871
+  image[1]:     0221 (339x510)  best_PSNR=34.4353
+  image[2]:     0527 (261x510)  best_PSNR=36.8962
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-25 06:03:15
+best_score:      35.1729  (mean of per-image PSNRs)
+best_trial_#:    15
+n_params:        199,287
+
+searched params (Optuna):
+  lr: 0.005996560831034611
+  first_omega_0: 13.153783024521411
+  hidden_omega_0: 13.020440364613012
+  scale: 8.046128651320604
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.scheduler: cosine

@@ -1,0 +1,28 @@
+task:            image_fitting
+method:          wf
+tag:             multi_div2k_214_221_527_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=35.8557
+  image[1]:     0221 (339x510)  best_PSNR=36.7980
+  image[2]:     0527 (261x510)  best_PSNR=39.8609
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-25 15:18:33
+best_score:      37.5049  (mean of per-image PSNRs)
+best_trial_#:    12
+n_params:        199,287
+
+searched params (Optuna):
+  lr: 0.00037196486564335443
+  scale: 6.436708700406155
+  omega_w: 7.693313139389444
+  omega: 3.7394525013225755
+  first_bias_scale: 1.973355514954382
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.scheduler: cosine
