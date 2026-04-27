@@ -29,7 +29,7 @@ python benchmark/search_hyper_multi/hparam_search_inpaint_multi.py \
     --data_root data/validation \
     --image_indices 214 221 527 \
     --downscale 4 \
-    --methods siren wire gauss finer gf wf staf pemlp incode sl2a cosmo \
+    --methods siren wire gauss finer gf wf staf relu incode sl2a cosmo \
     --n_trials 20 \
     --iters 4000 \
     --batch_size -1 \

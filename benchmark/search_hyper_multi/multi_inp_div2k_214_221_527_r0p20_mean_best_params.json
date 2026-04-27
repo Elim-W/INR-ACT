@@ -1,0 +1,27 @@
+{
+  "relu": {
+    "best_score": 20.4488951365153,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 18.969066619873047,
+      "0221": 19.573871612548828,
+      "0527": 22.803747177124023
+    },
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.004015543686135838
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3
+    },
+    "training": {
+      "sampling_ratio": 0.2,
+      "mask_seed": 0,
+      "lr": 0.004015543686135838,
+      "scheduler": "cosine"
+    }
+  }
+}

@@ -39,7 +39,7 @@ SEARCH_SPACES = {
     'gf':     {'lr': ('float_log', 1e-4, 1e-2), 'scale': ('float', 0.5, 10.0), 'omega': ('float', 1.0, 30.0), 'first_bias_scale': ('float', 0.1, 5.0)},
     'wf':     {'lr': ('float_log', 1e-4, 1e-2), 'scale': ('float', 0.5, 10.0), 'omega_w': ('float', 1.0, 15.0), 'omega': ('float', 1.0, 15.0), 'first_bias_scale': ('float', 0.1, 5.0)},
     'staf':   {'lr': ('float_log', 1e-5, 1e-2), 'first_omega_0': ('float', 5.0, 60.0), 'hidden_omega_0': ('float', 5.0, 60.0)},
-    'pemlp':  {'lr': ('float_log', 1e-4, 1e-2)},
+    'relu':   {'lr': ('float_log', 1e-4, 1e-2)},
     'incode': {'lr': ('float_log', 1e-5, 1e-2), 'first_omega_0': ('float', 5.0, 60.0), 'hidden_omega_0': ('float', 5.0, 60.0)},
     'sl2a':   {'lr': ('float_log', 1e-4, 1e-2)},
     'cosmo':  {'lr': ('float_log', 1e-3, 1e-1), 'beta0': ('float', 0.01, 0.5)},

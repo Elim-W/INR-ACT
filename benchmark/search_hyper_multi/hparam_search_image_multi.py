@@ -91,7 +91,7 @@ SEARCH_SPACES = {
         'first_omega_0':  ('float', 5.0, 60.0),
         'hidden_omega_0': ('float', 5.0, 60.0),
     },
-    'pemlp': {
+    'relu': {
         'lr':             ('float_log', 1e-4, 1e-2),
     },
     'incode': {

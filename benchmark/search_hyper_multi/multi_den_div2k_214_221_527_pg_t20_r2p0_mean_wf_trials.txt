@@ -1,0 +1,12 @@
+# task: image_denoising (multi)
+# method: wf
+# tag: multi_den_div2k_214_221_527_pg_t20_r2p0_mean
+# images: ['0214', '0221', '0527']
+# noise_type: poisson_gaussian
+# noise_seed: 0
+# noise_tau: 20.0
+# noise_readout_snr: 2.0
+# agg: mean
+# iters/trial: 4000
+# started: 2026-04-27 01:28:55
+trial	score	psnr_0214	psnr_0221	psnr_0527	lr	scale	omega_w	omega	first_bias_scale

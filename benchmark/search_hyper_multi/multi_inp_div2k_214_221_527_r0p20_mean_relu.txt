@@ -1,0 +1,28 @@
+task:            image_inpainting
+method:          relu
+tag:             multi_inp_div2k_214_221_527_r0p20_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=18.9691
+  image[1]:     0221 (339x510)  best_PSNR=19.5739
+  image[2]:     0527 (261x510)  best_PSNR=22.8037
+sampling_ratio:  0.2
+mask_seed:       0
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-26 22:54:30
+best_score:      20.4489  (mean of per-image PSNRs)
+best_trial_#:    7
+n_params:        198,915
+
+searched params (Optuna):
+  lr: 0.004015543686135838
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

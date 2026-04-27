@@ -1,0 +1,34 @@
+task:            image_denoising
+method:          finer
+tag:             multi_den_div2k_214_221_527_pg_t20_r2p0_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=23.3924
+  image[1]:     0221 (339x510)  best_PSNR=24.7322
+  image[2]:     0527 (261x510)  best_PSNR=25.3837
+noise_type       poisson_gaussian
+noise_seed       0
+noise_tau        20.0
+noise_readout_snr 2.0
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-26 23:34:46
+best_score:      24.5028  (mean of per-image PSNRs)
+best_trial_#:    11
+n_params:        198,915
+
+searched params (Optuna):
+  lr: 1.2601989174753526e-05
+  first_omega_0: 10.362158137662984
+  hidden_omega_0: 45.52204570169274
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.noise_type: poisson_gaussian
+  training.noise_seed: 0
+  training.noise_tau: 20.0
+  training.noise_readout_snr: 2.0
+  training.scheduler: cosine

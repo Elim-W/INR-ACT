@@ -1,0 +1,16 @@
+[W 2026-04-25 11:11:07,950] Trial 1 failed with parameters: {'lr': 0.00035090148857968553, 'scale': 3.1264104238594186, 'omega_w': 12.22621048549027, 'omega': 14.413950951571872, 'first_bias_scale': 4.392069910236264} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 11:11:07,951] Trial 1 failed with value nan.
+[W 2026-04-25 12:06:07,243] Trial 5 failed with parameters: {'lr': 0.002007965683910147, 'scale': 4.273424488398465, 'omega_w': 12.042222001170437, 'omega': 5.435705710364197, 'first_bias_scale': 2.883683397867739} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 12:06:07,243] Trial 5 failed with value nan.
+[W 2026-04-25 12:19:52,171] Trial 6 failed with parameters: {'lr': 0.005473369642905612, 'scale': 4.643647527008954, 'omega_w': 12.230066989122227, 'omega': 3.0127355432039042, 'first_bias_scale': 3.550878758479844} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 12:19:52,172] Trial 6 failed with value nan.
+[W 2026-04-25 12:33:37,094] Trial 7 failed with parameters: {'lr': 0.002565444456718595, 'scale': 2.5785250039038417, 'omega_w': 13.948146800617911, 'omega': 7.189970575658473, 'first_bias_scale': 4.555648198965115} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 12:33:37,094] Trial 7 failed with value nan.
+[W 2026-04-25 13:01:06,440] Trial 9 failed with parameters: {'lr': 0.001165790000863127, 'scale': 0.9115785956006331, 'omega_w': 8.86006312088757, 'omega': 5.61535823869281, 'first_bias_scale': 2.56453748225183} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 13:01:06,440] Trial 9 failed with value nan.
+[W 2026-04-25 13:28:35,856] Trial 11 failed with parameters: {'lr': 0.006671842305866797, 'scale': 8.009979264041817, 'omega_w': 14.88914052663706, 'omega': 14.423224670140131, 'first_bias_scale': 3.980624262929035} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 13:28:35,857] Trial 11 failed with value nan.
+[W 2026-04-25 14:51:03,088] Trial 17 failed with parameters: {'lr': 0.00484809602033841, 'scale': 8.708018158018321, 'omega_w': 11.84347073713949, 'omega': 4.430552570595261, 'first_bias_scale': 1.4028094207742152} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 14:51:03,088] Trial 17 failed with value nan.
+[W 2026-04-25 15:18:33,312] Trial 19 failed with parameters: {'lr': 0.0026951235660089856, 'scale': 8.024301672035755, 'omega_w': 11.607709702378733, 'omega': 14.93359878505069, 'first_bias_scale': 2.29010499388942} because of the following error: The value nan is not acceptable.
+[W 2026-04-25 15:18:33,313] Trial 19 failed with value nan.

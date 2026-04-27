@@ -14,3 +14,4 @@
 [W 2026-04-25 14:51:03,088] Trial 17 failed with value nan.
 [W 2026-04-25 15:18:33,312] Trial 19 failed with parameters: {'lr': 0.0026951235660089856, 'scale': 8.024301672035755, 'omega_w': 11.607709702378733, 'omega': 14.93359878505069, 'first_bias_scale': 2.29010499388942} because of the following error: The value nan is not acceptable.
 [W 2026-04-25 15:18:33,313] Trial 19 failed with value nan.
+[2026-04-26T16:03:26.620] error: *** JOB 27126192 ON lh1300 CANCELLED AT 2026-04-26T16:03:26 DUE to SIGNAL Terminated ***

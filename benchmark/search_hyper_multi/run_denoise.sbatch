@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=96G
-#SBATCH --time=24:00:00
+#SBATCH --time=100:00:00
 #SBATCH --output=/scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/slurm_denoise_%j.out
 #SBATCH --error=/scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/slurm_denoise_%j.err
 #SBATCH --mail-type=BEGIN,END,FAIL
@@ -29,7 +29,7 @@ python benchmark/search_hyper_multi/hparam_search_denoise_multi.py \
     --data_root data/validation \
     --image_indices 214 221 527 \
     --downscale 4 \
-    --methods siren wire gauss finer gf wf staf pemlp incode sl2a cosmo \
+    --methods finer gf wf staf relu incode sl2a cosmo \
     --n_trials 20 \
     --iters 4000 \
     --batch_size -1 \

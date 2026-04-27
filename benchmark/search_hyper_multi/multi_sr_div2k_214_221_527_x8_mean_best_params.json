@@ -1,0 +1,360 @@
+{
+  "relu": {
+    "best_score": 18.552244504292805,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 15.898442268371582,
+      "0221": 19.045360565185547,
+      "0527": 20.71293067932129
+    },
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.004015543686135838
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.004015543686135838,
+      "scheduler": "cosine"
+    }
+  },
+  "siren": {
+    "best_score": 21.186002731323242,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.298105239868164,
+      "0221": 23.269264221191406,
+      "0527": 22.990638732910156
+    },
+    "n_params": 198915,
+    "searched": {
+      "lr": 7.314877088359556e-05,
+      "first_omega_0": 58.14707363160215,
+      "hidden_omega_0": 59.82435743032896
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 58.14707363160215,
+      "hidden_omega_0": 59.82435743032896,
+      "outermost_linear": true
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 7.314877088359556e-05,
+      "scheduler": "cosine"
+    }
+  },
+  "wire": {
+    "best_score": 19.76239077250163,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 16.83734893798828,
+      "0221": 21.307350158691406,
+      "0527": 21.142473220825195
+    },
+    "n_params": 199287,
+    "searched": {
+      "lr": 0.006388194897101019,
+      "first_omega_0": 14.13559407207673,
+      "hidden_omega_0": 9.41783121452076,
+      "scale": 23.389185921415706
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 14.13559407207673,
+      "hidden_omega_0": 9.41783121452076,
+      "scale": 23.389185921415706
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.006388194897101019,
+      "scheduler": "cosine"
+    }
+  },
+  "gauss": {
+    "best_score": 21.12350336710612,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.282438278198242,
+      "0221": 23.121688842773438,
+      "0527": 22.96638298034668
+    },
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.001328540553245974,
+      "scale": 7.986182058096781
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "scale": 7.986182058096781
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.001328540553245974,
+      "scheduler": "cosine"
+    }
+  },
+  "finer": {
+    "best_score": 21.17342249552409,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.27806854248047,
+      "0221": 23.269014358520508,
+      "0527": 22.97318458557129
+    },
+    "n_params": 198915,
+    "searched": {
+      "lr": 3.754553966912877e-05,
+      "first_omega_0": 39.21598240719075,
+      "hidden_omega_0": 29.075025645391296
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 39.21598240719075,
+      "hidden_omega_0": 29.075025645391296
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 3.754553966912877e-05,
+      "scheduler": "cosine"
+    }
+  },
+  "gf": {
+    "best_score": 20.38964335123698,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.039884567260742,
+      "0221": 22.297531127929688,
+      "0527": 21.831514358520508
+    },
+    "n_params": 198915,
+    "searched": {
+      "lr": 0.00010761709355041595,
+      "scale": 4.009376826043058,
+      "omega": 1.5430664660493019,
+      "first_bias_scale": 0.5560816818020646
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "scale": 4.009376826043058,
+      "omega": 1.5430664660493019,
+      "first_bias_scale": 0.5560816818020646
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.00010761709355041595,
+      "scheduler": "cosine"
+    }
+  },
+  "wf": {
+    "best_score": 21.09035364786784,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.249631881713867,
+      "0221": 23.128265380859375,
+      "0527": 22.893163681030273
+    },
+    "n_params": 199287,
+    "searched": {
+      "lr": 0.00016741279038560018,
+      "scale": 6.268340209075603,
+      "omega_w": 8.92322500270744,
+      "omega": 1.094696867860039,
+      "first_bias_scale": 3.125464373141056
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "scale": 6.268340209075603,
+      "omega_w": 8.92322500270744,
+      "omega": 1.094696867860039,
+      "first_bias_scale": 3.125464373141056
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.00016741279038560018,
+      "scheduler": "cosine"
+    }
+  },
+  "staf": {
+    "best_score": 20.965246836344402,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.25930404663086,
+      "0221": 22.858051300048828,
+      "0527": 22.778385162353516
+    },
+    "n_params": 198975,
+    "searched": {
+      "lr": 0.00048260137861767664,
+      "first_omega_0": 32.66957409192953,
+      "hidden_omega_0": 5.757264727487524
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 32.66957409192953,
+      "hidden_omega_0": 5.757264727487524,
+      "tau": 5,
+      "skip_conn": false
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.00048260137861767664,
+      "scheduler": "cosine"
+    }
+  },
+  "pemlp": {
+    "best_score": 17.163095156351726,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 14.475906372070312,
+      "0221": 15.747384071350098,
+      "0527": 21.265995025634766
+    },
+    "n_params": 209155,
+    "searched": {
+      "lr": 0.001754759256702473
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "use_pe": true,
+      "N_freqs": 10
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.001754759256702473,
+      "scheduler": "cosine"
+    }
+  },
+  "incode": {
+    "best_score": 21.196409225463867,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.303850173950195,
+      "0221": 23.284000396728516,
+      "0527": 23.00137710571289
+    },
+    "n_params": 892455,
+    "searched": {
+      "lr": 1.0426649486130482e-05,
+      "first_omega_0": 50.39340186887212,
+      "hidden_omega_0": 47.74807934774146
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "first_omega_0": 50.39340186887212,
+      "hidden_omega_0": 47.74807934774146
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 1.0426649486130482e-05,
+      "scheduler": "cosine"
+    }
+  },
+  "sl2a": {
+    "best_score": 21.06603240966797,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 17.238744735717773,
+      "0221": 23.156944274902344,
+      "0527": 22.80240821838379
+    },
+    "n_params": 264707,
+    "searched": {
+      "lr": 0.0004749700210868798
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "degree": 128,
+      "rank": 128,
+      "init_method": "xavier_uniform",
+      "linear_init_type": "kaiming_uniform",
+      "nonlinearity": "relu"
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.0004749700210868798,
+      "scheduler": "cosine"
+    }
+  },
+  "cosmo": {
+    "best_score": 18.966012318929035,
+    "agg": "mean",
+    "per_image_psnr": {
+      "0214": 16.345783233642578,
+      "0221": 20.027456283569336,
+      "0527": 20.524797439575195
+    },
+    "n_params": 1090734,
+    "searched": {
+      "lr": 0.0022563176718752376,
+      "beta0": 0.056339043575325765
+    },
+    "model": {
+      "in_features": 2,
+      "hidden_features": 256,
+      "hidden_layers": 3,
+      "out_features": 3,
+      "beta0": 0.056339043575325765,
+      "T_range": [
+        0.5,
+        5.0
+      ],
+      "c_range": [
+        0.0,
+        3.0
+      ]
+    },
+    "training": {
+      "scale_factor": 8,
+      "eval_epoch": 0,
+      "lr": 0.0022563176718752376,
+      "scheduler": "cosine"
+    }
+  }
+}

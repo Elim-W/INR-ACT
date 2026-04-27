@@ -1,0 +1,31 @@
+task:            image_inpainting
+method:          wire
+tag:             multi_inp_div2k_214_221_527_r0p20_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=19.5820
+  image[1]:     0221 (339x510)  best_PSNR=20.3540
+  image[2]:     0527 (261x510)  best_PSNR=22.3788
+sampling_ratio:  0.2
+mask_seed:       0
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-25 19:10:12
+best_score:      20.7716  (mean of per-image PSNRs)
+best_trial_#:    11
+n_params:        199,287
+
+searched params (Optuna):
+  lr: 0.006388194897101019
+  first_omega_0: 14.13559407207673
+  hidden_omega_0: 9.41783121452076
+  scale: 23.389185921415706
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  training.sampling_ratio: 0.2
+  training.mask_seed: 0
+  training.scheduler: cosine

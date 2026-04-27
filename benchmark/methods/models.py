@@ -88,8 +88,8 @@ BENCHMARK_DEFAULTS = {
         lr=5e-4, scheduler='cosine',
     ),
     'pemlp': dict(
+        # Plain ReLU MLP (no positional encoding) — alias of 'relu'.
         hidden_features=256, hidden_layers=3,
-        use_pe=True, N_freqs=10,
         lr=5e-4, scheduler='cosine',
     ),
     'incode': dict(

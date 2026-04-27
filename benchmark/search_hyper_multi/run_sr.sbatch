@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=multi_sr
 #SBATCH --nodes=1
-#SBATCH --partition=vvh-l40s
+#SBATCH --account=liyues
+#SBATCH --partition=liyues-a100
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=96G
@@ -29,7 +30,7 @@ python benchmark/search_hyper_multi/hparam_search_sr_multi.py \
     --data_root data/validation \
     --image_indices 214 221 527 \
     --downscale 1 \
-    --methods siren wire gauss finer gf wf staf pemlp incode sl2a cosmo \
+    --methods siren wire gauss finer gf wf staf relu incode sl2a cosmo \
     --n_trials 20 \
     --iters 4000 \
     --batch_size -1 \

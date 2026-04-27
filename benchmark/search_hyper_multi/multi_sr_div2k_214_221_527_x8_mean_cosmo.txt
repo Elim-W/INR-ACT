@@ -1,0 +1,31 @@
+task:            image_super_resolution
+method:          cosmo
+tag:             multi_sr_div2k_214_221_527_x8_mean
+n_images:        3
+  image[0]:     0214 (1356x2040)  best_HR_PSNR=16.3458
+  image[1]:     0221 (1356x2040)  best_HR_PSNR=20.0275
+  image[2]:     0527 (1044x2040)  best_HR_PSNR=20.5248
+scale_factor:    8
+eval_epoch:      0
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-27 00:10:58
+best_score:      18.9660  (mean of per-image HR-PSNRs)
+best_trial_#:    14
+n_params:        1,090,734
+
+searched params (Optuna):
+  lr: 0.0022563176718752376
+  beta0: 0.056339043575325765
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.T_range: (0.5, 5.0)
+  model.c_range: (0.0, 3.0)
+  training.scale_factor: 8
+  training.eval_epoch: 0
+  training.scheduler: cosine

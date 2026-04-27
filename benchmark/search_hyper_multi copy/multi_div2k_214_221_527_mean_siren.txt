@@ -1,0 +1,27 @@
+task:            image_fitting
+method:          siren
+tag:             multi_div2k_214_221_527_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=38.9303
+  image[1]:     0221 (339x510)  best_PSNR=39.7406
+  image[2]:     0527 (261x510)  best_PSNR=40.0950
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-25 02:34:06
+best_score:      39.5887  (mean of per-image PSNRs)
+best_trial_#:    4
+n_params:        198,915
+
+searched params (Optuna):
+  lr: 0.0011230233998349253
+  first_omega_0: 44.19861148405951
+  hidden_omega_0: 25.36379151347172
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.outermost_linear: True
+  training.scheduler: cosine
