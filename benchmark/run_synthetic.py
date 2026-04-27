@@ -620,13 +620,11 @@ def main():
                     n_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
                     print(f'  params={n_params:,}  lr={train_cfg["lr"]}')
 
-                    # INCODE needs GT image for its Harmonizer (ResNet expects 3-ch input)
-                    if hasattr(model, 'set_gt'):
+                    # INCODE needs GT image for its Harmonizer (ResNet expects 3-ch 2D input)
+                    if hasattr(model, 'set_gt') and not is_3d:
                         gt_t = torch.from_numpy(sig)
                         if gt_t.dim() == 2:
                             gt_t = gt_t[None, None].expand(1, 3, -1, -1)
-                        elif gt_t.dim() == 3:
-                            gt_t = gt_t[None].expand(1, 3, -1, -1)
                         model.set_gt(gt_t.to(device))
 
                     best_psnr, best_ssim, elapsed, iter_list, psnr_list, best_output = train_one(
