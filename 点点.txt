@@ -33,3 +33,11 @@ git commit -m "记录修改了什么"
 git push
 
 bash benchmark/search_hyper/run_two_images.sh
+
+python -u benchmark/hparam_search.py \
+    --signal 3d_sphere \
+    --methods cosmo \
+    --n_trials 20 \
+    --iters 10000 \
+    --batch_size 65536 \
+    --study_dir results/hparam_search/optuna_db
