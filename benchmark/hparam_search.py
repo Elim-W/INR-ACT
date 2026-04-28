@@ -142,14 +142,12 @@ def run_trial(method, params, signal, coords, device, iters, batch_size, seed):
         **model_kw,
     ).to(device)
 
-    # incode / cosmo need GT image for their Harmonizer (2D ResNet, expects [1,3,H,W])
     if hasattr(model, 'set_gt'):
         gt_t = torch.from_numpy(signal)
         if gt_t.dim() == 2:
-            gt_t = gt_t[None, None].expand(1, 3, -1, -1)
+            gt_t = gt_t[None, None].expand(1, 3, -1, -1)      # (1,3,H,W)
         elif gt_t.dim() == 3:
-            mid = gt_t.shape[0] // 2
-            gt_t = gt_t[mid][None, None].expand(1, 3, -1, -1)
+            gt_t = gt_t[None, None].expand(1, 3, -1, -1, -1)  # (1,3,D,H,W)
         model.set_gt(gt_t.to(device))
 
     signal_flat = torch.from_numpy(signal).reshape(-1).to(device)

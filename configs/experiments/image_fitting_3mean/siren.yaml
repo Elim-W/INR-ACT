@@ -1,0 +1,33 @@
+task: image_fitting
+method: siren
+dataset: div2k
+data_root: data/validation
+image_indices: []
+downscale: 4
+device: auto
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 3
+  outermost_linear: true
+  first_omega_0: 44.19861148405951
+  hidden_omega_0: 25.36379151347172
+training:
+  scheduler: cosine
+  lr: 0.0011230233998349253
+  num_epochs: 4000
+  log_every: 400
+  save_every: 4000
+output:
+  save_dir: results/image_fitting_3mean/siren
+  save_model: true
+  save_images: true
+_search:
+  tag: multi_div2k_214_221_527_mean
+  results_dir: benchmark/search_hyper_multi
+  image_indices:
+  - 214
+  - 221
+  - 527
+  best_score: 39.5887

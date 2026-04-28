@@ -2,35 +2,37 @@ import numpy as np
 import torch
 from torch import nn
 import torchvision.models as tv_models
+import torchvision.models.video as tv_video
 
 
 # ---------------------------------------------------------------------------
-# Harmonizer (image → 4 modulation scalars)
+# Harmonizer (GT → 4 modulation scalars)
 # ---------------------------------------------------------------------------
 
 class Harmonizer(nn.Module):
     """
-    Extracts image-level features with a truncated ResNet and maps them to
-    4 scalar modulation parameters (a, b, c, d) for the composer network.
+    image-based tasks:  truncated ResNet-34   (first 5 layers) + AdaptiveAvgPool1d
+    3D occupancy task:  truncated ResNet3D-18 (first 5 layers) + AdaptiveAvgPool3d
 
-    a, b: log-scale amplitude and frequency multipliers  → exp(a), exp(b)
-    c:    phase shift
-    d:    output bias
+    Follows the original INCODE third-party implementation.
     """
 
-    def __init__(self, backbone='resnet18', truncate_at=6,
-                 feat_channels=128,
-                 mlp_hidden_channels=(64, 32, 4),
-                 mlp_bias=0.1):
+    def __init__(self, is_3d=False, truncate_at=5,
+                 mlp_hidden_channels=(64, 32, 4), mlp_bias=0.1):
         super().__init__()
+        self.is_3d = is_3d
 
-        base = getattr(tv_models, backbone)(weights=None)
-        # children: conv1, bn1, relu, maxpool, layer1, layer2, layer3, layer4, avgpool, fc
-        children = list(base.children())
-        self.feature_extractor = nn.Sequential(*children[:truncate_at])
-        self.gap = nn.AdaptiveAvgPool2d(1)
+        if is_3d:
+            base = tv_video.r3d_18(weights=None)
+            feat_channels = 512   # layer4 output of r3d_18
+            self.gap = nn.AdaptiveAvgPool3d((1, 1, 1))
+        else:
+            base = tv_models.resnet34(weights=None)
+            feat_channels = 64    # layer1 output of resnet34
+            self.gap = nn.AdaptiveAvgPool1d(1)
 
-        # small MLP: feat_channels → ... → 4
+        self.feature_extractor = nn.Sequential(*list(base.children())[:truncate_at])
+
         layers = []
         in_dim = feat_channels
         for h in mlp_hidden_channels[:-1]:
@@ -47,18 +49,21 @@ class Harmonizer(nn.Module):
                 nn.init.constant_(m.bias, bias_val)
 
     def forward(self, img):
-        """
-        img: (1, C, H, W) ground-truth image tensor.
-        Returns: (a, b, c, d) each scalar.
-        """
-        feats = self.feature_extractor(img)       # (1, C', h', w')
-        pooled = self.gap(feats).flatten(1)        # (1, C')
-        coef = self.mlp(pooled)                    # (1, 4)
-        return coef[0]                             # (4,)
+        feats = self.feature_extractor(img)
+        if self.is_3d:
+            # (1, C, D', H', W') → AdaptiveAvgPool3d → (1, C, 1, 1, 1) → (1, C)
+            pooled = self.gap(feats)[:, :, 0, 0, 0]
+        else:
+            # (1, C, H', W') → flatten spatial → AdaptiveAvgPool1d → (1, C)
+            pooled = self.gap(
+                feats.view(feats.size(0), feats.size(1), -1)
+            )[..., 0]
+        coef = self.mlp(pooled)   # (1, 4)
+        return coef[0]            # (4,)
 
 
 # ---------------------------------------------------------------------------
-# Composer SineLayer  (accepts 4 modulation params)
+# Composer SineLayer
 # ---------------------------------------------------------------------------
 
 class SineLayer(nn.Module):
@@ -99,43 +104,33 @@ class INR(nn.Module):
     INCODE: Implicit Neural Conditioning with Prior Knowledge Encodings.
     Kazerouni et al., WACV 2024.
 
-    Two-module design:
-      - Harmonizer: truncated ResNet + MLP → 4 modulation scalars from GT image
-      - Composer: modulated SIREN using those 4 scalars
+    Backbone selection follows the original paper / third-party code:
+      in_features == 2  →  ResNet-34   (image tasks, first 5 layers)
+      in_features == 3  →  ResNet3D-18 (3D occupancy, first 5 layers)
 
-    The GT image must be set via set_gt(img) before training/inference.
-
-    Args:
-        gt_channels:        channels of GT image (default 3 for RGB)
-        backbone:           torchvision backbone for feature extraction
-        truncate_at:        truncate backbone at this child index
-        feat_channels:      output channels of the truncated backbone
-        mlp_hidden_channels: hidden dims of harmonizer MLP (last must be 4)
+    Call set_gt(gt_tensor) before training/inference:
+      2D: gt_tensor shape (1, 3, H, W)
+      3D: gt_tensor shape (1, 3, D, H, W)
     """
 
     def __init__(self, in_features, hidden_features, hidden_layers,
                  out_features, outermost_linear=True,
                  first_omega_0=30.0, hidden_omega_0=30.0,
-                 gt_channels=3,
-                 backbone='resnet18', truncate_at=6,
-                 feat_channels=128,
                  mlp_hidden_channels=(64, 32, 4),
                  mlp_bias=0.1,
                  **kwargs):
         super().__init__()
 
+        is_3d = (in_features == 3)
         self.hidden_layers = hidden_layers
 
         self.harmonizer = Harmonizer(
-            backbone=backbone,
-            truncate_at=truncate_at,
-            feat_channels=feat_channels,
+            is_3d=is_3d,
+            truncate_at=5,
             mlp_hidden_channels=mlp_hidden_channels,
             mlp_bias=mlp_bias,
         )
 
-        # Composer network (manually iterated — not nn.Sequential because
-        # each layer needs the (a,b,c,d) params from the harmonizer)
         self.composer = nn.ModuleList()
         self.composer.append(SineLayer(in_features, hidden_features,
                                        is_first=True, omega_0=first_omega_0))
@@ -154,17 +149,17 @@ class INR(nn.Module):
                                            is_first=False, omega_0=hidden_omega_0))
 
         self.outermost_linear = outermost_linear
-        self._gt = None   # set by set_gt()
+        self._gt = None
 
-    def set_gt(self, img_tensor):
+    def set_gt(self, gt_tensor):
         """
-        Register the ground-truth image used by the harmonizer.
-        img_tensor: (1, C, H, W) float tensor in [0,1] or [-1,1].
+        2D: gt_tensor (1, 3, H, W)
+        3D: gt_tensor (1, 3, D, H, W)
         """
-        self._gt = img_tensor
+        self._gt = gt_tensor
 
     def forward(self, coords):
-        assert self._gt is not None, "Call set_gt(img) before forward()."
+        assert self._gt is not None, "Call set_gt(gt) before forward()."
 
         a, b, c, d = self.harmonizer(self._gt)
 
@@ -172,7 +167,6 @@ class INR(nn.Module):
         for i in range(self.hidden_layers + 1):
             x = self.composer[i](x, a, b, c, d)
 
-        # final layer (linear or sine)
         if self.outermost_linear:
             x = self.composer[self.hidden_layers + 1](x)
         else:

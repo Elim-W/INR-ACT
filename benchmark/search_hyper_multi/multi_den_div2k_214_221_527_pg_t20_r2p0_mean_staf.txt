@@ -1,0 +1,36 @@
+task:            image_denoising
+method:          staf
+tag:             multi_den_div2k_214_221_527_pg_t20_r2p0_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=22.3146
+  image[1]:     0221 (339x510)  best_PSNR=23.5122
+  image[2]:     0527 (261x510)  best_PSNR=24.0262
+noise_type       poisson_gaussian
+noise_seed       0
+noise_tau        20.0
+noise_readout_snr 2.0
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-27 10:57:58
+best_score:      23.2843  (mean of per-image PSNRs)
+best_trial_#:    13
+n_params:        198,975
+
+searched params (Optuna):
+  lr: 0.00016629190174868765
+  first_omega_0: 15.523751416150342
+  hidden_omega_0: 5.526002401211933
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.tau: 5
+  model.skip_conn: False
+  training.noise_type: poisson_gaussian
+  training.noise_seed: 0
+  training.noise_tau: 20.0
+  training.noise_readout_snr: 2.0
+  training.scheduler: cosine

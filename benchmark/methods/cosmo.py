@@ -5,29 +5,39 @@ Pandula et al., arXiv 2505.11640
 Core activation: raised cosine impulse response with complex modulation
     f(x) = (1/T) * sinc(x/T) * cos(π*β*x/T) / (1-(2β*x/T)²) * exp(2π*c*x*j)
 
-T and c are predicted per-layer from GT image by a Harmonizer (ResNet + MLP).
+T and c are predicted per-layer from GT by a Harmonizer:
+  image-based tasks:  ResNet-34   (first 5 layers) + AdaptiveAvgPool2d
+  3D occupancy task:  ResNet3D-18 (first 5 layers) + AdaptiveAvgPool3d
 """
 
 import numpy as np
 import torch
 from torch import nn
 import torchvision.models as tv_models
+import torchvision.models.video as tv_video
 
 
 class Harmonizer(nn.Module):
-    """Truncated ResNet + MLP → per-layer (T, c) modulation parameters."""
+    """Truncated ResNet (2D or 3D) + MLP → per-layer (T, c) modulation parameters."""
 
-    def __init__(self, num_layers, backbone='resnet18', truncate_at=6,
-                 feat_channels=128, mlp_bias=0.1,
-                 T_range=(0.5, 5.0), c_range=(0.0, 3.0)):
+    def __init__(self, num_layers, is_3d=False, truncate_at=5,
+                 mlp_bias=0.1, T_range=(0.5, 5.0), c_range=(0.0, 3.0)):
         super().__init__()
         self.T_range = T_range
         self.c_range = c_range
-        self.num_layers = num_layers  # number of RC layers (first + hidden)
+        self.num_layers = num_layers
+        self.is_3d = is_3d
 
-        base = getattr(tv_models, backbone)(weights=None)
+        if is_3d:
+            base = tv_video.r3d_18(weights=None)
+            feat_channels = 512   # output channels of layer4 in r3d_18
+            self.gap = nn.AdaptiveAvgPool3d((1, 1, 1))
+        else:
+            base = tv_models.resnet34(weights=None)
+            feat_channels = 64    # output channels of layer1 in resnet34
+            self.gap = nn.AdaptiveAvgPool2d(1)
+
         self.feature_extractor = nn.Sequential(*list(base.children())[:truncate_at])
-        self.gap = nn.AdaptiveAvgPool2d(1)
 
         out_dim = num_layers * 2  # T and c for each layer
         self.mlp = nn.Sequential(
@@ -44,11 +54,17 @@ class Harmonizer(nn.Module):
                 nn.init.constant_(m.bias, bias_val)
 
     def forward(self, img):
-        """img: (1, 3, H, W). Returns T_list, c_list each of length num_layers."""
+        """
+        img: (1, 3, H, W) for 2D  or  (1, 3, D, H, W) for 3D.
+        Returns T_list, c_list each of length num_layers.
+        """
         feats = self.feature_extractor(img)
-        pooled = self.gap(feats).flatten(1)       # (1, feat_channels)
-        coef = self.mlp(pooled)[0]                # (num_layers * 2,)
-        coef = coef.view(self.num_layers, 2)       # (num_layers, 2)
+        if self.is_3d:
+            pooled = self.gap(feats)[:, :, 0, 0, 0]   # (1, feat_channels)
+        else:
+            pooled = self.gap(feats).flatten(1)         # (1, feat_channels)
+        coef = self.mlp(pooled)[0]                      # (num_layers * 2,)
+        coef = coef.view(self.num_layers, 2)
 
         T = torch.sigmoid(coef[:, 0]) * (self.T_range[1] - self.T_range[0]) + self.T_range[0]
         c = torch.sigmoid(coef[:, 1]) * (self.c_range[1] - self.c_range[0]) + self.c_range[0]
@@ -102,32 +118,28 @@ class INR(nn.Module):
     """
     COSMO-INR (COSMO-RC variant).
 
-    Call set_gt(img_tensor) before training — the Harmonizer extracts
-    per-layer (T, c) modulation params from the GT image each forward pass.
+    Backbone selection follows the original paper:
+      in_features == 2  →  ResNet-34   (image tasks, first 5 layers)
+      in_features == 3  →  ResNet3D-18 (3D occupancy, first 5 layers)
 
-    Args:
-        beta0:       roll-off factor for raised cosine (default 0.05)
-        T_range:     (min, max) range for T after sigmoid projection
-        c_range:     (min, max) range for c after sigmoid projection
-        backbone:    torchvision backbone for Harmonizer feature extractor
-        truncate_at: layer index to truncate backbone
-        feat_channels: output channels of truncated backbone
+    Call set_gt(gt_tensor) before training/inference:
+      2D: gt_tensor shape (1, 3, H, W)
+      3D: gt_tensor shape (1, 3, D, H, W)
     """
 
     def __init__(self, in_features, hidden_features, hidden_layers, out_features,
                  beta0=0.05, T_range=(0.5, 5.0), c_range=(0.0, 3.0),
-                 backbone='resnet18', truncate_at=6, feat_channels=128,
                  **kwargs):
         super().__init__()
 
         self.hidden_layers = hidden_layers
+        is_3d = (in_features == 3)
         num_rc_layers = hidden_layers + 1  # first layer + hidden layers
 
         self.harmonizer = Harmonizer(
             num_layers=num_rc_layers,
-            backbone=backbone,
-            truncate_at=truncate_at,
-            feat_channels=feat_channels,
+            is_3d=is_3d,
+            truncate_at=5,
             T_range=T_range,
             c_range=c_range,
         )
@@ -147,7 +159,10 @@ class INR(nn.Module):
         self._gt = None
 
     def set_gt(self, img_tensor):
-        """img_tensor: (1, C, H, W) float tensor."""
+        """
+        2D: img_tensor (1, 3, H, W)
+        3D: img_tensor (1, 3, D, H, W)
+        """
         self._gt = img_tensor
 
     def forward(self, coords):

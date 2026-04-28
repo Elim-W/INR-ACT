@@ -96,13 +96,16 @@ def compute_freq_band_errors(gt_norm, pred):
 
 
 def _compute_radial_spectrum_nd(arr, n_bins=200):
-    """Radial mean power spectrum for N-D arrays. Returns (centers, mean_power)."""
+    """Radial mean power spectrum for N-D arrays, log-spaced bins. Returns (centers, mean_power)."""
     power = np.abs(fft.fftn(arr)) ** 2
     grids = np.meshgrid(*[fft.fftfreq(n) for n in arr.shape], indexing='ij')
     radius = np.sqrt(sum(g ** 2 for g in grids))
-    max_r = np.sqrt(arr.ndim) / 2  # max radius for unit-sampled ND FFT
-    bins = np.linspace(0, max_r, n_bins + 1)
-    centers = (bins[:-1] + bins[1:]) / 2
+    max_r = np.sqrt(arr.ndim) / 2
+    # smallest non-zero frequency: 1 / max(side length)
+    min_r = 1.0 / max(arr.shape)
+    # log-spaced bins so low-frequency cutoffs (e.g. 0.001) are well-resolved
+    bins = np.concatenate([[0.0], np.geomspace(min_r, max_r, n_bins)])
+    centers = np.concatenate([[0.0], np.sqrt(bins[1:-1] * bins[2:])])  # geometric mean
     mean_power = np.zeros(n_bins)
     for i in range(n_bins):
         mask = (bins[i] <= radius) & (radius < bins[i + 1])
@@ -372,6 +375,7 @@ def train_one(model, coords, signal_flat, signal_shape, train_cfg,
                 best_output = out.detach().cpu().reshape(signal_shape).numpy()
                 if save_dir:
                     _save_vis(best_output, os.path.join(save_dir, 'best_recon.png'), is_3d)
+                    torch.save(best_state, os.path.join(save_dir, 'best_model.pth'))
 
     elapsed = time.time() - t0
     model.load_state_dict(best_state)
@@ -452,6 +456,8 @@ def parse_args():
     p.add_argument('--device', default='auto')
     p.add_argument('--out_dir', default=None,
                    help='Output directory (default: results/<signal>)')
+    p.add_argument('--force', action='store_true',
+                   help='Re-run even if already in results.csv (saves weights, skips duplicate CSV rows)')
     return p.parse_args()
 
 
@@ -515,11 +521,18 @@ def main():
     if not is_3d:
         summary_fields.insert(-1, 'ssim')   # insert ssim before time_s
     done = set()
-    if os.path.exists(summary_path):
+    if os.path.exists(summary_path) and not args.force:
         with open(summary_path, newline='') as f:
             for row in csv.DictReader(f):
                 key = (row['method'], float(row.get('bandwidth', 0)), int(row['seed']))
                 done.add(key)
+    # when --force: track which keys were already in CSV to avoid duplicate rows
+    already_done = set()
+    if args.force and os.path.exists(summary_path):
+        with open(summary_path, newline='') as f:
+            for row in csv.DictReader(f):
+                key = (row['method'], float(row.get('bandwidth', 0)), int(row['seed']))
+                already_done.add(key)
 
     iters_path = os.path.join(args.out_dir, 'iters_psnrs.csv')
     iters_fields = (['method', 'bandwidth', 'seed', 'iteration', 'psnr']
@@ -620,11 +633,20 @@ def main():
                     n_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
                     print(f'  params={n_params:,}  lr={train_cfg["lr"]}')
 
-                    # INCODE needs GT image for its Harmonizer (ResNet expects 3-ch 2D input)
-                    if hasattr(model, 'set_gt') and not is_3d:
+                    # Save learnable parameter shapes
+                    with open(os.path.join(run_dir, 'param_shapes.txt'), 'w') as _pf:
+                        for name, p in model.named_parameters():
+                            if p.requires_grad:
+                                _pf.write(f'{name}: {list(p.shape)}\n')
+                        _pf.write(f'total: {n_params:,}\n')
+
+                    # INCODE/COSMO Harmonizer needs GT tensor before training
+                    if hasattr(model, 'set_gt'):
                         gt_t = torch.from_numpy(sig)
                         if gt_t.dim() == 2:
-                            gt_t = gt_t[None, None].expand(1, 3, -1, -1)
+                            gt_t = gt_t[None, None].expand(1, 3, -1, -1)      # (1,3,H,W)
+                        elif gt_t.dim() == 3:
+                            gt_t = gt_t[None, None].expand(1, 3, -1, -1, -1)  # (1,3,D,H,W)
                         model.set_gt(gt_t.to(device))
 
                     best_psnr, best_ssim, elapsed, iter_list, psnr_list, best_output = train_one(
@@ -649,23 +671,24 @@ def main():
                     ssim_str = f'  SSIM={best_ssim:.4f}' if best_ssim is not None else ''
                     print(f'  → PSNR={best_psnr:.2f}{ssim_str}  time={elapsed:.1f}s')
 
-                    # Write summary row
-                    row = {'method': method, 'seed': seed,
-                           'psnr': f'{best_psnr:.4f}', 'time_s': f'{elapsed:.1f}'}
-                    if has_bw:
-                        row['bandwidth'] = bw
-                    if not is_3d:
-                        row['ssim'] = f'{best_ssim:.4f}'
-                    sum_writer.writerow(row)
-                    sum_f.flush()
-
-                    for it, pv in zip(iter_list, psnr_list):
-                        irow = {'method': method, 'seed': seed,
-                                'iteration': it, 'psnr': f'{pv:.4f}'}
+                    # Write summary row (skip if --force and already recorded)
+                    if key not in already_done:
+                        row = {'method': method, 'seed': seed,
+                               'psnr': f'{best_psnr:.4f}', 'time_s': f'{elapsed:.1f}'}
                         if has_bw:
-                            irow['bandwidth'] = bw
-                        iter_writer.writerow(irow)
-                    iter_f.flush()
+                            row['bandwidth'] = bw
+                        if not is_3d:
+                            row['ssim'] = f'{best_ssim:.4f}'
+                        sum_writer.writerow(row)
+                        sum_f.flush()
+
+                        for it, pv in zip(iter_list, psnr_list):
+                            irow = {'method': method, 'seed': seed,
+                                    'iteration': it, 'psnr': f'{pv:.4f}'}
+                            if has_bw:
+                                irow['bandwidth'] = bw
+                            iter_writer.writerow(irow)
+                        iter_f.flush()
 
                     # Frequency analysis (signals with bandwidth only)
                     if bw is not None and key not in freq_done:

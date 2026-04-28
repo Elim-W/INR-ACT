@@ -1,0 +1,34 @@
+task: image_super_resolution
+method: finer
+dataset: div2k
+data_root: data/validation
+image_indices: []
+downscale: 1
+device: auto
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 3
+  first_omega_0: 39.21598240719075
+  hidden_omega_0: 29.075025645391296
+training:
+  scale_factor: 8
+  eval_epoch: 0
+  scheduler: cosine
+  lr: 3.754553966912877e-05
+  num_epochs: 4000
+  log_every: 400
+  save_every: 4000
+output:
+  save_dir: results/image_super_resolution_3mean/finer
+  save_model: true
+  save_images: true
+_search:
+  tag: multi_sr_div2k_214_221_527_x8_mean
+  results_dir: benchmark/search_hyper_multi
+  image_indices:
+  - 214
+  - 221
+  - 527
+  best_score: 21.1734

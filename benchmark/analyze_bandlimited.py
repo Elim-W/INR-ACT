@@ -32,6 +32,13 @@ _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
+from benchmark.run_synthetic import _CUTOFFS
+
+def bw_to_freq(bw):
+    """Convert bandwidth label (0.1–0.9) to actual Fourier cutoff frequency."""
+    idx = int(round(bw * 10)) - 1
+    return float(_CUTOFFS[idx])
+
 # ---------------------------------------------------------------------------
 # Display config
 # ---------------------------------------------------------------------------
@@ -105,18 +112,22 @@ def plot_psnr_vs_bw(results, methods, fig_dir):
         if m not in results:
             continue
         bws   = sorted(results[m])
+        freqs = [bw_to_freq(bw) for bw in bws]
         means = [np.mean(results[m][bw]) for bw in bws]
         stds  = [np.std(results[m][bw])  for bw in bws]
-        ax.errorbar(bws, means, yerr=stds,
+        ax.errorbar(freqs, means, yerr=stds,
                     label=METHOD_LABELS.get(m, m),
                     color=COLORS.get(m), marker=MARKERS.get(m, 'o'),
                     markersize=5, linewidth=1.5, capsize=3)
-    ax.set_xlabel('Bandwidth')
+    ax.set_xscale('log')
+    ax.set_xlabel('Cutoff frequency (log scale)')
     ax.set_ylabel('PSNR (dB)')
     ax.set_title('PSNR vs Bandwidth')
-    ax.set_xticks([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
+    freqs_all = [bw_to_freq(bw) for bw in [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]]
+    ax.set_xticks(freqs_all)
+    ax.set_xticklabels([f'{f:.4g}' for f in freqs_all], rotation=30, ha='right', fontsize=7)
     ax.legend(fontsize=8, ncol=2)
-    ax.grid(True, alpha=0.3)
+    ax.grid(True, alpha=0.3, which='both')
     plt.tight_layout()
     _save(fig, fig_dir, '01_psnr_vs_bandwidth.png')
 
@@ -142,10 +153,11 @@ def plot_psnr_heatmap(results, methods, fig_dir):
     plt.colorbar(im, ax=ax, label='PSNR (dB)')
 
     ax.set_xticks(range(len(all_bws)))
-    ax.set_xticklabels([f'{bw:.1f}' for bw in all_bws])
+    ax.set_xticklabels([f'{bw_to_freq(bw):.4g}' for bw in all_bws],
+                       rotation=30, ha='right', fontsize=7)
     ax.set_yticks(range(len(methods_present)))
     ax.set_yticklabels([METHOD_LABELS.get(m, m) for m in methods_present])
-    ax.set_xlabel('Bandwidth')
+    ax.set_xlabel('Cutoff frequency')
     ax.set_title('PSNR Heatmap (Method × Bandwidth)')
 
     # Annotate cells
@@ -188,17 +200,21 @@ def plot_freq_band_error(freq, methods, fig_dir):
                 stds.append(np.nanstd(vals))
             if not bws:
                 continue
-            ax.errorbar(bws, means, yerr=stds,
+            freqs = [bw_to_freq(bw) for bw in bws]
+            ax.errorbar(freqs, means, yerr=stds,
                         label=METHOD_LABELS.get(m, m),
                         color=COLORS.get(m), marker=MARKERS.get(m, 'o'),
                         markersize=4, linewidth=1.5, capsize=3)
 
+        ax.set_xscale('log')
         ax.set_yscale('log')
-        ax.set_xlabel('Bandwidth')
+        ax.set_xlabel('Cutoff frequency (log scale)')
         ax.set_ylabel('Relative Error (err / GT energy)')
         ax.set_title(f'{blabel} Band Error')
-        ax.set_xticks([0.1, 0.3, 0.5, 0.7, 0.9])
-        ax.grid(True, alpha=0.3)
+        sel_freqs = [bw_to_freq(bw) for bw in [0.1, 0.3, 0.5, 0.7, 0.9]]
+        ax.set_xticks(sel_freqs)
+        ax.set_xticklabels([f'{f:.4g}' for f in sel_freqs], rotation=30, ha='right', fontsize=7)
+        ax.grid(True, alpha=0.3, which='both')
 
     axes[0].legend(fontsize=7, ncol=1)
     plt.suptitle('Frequency Band Reconstruction Error', fontsize=13, y=1.01)
@@ -225,16 +241,20 @@ def plot_oob_leakage(freq, methods, fig_dir):
             stds.append(np.std(vals))
         if not bws:
             continue
-        ax.errorbar(bws, means, yerr=stds,
+        freqs = [bw_to_freq(bw) for bw in bws]
+        ax.errorbar(freqs, means, yerr=stds,
                     label=METHOD_LABELS.get(m, m),
                     color=COLORS.get(m), marker=MARKERS.get(m, 'o'),
                     markersize=5, linewidth=1.5, capsize=3)
-    ax.set_xlabel('Bandwidth')
+    ax.set_xscale('log')
+    ax.set_xlabel('Cutoff frequency (log scale)')
     ax.set_ylabel('Out-of-band energy fraction')
     ax.set_title('Out-of-band Leakage vs Bandwidth')
-    ax.set_xticks([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
+    freqs_all = [bw_to_freq(bw) for bw in [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]]
+    ax.set_xticks(freqs_all)
+    ax.set_xticklabels([f'{f:.4g}' for f in freqs_all], rotation=30, ha='right', fontsize=7)
     ax.legend(fontsize=8, ncol=2)
-    ax.grid(True, alpha=0.3)
+    ax.grid(True, alpha=0.3, which='both')
     plt.tight_layout()
     _save(fig, fig_dir, '04_oob_leakage.png')
 
@@ -273,12 +293,12 @@ def plot_radial_spectrum(out_dir, methods, bandwidth, seed, fig_dir):
             pred_npy = os.path.join(run_dir, 'best_recon.npy')
             if not (os.path.exists(gt_npy) and os.path.exists(pred_npy)):
                 continue
-            from benchmark.run_synthetic import _compute_radial_spectrum
+            from benchmark.run_synthetic import _compute_radial_spectrum_nd
             gt_norm = np.load(gt_npy)
             pred    = np.load(pred_npy)
-            centers, gt_p   = _compute_radial_spectrum(gt_norm)
-            _,       pred_p = _compute_radial_spectrum(pred)
-            _,       res_p  = _compute_radial_spectrum(gt_norm - pred)
+            centers, gt_p   = _compute_radial_spectrum_nd(gt_norm)
+            _,       pred_p = _compute_radial_spectrum_nd(pred)
+            _,       res_p  = _compute_radial_spectrum_nd(gt_norm - pred)
 
         label  = METHOD_LABELS.get(m, m)
         color  = COLORS.get(m)
@@ -299,12 +319,13 @@ def plot_radial_spectrum(out_dir, methods, bandwidth, seed, fig_dir):
         return
 
     for ax in axes:
+        ax.set_xscale('log')
         if cutoff_r is not None:
             ax.axvline(cutoff_r, color='gray', linestyle='--', linewidth=1,
-                       label=f'GT cutoff ({cutoff_r:.3f})')
-        ax.set_xlabel('Radial frequency')
+                       label=f'GT cutoff ({cutoff_r:.4g})')
+        ax.set_xlabel('Radial frequency (log scale)')
         ax.set_ylabel('Mean power (log)')
-        ax.grid(True, alpha=0.3)
+        ax.grid(True, alpha=0.3, which='both')
         ax.legend(fontsize=7, ncol=2)
 
     ax_pred.set_title(f'GT vs Predicted  |  bw={bw_str}  seed={seed}')

@@ -65,10 +65,9 @@ methods:
     lr: 0.001722830456172326
     scheduler: cosine
   incode:
-    hidden_features: 256
-    hidden_layers: 3
-    lr: 0.0001
-    scheduler: cosine
+    lr: 0.0003006148186025661
+    first_omega_0: 5.470365473903373
+    hidden_omega_0: 13.004635229371374
   sl2a:
     hidden_features: 256
     hidden_layers: 3
@@ -80,5 +79,6 @@ methods:
     lr: 0.0016217067256007038
     scheduler: cosine
   cosmo:
-    lr: 0.001926318572649933
-    beta0: 0.10528732311771717
+    lr: 0.0010097498049401817
+    beta0: 0.08290913883787888
+
