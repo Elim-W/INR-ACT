@@ -1,0 +1,1189 @@
+==========================================
+ Job: image_denoising started Sun Apr 26 22:13:40 EDT 2026
+ Host: lh1300.arc-ts.umich.edu   GPU: GPU 0: NVIDIA A100-SXM4-80GB (UUID: GPU-4dced277-4128-d813-53c6-e235ab02a24a)
+==========================================
+[hparam_search_denoise_multi] device=cuda  agg=mean  noise={'noise_type': 'poisson_gaussian', 'noise_seed': 0, 'noise_tau': 20.0, 'noise_readout_snr': 2.0}  n_trials=20  iters/trial=4000
+    [0] 0214  (339x510)
+    [1] 0221  (339x510)
+    [2] 0527  (261x510)
+
+============================================================
+  Tuning finer  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009992  PSNR(vs clean)=19.11  SSIM=0.4419
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009497  PSNR(vs clean)=18.78  SSIM=0.4679
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014957  PSNR(vs clean)=18.18  SSIM=0.2536
+    trial   0  mean=18.69  per_img=['19.11', '18.78', '18.18']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.002952  PSNR(vs clean)=16.97  SSIM=0.3648
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.002660  PSNR(vs clean)=16.50  SSIM=0.3720
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.001726  PSNR(vs clean)=15.45  SSIM=0.1856
+    trial   1  mean=16.30  per_img=['16.97', '16.50', '15.45']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006143  PSNR(vs clean)=17.73  SSIM=0.3937
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.005999  PSNR(vs clean)=17.33  SSIM=0.4084
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.007748  PSNR(vs clean)=16.37  SSIM=0.2087
+    trial   2  mean=17.14  per_img=['17.73', '17.33', '16.37']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104296  PSNR(vs clean)=11.13  SSIM=0.2139
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077248  PSNR(vs clean)=13.01  SSIM=0.1574
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119403  PSNR(vs clean)=11.04  SSIM=0.4920
+    trial   3  mean=11.73  per_img=['11.13', '13.01', '11.04']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.005126  PSNR(vs clean)=17.28  SSIM=0.3747
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.005110  PSNR(vs clean)=16.85  SSIM=0.3851
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.003471  PSNR(vs clean)=15.60  SSIM=0.1890
+    trial   4  mean=16.58  per_img=['17.28', '16.85', '15.60']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009884  PSNR(vs clean)=18.24  SSIM=0.4175
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009821  PSNR(vs clean)=17.94  SSIM=0.4408
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008769  PSNR(vs clean)=16.24  SSIM=0.2047
+    trial   5  mean=17.47  per_img=['18.24', '17.94', '16.24']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.002498  PSNR(vs clean)=16.89  SSIM=0.3627
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.002693  PSNR(vs clean)=16.45  SSIM=0.3698
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.001505  PSNR(vs clean)=15.42  SSIM=0.1852
+    trial   6  mean=16.25  per_img=['16.89', '16.45', '15.42']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013518  PSNR(vs clean)=19.08  SSIM=0.4667
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013501  PSNR(vs clean)=18.92  SSIM=0.4877
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.016097  PSNR(vs clean)=17.36  SSIM=0.2419
+    trial   7  mean=18.45  per_img=['19.08', '18.92', '17.36']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104356  PSNR(vs clean)=11.13  SSIM=0.2135
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077320  PSNR(vs clean)=13.00  SSIM=0.1566
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119700  PSNR(vs clean)=11.03  SSIM=0.4911
+    trial   8  mean=11.72  per_img=['11.13', '13.00', '11.03']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.084864  PSNR(vs clean)=12.13  SSIM=0.3022
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.003259  PSNR(vs clean)=16.40  SSIM=0.3675
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.031385  PSNR(vs clean)=18.20  SSIM=0.2795
+    trial   9  mean=15.58  per_img=['12.13', '16.40', '18.20']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.031643  PSNR(vs clean)=22.24  SSIM=0.5923
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.029114  PSNR(vs clean)=23.96  SSIM=0.7045
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.043236  PSNR(vs clean)=24.73  SSIM=0.6885
+    trial  10  mean=23.64  per_img=['22.24', '23.96', '24.73']  params={'lr': 1.2266094817403999e-05, 'first_omega_0': 5.3707763821857775, 'hidden_omega_0': 46.46609943286623}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.028522  PSNR(vs clean)=23.39  SSIM=0.6478
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.026732  PSNR(vs clean)=24.73  SSIM=0.7504
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.041445  PSNR(vs clean)=25.38  SSIM=0.6803
+    trial  11  mean=24.50  per_img=['23.39', '24.73', '25.38']  params={'lr': 1.2601989174753526e-05, 'first_omega_0': 10.362158137662984, 'hidden_omega_0': 45.52204570169274}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.032022  PSNR(vs clean)=22.04  SSIM=0.5811
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.029183  PSNR(vs clean)=23.96  SSIM=0.7076
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.043348  PSNR(vs clean)=24.71  SSIM=0.6904
+    trial  12  mean=23.57  per_img=['22.04', '23.96', '24.71']  params={'lr': 1.1314626052512495e-05, 'first_omega_0': 5.373101675626415, 'hidden_omega_0': 48.915842192944616}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.027864  PSNR(vs clean)=23.46  SSIM=0.6457
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.025010  PSNR(vs clean)=24.57  SSIM=0.7433
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.041015  PSNR(vs clean)=25.43  SSIM=0.6611
+    trial  13  mean=24.48  per_img=['23.46', '24.57', '25.43']  params={'lr': 1.1194175253017681e-05, 'first_omega_0': 13.900487280123087, 'hidden_omega_0': 46.10955151673146}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.011075  PSNR(vs clean)=18.73  SSIM=0.4300
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.010761  PSNR(vs clean)=18.40  SSIM=0.4560
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.013468  PSNR(vs clean)=17.45  SSIM=0.2315
+    trial  14  mean=18.19  per_img=['18.73', '18.40', '17.45']  params={'lr': 0.00011736317568059886, 'first_omega_0': 16.54661941497529, 'hidden_omega_0': 41.1795149772598}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.010987  PSNR(vs clean)=18.67  SSIM=0.4295
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011143  PSNR(vs clean)=18.49  SSIM=0.4618
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.012118  PSNR(vs clean)=17.02  SSIM=0.2206
+    trial  15  mean=18.06  per_img=['18.67', '18.49', '17.02']  params={'lr': 0.00015535761704732067, 'first_omega_0': 15.12758367021626, 'hidden_omega_0': 54.90846397790033}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.020210  PSNR(vs clean)=22.38  SSIM=0.5777
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.017624  PSNR(vs clean)=21.84  SSIM=0.6132
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.033607  PSNR(vs clean)=22.84  SSIM=0.4383
+    trial  16  mean=22.35  per_img=['22.38', '21.84', '22.84']  params={'lr': 2.694138467083192e-05, 'first_omega_0': 15.017379577546945, 'hidden_omega_0': 43.966146739461706}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013325  PSNR(vs clean)=19.80  SSIM=0.4753
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011013  PSNR(vs clean)=19.27  SSIM=0.4957
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.019828  PSNR(vs clean)=18.49  SSIM=0.2638
+    trial  17  mean=19.19  per_img=['19.80', '19.27', '18.49']  params={'lr': 2.623324138744076e-05, 'first_omega_0': 28.10985567186244, 'hidden_omega_0': 51.61228092018949}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.010072  PSNR(vs clean)=18.41  SSIM=0.4202
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009156  PSNR(vs clean)=17.89  SSIM=0.4346
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008973  PSNR(vs clean)=16.46  SSIM=0.2073
+    trial  18  mean=17.59  per_img=['18.41', '17.89', '16.46']  params={'lr': 0.00020580360140728563, 'first_omega_0': 19.81721916859719, 'hidden_omega_0': 38.87132306736979}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015235  PSNR(vs clean)=20.18  SSIM=0.4851
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015153  PSNR(vs clean)=20.16  SSIM=0.5362
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.022448  PSNR(vs clean)=19.65  SSIM=0.3002
+    trial  19  mean=20.00  per_img=['20.18', '20.16', '19.65']  params={'lr': 6.44163201777811e-05, 'first_omega_0': 11.664427820742347, 'hidden_omega_0': 59.45418107880246}
+
+  >>> finer best mean=24.50 per_img=[23.392427444458008, 24.73220443725586, 25.383665084838867]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_finer.txt  (198,915 params)
+
+============================================================
+  Tuning gf  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009938  PSNR(vs clean)=17.71  SSIM=0.3935
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009223  PSNR(vs clean)=16.94  SSIM=0.3823
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.007699  PSNR(vs clean)=15.74  SSIM=0.1890
+    trial   0  mean=16.79  per_img=['17.71', '16.94', '15.74']  params={'lr': 0.00024156772025296256, 'scale': 6.410033324878403, 'omega': 13.69410443120632, 'first_bias_scale': 3.9482570601974696}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104348  PSNR(vs clean)=11.13  SSIM=0.2136
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077319  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119710  PSNR(vs clean)=11.03  SSIM=0.4904
+    trial   1  mean=11.72  per_img=['11.13', '13.00', '11.03']  params={'lr': 0.0036303760732131728, 'scale': 3.0896297501850953, 'omega': 9.017463399149804, 'first_bias_scale': 4.029173669921595}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104352  PSNR(vs clean)=11.13  SSIM=0.2136
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077319  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119709  PSNR(vs clean)=11.03  SSIM=0.4913
+    trial   2  mean=11.72  per_img=['11.13', '13.00', '11.03']  params={'lr': 0.008246671732726023, 'scale': 8.821360030049899, 'omega': 11.376700828778134, 'first_bias_scale': 2.554876115064948}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104240  PSNR(vs clean)=11.13  SSIM=0.2144
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077251  PSNR(vs clean)=13.01  SSIM=0.1574
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119694  PSNR(vs clean)=11.03  SSIM=0.4915
+    trial   3  mean=11.72  per_img=['11.13', '13.01', '11.03']  params={'lr': 0.0023276939100527693, 'scale': 7.270669256337552, 'omega': 11.737271888921454, 'first_bias_scale': 2.8498613117215625}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104441  PSNR(vs clean)=11.12  SSIM=0.1929
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077083  PSNR(vs clean)=13.01  SSIM=0.1443
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119878  PSNR(vs clean)=11.02  SSIM=0.3932
+    trial   4  mean=11.71  per_img=['11.12', '13.01', '11.02']  params={'lr': 0.001014299778430435, 'scale': 0.6308002711114813, 'omega': 23.411972026758846, 'first_bias_scale': 4.4249418341169715}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009251  PSNR(vs clean)=17.61  SSIM=0.3871
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.008890  PSNR(vs clean)=16.97  SSIM=0.3822
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.007219  PSNR(vs clean)=15.77  SSIM=0.1880
+    trial   5  mean=16.78  per_img=['17.61', '16.97', '15.77']  params={'lr': 0.000536749894569821, 'scale': 6.34626369511819, 'omega': 3.18605600764632, 'first_bias_scale': 1.9072376294096753}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104353  PSNR(vs clean)=11.13  SSIM=0.2136
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077319  PSNR(vs clean)=13.00  SSIM=0.1566
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119707  PSNR(vs clean)=11.03  SSIM=0.4914
+    trial   6  mean=11.72  per_img=['11.13', '13.00', '11.03']  params={'lr': 0.0073498792462323385, 'scale': 6.688092360652485, 'omega': 12.518874754058471, 'first_bias_scale': 3.964777700409653}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.008430  PSNR(vs clean)=17.51  SSIM=0.3872
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.010582  PSNR(vs clean)=16.82  SSIM=0.3778
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008959  PSNR(vs clean)=15.77  SSIM=0.1892
+    trial   7  mean=16.70  per_img=['17.51', '16.82', '15.77']  params={'lr': 0.00043020182095898635, 'scale': 5.896937199947657, 'omega': 26.204694297275548, 'first_bias_scale': 2.237249777088829}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104358  PSNR(vs clean)=11.13  SSIM=0.2129
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077357  PSNR(vs clean)=13.00  SSIM=0.1538
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119794  PSNR(vs clean)=11.02  SSIM=0.4661
+    trial   8  mean=11.72  per_img=['11.13', '13.00', '11.02']  params={'lr': 0.004020640881061957, 'scale': 1.8657848328883635, 'omega': 21.423568162431728, 'first_bias_scale': 3.552448410128906}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009442  PSNR(vs clean)=17.67  SSIM=0.3936
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009373  PSNR(vs clean)=16.99  SSIM=0.3857
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008993  PSNR(vs clean)=15.85  SSIM=0.1913
+    trial   9  mean=16.84  per_img=['17.67', '16.99', '15.85']  params={'lr': 0.000273895067570749, 'scale': 9.286242471847867, 'omega': 13.822081906721122, 'first_bias_scale': 4.555648198965115}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013905  PSNR(vs clean)=17.80  SSIM=0.3966
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013021  PSNR(vs clean)=17.01  SSIM=0.3801
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014809  PSNR(vs clean)=16.01  SSIM=0.1907
+    trial  10  mean=16.94  per_img=['17.80', '17.01', '16.01']  params={'lr': 0.00011588195553183336, 'scale': 9.724207247941175, 'omega': 18.264219049212116, 'first_bias_scale': 0.2640505336187484}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013251  PSNR(vs clean)=17.86  SSIM=0.3983
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011807  PSNR(vs clean)=17.05  SSIM=0.3804
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.013796  PSNR(vs clean)=16.04  SSIM=0.1908
+    trial  11  mean=16.98  per_img=['17.86', '17.05', '16.04']  params={'lr': 0.00010428298103315569, 'scale': 9.841695893746934, 'omega': 18.230682532693468, 'first_bias_scale': 0.20698713921258566}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015791  PSNR(vs clean)=17.86  SSIM=0.3988
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013312  PSNR(vs clean)=17.00  SSIM=0.3774
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.015975  PSNR(vs clean)=16.04  SSIM=0.1925
+    trial  12  mean=16.97  per_img=['17.86', '17.00', '16.04']  params={'lr': 0.00011251939045228, 'scale': 9.901540914956648, 'omega': 19.329469727454022, 'first_bias_scale': 0.18397028189284959}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.019930  PSNR(vs clean)=17.61  SSIM=0.3900
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.020396  PSNR(vs clean)=17.02  SSIM=0.3741
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.023945  PSNR(vs clean)=15.89  SSIM=0.1852
+    trial  13  mean=16.84  per_img=['17.61', '17.02', '15.89']  params={'lr': 0.00010091691491539532, 'scale': 8.04820696556986, 'omega': 29.09226216357667, 'first_bias_scale': 0.23207087276721902}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006781  PSNR(vs clean)=17.42  SSIM=0.3777
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007732  PSNR(vs clean)=16.96  SSIM=0.3809
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.005748  PSNR(vs clean)=15.87  SSIM=0.1907
+    trial  14  mean=16.75  per_img=['17.42', '16.96', '15.87']  params={'lr': 0.00019125180050797602, 'scale': 4.234691883011191, 'omega': 18.249694757210047, 'first_bias_scale': 1.1599436019333766}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.103754  PSNR(vs clean)=11.16  SSIM=0.2176
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.074384  PSNR(vs clean)=13.21  SSIM=0.1837
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.118263  PSNR(vs clean)=11.10  SSIM=0.4816
+    trial  15  mean=11.82  per_img=['11.16', '13.21', '11.10']  params={'lr': 0.0009289884784408745, 'scale': 9.945738859823054, 'omega': 17.861524009737554, 'first_bias_scale': 1.2238088460413532}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.014837  PSNR(vs clean)=18.10  SSIM=0.4094
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015702  PSNR(vs clean)=17.09  SSIM=0.3830
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.015931  PSNR(vs clean)=15.99  SSIM=0.1908
+    trial  16  mean=17.06  per_img=['18.10', '17.09', '15.99']  params={'lr': 0.00015561499306210398, 'scale': 8.021480631187622, 'omega': 22.162594463454997, 'first_bias_scale': 0.8528561086690256}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015239  PSNR(vs clean)=18.17  SSIM=0.4140
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015766  PSNR(vs clean)=17.12  SSIM=0.3854
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.018414  PSNR(vs clean)=16.07  SSIM=0.1921
+    trial  17  mean=17.12  per_img=['18.17', '17.12', '16.07']  params={'lr': 0.0002110133001322525, 'scale': 8.247686600268732, 'omega': 24.140815891407726, 'first_bias_scale': 1.1063935464352967}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006305  PSNR(vs clean)=17.40  SSIM=0.3839
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007295  PSNR(vs clean)=16.78  SSIM=0.3785
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.006125  PSNR(vs clean)=15.75  SSIM=0.1902
+    trial  18  mean=16.64  per_img=['17.40', '16.78', '15.75']  params={'lr': 0.00045067515166297503, 'scale': 4.649603099044937, 'omega': 24.949684595670885, 'first_bias_scale': 1.1227910249863766}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104321  PSNR(vs clean)=11.13  SSIM=0.2138
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077283  PSNR(vs clean)=13.00  SSIM=0.1570
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119288  PSNR(vs clean)=11.05  SSIM=0.4312
+    trial  19  mean=11.73  per_img=['11.13', '13.00', '11.05']  params={'lr': 0.0008675525230039039, 'scale': 8.172461983078588, 'omega': 29.35563261808496, 'first_bias_scale': 1.673412720229884}
+
+  >>> gf best mean=17.12 per_img=[18.174259185791016, 17.122037887573242, 16.06987190246582]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_gf.txt  (198,915 params)
+
+============================================================
+  Tuning wf  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.022833  PSNR(vs clean)=19.23  SSIM=0.4318
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.023240  PSNR(vs clean)=17.95  SSIM=0.4125
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.027651  PSNR(vs clean)=17.52  SSIM=0.2272
+    trial   0  mean=18.23  per_img=['19.23', '17.95', '17.52']  params={'lr': 0.00024156772025296256, 'scale': 6.410033324878403, 'omega_w': 7.128188346099603, 'omega': 11.995020171992769, 'first_bias_scale': 3.9218814597821376}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial   1  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.00035090148857968553, 'scale': 3.1264104238594186, 'omega_w': 12.22621048549027, 'omega': 14.413950951571872, 'first_bias_scale': 4.392069910236264}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012873  PSNR(vs clean)=18.05  SSIM=0.4089
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.014158  PSNR(vs clean)=17.34  SSIM=0.3987
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.017206  PSNR(vs clean)=16.57  SSIM=0.2064
+    trial   2  mean=17.32  per_img=['18.05', '17.34', '16.57']  params={'lr': 0.000519558602432567, 'scale': 5.259453692472857, 'omega_w': 10.568481092409908, 'omega': 10.977828377760602, 'first_bias_scale': 1.9142286984729353}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.022735  PSNR(vs clean)=18.86  SSIM=0.4063
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.018935  PSNR(vs clean)=17.88  SSIM=0.4128
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.037448  PSNR(vs clean)=19.51  SSIM=0.3976
+    trial   3  mean=18.75  per_img=['18.86', '17.88', '19.51']  params={'lr': 0.0013255385789985395, 'scale': 5.279290070424192, 'omega_w': 1.1927582942695514, 'omega': 11.819572702573236, 'first_bias_scale': 4.4249418341169715}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006353  PSNR(vs clean)=17.46  SSIM=0.3845
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007553  PSNR(vs clean)=17.22  SSIM=0.4047
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008180  PSNR(vs clean)=16.19  SSIM=0.2015
+    trial   4  mean=16.96  per_img=['17.46', '17.22', '16.19']  params={'lr': 0.000536749894569821, 'scale': 6.34626369511819, 'omega_w': 2.055337383001672, 'omega': 6.163536084027643, 'first_bias_scale': 4.672386499714356}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial   5  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.002007965683910147, 'scale': 4.273424488398465, 'omega_w': 12.042222001170437, 'omega': 5.435705710364197, 'first_bias_scale': 2.883683397867739}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial   6  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.005473369642905612, 'scale': 4.643647527008954, 'omega_w': 12.230066989122227, 'omega': 3.0127355432039042, 'first_bias_scale': 3.550878758479844}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial   7  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.002565444456718595, 'scale': 2.5785250039038417, 'omega_w': 13.948146800617911, 'omega': 7.189970575658473, 'first_bias_scale': 4.555648198965115}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009443  PSNR(vs clean)=18.70  SSIM=0.4327
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.008527  PSNR(vs clean)=18.10  SSIM=0.4491
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.011885  PSNR(vs clean)=17.18  SSIM=0.2292
+    trial   8  mean=18.00  per_img=['18.70', '18.10', '17.18']  params={'lr': 0.00013170990774640117, 'scale': 2.2507272962312297, 'omega_w': 1.6629739032212119, 'omega': 10.448333210152622, 'first_bias_scale': 3.0136614216788}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial   9  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.001165790000863127, 'scale': 0.9115785956006331, 'omega_w': 8.86006312088757, 'omega': 5.61535823869281, 'first_bias_scale': 2.56453748225183}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.017156  PSNR(vs clean)=20.51  SSIM=0.5109
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.016105  PSNR(vs clean)=20.20  SSIM=0.5513
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.022994  PSNR(vs clean)=19.12  SSIM=0.2874
+    trial  10  mean=19.94  per_img=['20.51', '20.20', '19.12']  params={'lr': 0.00016741279038560018, 'scale': 6.268340209075603, 'omega_w': 8.92322500270744, 'omega': 1.094696867860039, 'first_bias_scale': 3.125464373141056}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial  11  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.006671842305866797, 'scale': 8.009979264041817, 'omega_w': 14.88914052663706, 'omega': 14.423224670140131, 'first_bias_scale': 3.980624262929035}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.007664  PSNR(vs clean)=17.93  SSIM=0.4096
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007293  PSNR(vs clean)=17.40  SSIM=0.4201
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.006900  PSNR(vs clean)=16.29  SSIM=0.2129
+    trial  12  mean=17.21  per_img=['17.93', '17.40', '16.29']  params={'lr': 0.00037196486564335443, 'scale': 6.436708700406155, 'omega_w': 7.693313139389444, 'omega': 3.7394525013225755, 'first_bias_scale': 1.973355514954382}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012257  PSNR(vs clean)=18.64  SSIM=0.4389
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013549  PSNR(vs clean)=18.58  SSIM=0.4870
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014918  PSNR(vs clean)=16.91  SSIM=0.2224
+    trial  13  mean=18.04  per_img=['18.64', '18.58', '16.91']  params={'lr': 0.0001281584866075842, 'scale': 4.790659878478161, 'omega_w': 14.748066381307362, 'omega': 2.7351978068174816, 'first_bias_scale': 0.6849663998386172}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.011197  PSNR(vs clean)=18.43  SSIM=0.4264
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011398  PSNR(vs clean)=18.08  SSIM=0.4561
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.013457  PSNR(vs clean)=16.82  SSIM=0.2229
+    trial  14  mean=17.78  per_img=['18.43', '18.08', '16.82']  params={'lr': 0.0029994809793642352, 'scale': 6.079384517907854, 'omega_w': 7.6028554804851485, 'omega': 2.499775440714128, 'first_bias_scale': 1.223170970757028}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013110  PSNR(vs clean)=18.93  SSIM=0.4499
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013633  PSNR(vs clean)=18.76  SSIM=0.4894
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.016147  PSNR(vs clean)=17.18  SSIM=0.2326
+    trial  15  mean=18.29  per_img=['18.93', '18.76', '17.18']  params={'lr': 0.0063085622040667385, 'scale': 4.459158609125586, 'omega_w': 8.501923275442621, 'omega': 1.0869192322198116, 'first_bias_scale': 1.5731443582744757}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.027621  PSNR(vs clean)=21.01  SSIM=0.4973
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.026659  PSNR(vs clean)=20.49  SSIM=0.5322
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.039204  PSNR(vs clean)=22.99  SSIM=0.4846
+    trial  16  mean=21.50  per_img=['21.01', '20.49', '22.99']  params={'lr': 0.0011586611567065805, 'scale': 9.411907211206877, 'omega_w': 12.496893145959199, 'omega': 7.671635798639001, 'first_bias_scale': 3.1636510878530695}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.027082  PSNR(vs clean)=21.15  SSIM=0.5050
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.031976  PSNR(vs clean)=20.47  SSIM=0.5121
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045445  PSNR(vs clean)=19.29  SSIM=0.3021
+    trial  17  mean=20.31  per_img=['21.15', '20.47', '19.29']  params={'lr': 0.00136460254411546, 'scale': 9.998393094696066, 'omega_w': 12.611465473127748, 'omega': 7.659029151117957, 'first_bias_scale': 3.1035443874547273}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.039879  PSNR(vs clean)=18.63  SSIM=0.3798
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.049132  PSNR(vs clean)=16.29  SSIM=0.2797
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.044457  PSNR(vs clean)=22.60  SSIM=0.5262
+    trial  18  mean=19.17  per_img=['18.63', '16.29', '22.60']  params={'lr': 0.001659865004398763, 'scale': 9.913396345583614, 'omega_w': 13.75879701299506, 'omega': 7.820279575284316, 'first_bias_scale': 3.440834733671396}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=nan  PSNR(vs clean)=nan  SSIM=nan
+    trial  19  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.0029722836270206637, 'scale': 9.821568254051948, 'omega_w': 11.527134854940414, 'omega': 14.93359878505069, 'first_bias_scale': 2.524576713412162}
+
+  >>> wf best mean=21.50 per_img=[21.012250900268555, 20.486637115478516, 22.989675521850586]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_wf.txt  (199,287 params)
+
+============================================================
+  Tuning staf  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.014474  PSNR(vs clean)=17.67  SSIM=0.3917
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.014173  PSNR(vs clean)=16.87  SSIM=0.3744
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.015628  PSNR(vs clean)=15.43  SSIM=0.1798
+    trial   0  mean=16.66  per_img=['17.67', '16.87', '15.43']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.019144  PSNR(vs clean)=20.39  SSIM=0.5042
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.010329  PSNR(vs clean)=17.54  SSIM=0.4097
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.003271  PSNR(vs clean)=15.43  SSIM=0.1837
+    trial   1  mean=17.79  per_img=['20.39', '17.54', '15.43']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013966  PSNR(vs clean)=17.52  SSIM=0.3813
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011727  PSNR(vs clean)=16.47  SSIM=0.3532
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.012255  PSNR(vs clean)=15.73  SSIM=0.1886
+    trial   2  mean=16.57  per_img=['17.52', '16.47', '15.73']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.008969  PSNR(vs clean)=17.78  SSIM=0.3961
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007721  PSNR(vs clean)=17.21  SSIM=0.3955
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.001829  PSNR(vs clean)=15.37  SSIM=0.1837
+    trial   3  mean=16.78  per_img=['17.78', '17.21', '15.37']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.007280  PSNR(vs clean)=17.40  SSIM=0.3825
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.008265  PSNR(vs clean)=16.85  SSIM=0.3795
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.005825  PSNR(vs clean)=15.78  SSIM=0.1908
+    trial   4  mean=16.68  per_img=['17.40', '16.85', '15.78']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.016419  PSNR(vs clean)=19.83  SSIM=0.4863
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011200  PSNR(vs clean)=18.13  SSIM=0.4456
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.034872  PSNR(vs clean)=21.71  SSIM=0.3821
+    trial   5  mean=19.89  per_img=['19.83', '18.13', '21.71']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.005875  PSNR(vs clean)=17.21  SSIM=0.3730
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007451  PSNR(vs clean)=16.99  SSIM=0.3875
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.006035  PSNR(vs clean)=15.84  SSIM=0.1933
+    trial   6  mean=16.68  per_img=['17.21', '16.99', '15.84']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.018198  PSNR(vs clean)=19.89  SSIM=0.4733
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.016919  PSNR(vs clean)=19.61  SSIM=0.5107
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.041346  PSNR(vs clean)=24.26  SSIM=0.5929
+    trial   7  mean=21.25  per_img=['19.89', '19.61', '24.26']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006250  PSNR(vs clean)=17.45  SSIM=0.3816
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.003903  PSNR(vs clean)=16.67  SSIM=0.3775
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.003095  PSNR(vs clean)=15.55  SSIM=0.1857
+    trial   8  mean=16.56  per_img=['17.45', '16.67', '15.55']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.008406  PSNR(vs clean)=17.64  SSIM=0.3844
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.007003  PSNR(vs clean)=16.92  SSIM=0.3799
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.002887  PSNR(vs clean)=15.45  SSIM=0.1834
+    trial   9  mean=16.67  per_img=['17.64', '16.92', '15.45']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012063  PSNR(vs clean)=18.09  SSIM=0.3943
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013886  PSNR(vs clean)=18.33  SSIM=0.4443
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.039364  PSNR(vs clean)=23.02  SSIM=0.4534
+    trial  10  mean=19.82  per_img=['18.09', '18.33', '23.02']  params={'lr': 0.000207058458959498, 'first_omega_0': 5.3707763821857775, 'hidden_omega_0': 44.561691323211114}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.031231  PSNR(vs clean)=21.91  SSIM=0.5593
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.033056  PSNR(vs clean)=21.71  SSIM=0.5602
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.043858  PSNR(vs clean)=23.93  SSIM=0.6510
+    trial  11  mean=22.52  per_img=['21.91', '21.71', '23.93']  params={'lr': 0.00036094727742433125, 'first_omega_0': 7.563820494333683, 'hidden_omega_0': 6.0518367062643215}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.028495  PSNR(vs clean)=22.04  SSIM=0.5605
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.036375  PSNR(vs clean)=20.13  SSIM=0.4530
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.044615  PSNR(vs clean)=23.41  SSIM=0.6380
+    trial  12  mean=21.86  per_img=['22.04', '20.13', '23.41']  params={'lr': 0.00016828735710972727, 'first_omega_0': 5.698667516270718, 'hidden_omega_0': 7.748468326980269}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.028336  PSNR(vs clean)=22.31  SSIM=0.5809
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.028778  PSNR(vs clean)=23.51  SSIM=0.6798
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.040128  PSNR(vs clean)=24.03  SSIM=0.5481
+    trial  13  mean=23.28  per_img=['22.31', '23.51', '24.03']  params={'lr': 0.00016629190174868765, 'first_omega_0': 15.523751416150342, 'hidden_omega_0': 5.526002401211933}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.040750  PSNR(vs clean)=18.52  SSIM=0.3618
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.033628  PSNR(vs clean)=21.13  SSIM=0.5237
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.050452  PSNR(vs clean)=20.09  SSIM=0.5666
+    trial  14  mean=19.91  per_img=['18.52', '21.13', '20.09']  params={'lr': 1.1103472275032838e-05, 'first_omega_0': 15.582745941312917, 'hidden_omega_0': 14.297793081725894}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.032769  PSNR(vs clean)=20.93  SSIM=0.4908
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.025153  PSNR(vs clean)=23.12  SSIM=0.6674
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.038776  PSNR(vs clean)=23.06  SSIM=0.4580
+    trial  15  mean=22.37  per_img=['20.93', '23.12', '23.06']  params={'lr': 7.787187047835185e-05, 'first_omega_0': 15.12758367021626, 'hidden_omega_0': 13.582846763288924}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.026410  PSNR(vs clean)=22.02  SSIM=0.5605
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.025746  PSNR(vs clean)=23.12  SSIM=0.6763
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.022416  PSNR(vs clean)=18.19  SSIM=0.2589
+    trial  16  mean=21.11  per_img=['22.02', '23.12', '18.19']  params={'lr': 0.0002993950476160227, 'first_omega_0': 15.141327308576065, 'hidden_omega_0': 13.978349222759766}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.044563  PSNR(vs clean)=17.56  SSIM=0.3346
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.034702  PSNR(vs clean)=20.83  SSIM=0.5022
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.047787  PSNR(vs clean)=21.40  SSIM=0.5807
+    trial  17  mean=19.93  per_img=['17.56', '20.83', '21.40']  params={'lr': 2.266386180496588e-05, 'first_omega_0': 24.41517619576378, 'hidden_omega_0': 5.386750339480511}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.011952  PSNR(vs clean)=17.97  SSIM=0.4043
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015708  PSNR(vs clean)=17.55  SSIM=0.4151
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.016663  PSNR(vs clean)=16.17  SSIM=0.2002
+    trial  18  mean=17.23  per_img=['17.97', '17.55', '16.17']  params={'lr': 0.00013199557691099292, 'first_omega_0': 30.464773427929224, 'hidden_omega_0': 41.73731714295643}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.020495  PSNR(vs clean)=20.57  SSIM=0.5007
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.030565  PSNR(vs clean)=22.75  SSIM=0.6324
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.031329  PSNR(vs clean)=20.24  SSIM=0.3236
+    trial  19  mean=21.19  per_img=['20.57', '22.75', '20.24']  params={'lr': 0.0006133242935961067, 'first_omega_0': 10.795439969520586, 'hidden_omega_0': 18.229665677646395}
+
+  >>> staf best mean=23.28 per_img=[22.314598083496094, 23.512155532836914, 24.02616310119629]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_staf.txt  (198,975 params)
+
+============================================================
+  Tuning relu  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.043178  PSNR(vs clean)=17.93  SSIM=0.3586
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.051276  PSNR(vs clean)=16.17  SSIM=0.2698
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.049071  PSNR(vs clean)=20.75  SSIM=0.5805
+    trial   0  mean=18.28  per_img=['17.93', '16.17', '20.75']  params={'lr': 0.00024156772025296256}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.039634  PSNR(vs clean)=18.97  SSIM=0.4081
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.040149  PSNR(vs clean)=18.79  SSIM=0.4032
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.046214  PSNR(vs clean)=22.48  SSIM=0.6213
+    trial   1  mean=20.08  per_img=['18.97', '18.79', '22.48']  params={'lr': 0.001754759256702473}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.041057  PSNR(vs clean)=18.52  SSIM=0.3849
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.045924  PSNR(vs clean)=17.25  SSIM=0.3240
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.046748  PSNR(vs clean)=22.13  SSIM=0.6081
+    trial   2  mean=19.30  per_img=['18.52', '17.25', '22.13']  params={'lr': 0.0007506810936068548}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.038247  PSNR(vs clean)=19.44  SSIM=0.4313
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.046845  PSNR(vs clean)=17.04  SSIM=0.3203
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045681  PSNR(vs clean)=22.88  SSIM=0.6326
+    trial   3  mean=19.79  per_img=['19.44', '17.04', '22.88']  params={'lr': 0.0037214926657368383}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.039432  PSNR(vs clean)=19.05  SSIM=0.4093
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.042461  PSNR(vs clean)=18.12  SSIM=0.3654
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045168  PSNR(vs clean)=23.31  SSIM=0.6441
+    trial   4  mean=20.16  per_img=['19.05', '18.12', '23.31']  params={'lr': 0.0036303760732131728}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.042862  PSNR(vs clean)=18.01  SSIM=0.3624
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.048074  PSNR(vs clean)=16.78  SSIM=0.3005
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.048266  PSNR(vs clean)=21.19  SSIM=0.5918
+    trial   5  mean=18.66  per_img=['18.01', '16.78', '21.19']  params={'lr': 0.00035090148857968553}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.042369  PSNR(vs clean)=18.15  SSIM=0.3664
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.049369  PSNR(vs clean)=16.53  SSIM=0.2874
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.047570  PSNR(vs clean)=21.57  SSIM=0.5978
+    trial   6  mean=18.75  per_img=['18.15', '16.53', '21.57']  params={'lr': 0.0003572140318996377}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.038087  PSNR(vs clean)=19.49  SSIM=0.4338
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.037912  PSNR(vs clean)=19.56  SSIM=0.4480
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045749  PSNR(vs clean)=22.81  SSIM=0.6282
+    trial   7  mean=20.62  per_img=['19.49', '19.56', '22.81']  params={'lr': 0.004015543686135838}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.042687  PSNR(vs clean)=18.06  SSIM=0.3687
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077322  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.052421  PSNR(vs clean)=19.31  SSIM=0.5638
+    trial   8  mean=16.79  per_img=['18.06', '13.00', '19.31']  params={'lr': 0.008246671732726023}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.038358  PSNR(vs clean)=19.39  SSIM=0.4298
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.040722  PSNR(vs clean)=18.63  SSIM=0.3945
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045744  PSNR(vs clean)=22.86  SSIM=0.6323
+    trial   9  mean=20.29  per_img=['19.39', '18.63', '22.86']  params={'lr': 0.005647617424572882}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.040162  PSNR(vs clean)=18.80  SSIM=0.3977
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.043967  PSNR(vs clean)=17.72  SSIM=0.3503
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.046182  PSNR(vs clean)=22.51  SSIM=0.6205
+    trial  10  mean=19.68  per_img=['18.80', '17.72', '22.51']  params={'lr': 0.0011586611567065805}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.047605  PSNR(vs clean)=16.89  SSIM=0.3286
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077322  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045879  PSNR(vs clean)=22.77  SSIM=0.6270
+    trial  11  mean=17.55  per_img=['16.89', '13.00', '22.77']  params={'lr': 0.008604916512528144}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.038852  PSNR(vs clean)=19.22  SSIM=0.4204
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.039308  PSNR(vs clean)=19.07  SSIM=0.4212
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.044967  PSNR(vs clean)=23.42  SSIM=0.6504
+    trial  12  mean=20.57  per_img=['19.22', '19.07', '23.42']  params={'lr': 0.0030830906967809655}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.040103  PSNR(vs clean)=18.82  SSIM=0.3998
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.041006  PSNR(vs clean)=18.53  SSIM=0.3910
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045852  PSNR(vs clean)=22.75  SSIM=0.6252
+    trial  13  mean=20.03  per_img=['18.82', '18.53', '22.75']  params={'lr': 0.002110289330343859}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.038915  PSNR(vs clean)=19.20  SSIM=0.4158
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.042484  PSNR(vs clean)=18.10  SSIM=0.3734
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.046152  PSNR(vs clean)=22.49  SSIM=0.6225
+    trial  14  mean=19.93  per_img=['19.20', '18.10', '22.49']  params={'lr': 0.00280716470736744}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.044772  PSNR(vs clean)=17.53  SSIM=0.3428
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.053633  PSNR(vs clean)=15.77  SSIM=0.2504
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.049631  PSNR(vs clean)=20.48  SSIM=0.5801
+    trial  15  mean=17.93  per_img=['17.53', '15.77', '20.48']  params={'lr': 0.0001166785288974834}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.040369  PSNR(vs clean)=18.74  SSIM=0.3948
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.044952  PSNR(vs clean)=17.46  SSIM=0.3395
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.046844  PSNR(vs clean)=22.05  SSIM=0.6071
+    trial  16  mean=19.42  per_img=['18.74', '17.46', '22.05']  params={'lr': 0.0010647155691193854}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.038642  PSNR(vs clean)=19.30  SSIM=0.4222
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.039595  PSNR(vs clean)=18.97  SSIM=0.4126
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.046462  PSNR(vs clean)=22.29  SSIM=0.6177
+    trial  17  mean=20.19  per_img=['19.30', '18.97', '22.29']  params={'lr': 0.005255818548809877}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.039735  PSNR(vs clean)=18.93  SSIM=0.4066
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.043468  PSNR(vs clean)=17.84  SSIM=0.3531
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.045959  PSNR(vs clean)=22.65  SSIM=0.6237
+    trial  18  mean=19.81  per_img=['18.93', '17.84', '22.65']  params={'lr': 0.0017491086958684465}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.041596  PSNR(vs clean)=18.37  SSIM=0.3770
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.047781  PSNR(vs clean)=16.84  SSIM=0.3022
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.047382  PSNR(vs clean)=21.72  SSIM=0.5999
+    trial  19  mean=18.98  per_img=['18.37', '16.84', '21.72']  params={'lr': 0.0006722751483159251}
+
+  >>> relu best mean=20.62 per_img=[19.485774993896484, 19.555866241455078, 22.814180374145508]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_relu.txt  (198,915 params)
+
+============================================================
+  Tuning incode  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.010329  PSNR(vs clean)=18.32  SSIM=0.4139
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009046  PSNR(vs clean)=17.77  SSIM=0.4274
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.010304  PSNR(vs clean)=16.51  SSIM=0.2066
+    trial   0  mean=17.53  per_img=['18.32', '17.77', '16.51']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.005028  PSNR(vs clean)=17.24  SSIM=0.3724
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.005583  PSNR(vs clean)=16.94  SSIM=0.3894
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.003955  PSNR(vs clean)=15.66  SSIM=0.1904
+    trial   1  mean=16.61  per_img=['17.24', '16.94', '15.66']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006931  PSNR(vs clean)=17.65  SSIM=0.3877
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.006569  PSNR(vs clean)=17.23  SSIM=0.4025
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.005177  PSNR(vs clean)=15.82  SSIM=0.1913
+    trial   2  mean=16.90  per_img=['17.65', '17.23', '15.82']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104053  PSNR(vs clean)=11.14  SSIM=0.2104
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.052905  PSNR(vs clean)=15.10  SSIM=0.3014
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119150  PSNR(vs clean)=11.05  SSIM=0.4541
+    trial   3  mean=12.43  per_img=['11.14', '15.10', '11.05']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.006218  PSNR(vs clean)=17.48  SSIM=0.3848
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.006246  PSNR(vs clean)=17.09  SSIM=0.3965
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.004598  PSNR(vs clean)=15.71  SSIM=0.1920
+    trial   4  mean=16.76  per_img=['17.48', '17.09', '15.71']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013078  PSNR(vs clean)=18.87  SSIM=0.4435
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013074  PSNR(vs clean)=18.67  SSIM=0.4778
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014980  PSNR(vs clean)=16.94  SSIM=0.2248
+    trial   5  mean=18.16  per_img=['18.87', '18.67', '16.94']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.005080  PSNR(vs clean)=17.28  SSIM=0.3755
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.005162  PSNR(vs clean)=16.89  SSIM=0.3874
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008027  PSNR(vs clean)=16.38  SSIM=0.2062
+    trial   6  mean=16.85  per_img=['17.28', '16.89', '16.38']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.018356  PSNR(vs clean)=20.14  SSIM=0.4999
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.017392  PSNR(vs clean)=20.09  SSIM=0.5418
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.021051  PSNR(vs clean)=18.13  SSIM=0.2651
+    trial   7  mean=19.45  per_img=['20.14', '20.09', '18.13']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.036877  PSNR(vs clean)=19.83  SSIM=0.4255
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077252  PSNR(vs clean)=13.01  SSIM=0.1573
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.093737  PSNR(vs clean)=12.67  SSIM=0.1955
+    trial   8  mean=15.17  per_img=['19.83', '13.01', '12.67']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015748  PSNR(vs clean)=19.81  SSIM=0.4780
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077322  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.048856  PSNR(vs clean)=20.83  SSIM=0.5806
+    trial   9  mean=17.88  per_img=['19.81', '13.00', '20.83']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.024575  PSNR(vs clean)=22.08  SSIM=0.5781
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.023159  PSNR(vs clean)=22.68  SSIM=0.6628
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.027567  PSNR(vs clean)=19.63  SSIM=0.3033
+    trial  10  mean=21.46  per_img=['22.08', '22.68', '19.63']  params={'lr': 0.000207058458959498, 'first_omega_0': 5.3707763821857775, 'hidden_omega_0': 44.561691323211114}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.025152  PSNR(vs clean)=22.26  SSIM=0.5908
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.023721  PSNR(vs clean)=22.86  SSIM=0.6694
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.033845  PSNR(vs clean)=21.37  SSIM=0.3623
+    trial  11  mean=22.16  per_img=['22.26', '22.86', '21.37']  params={'lr': 0.00012736614540714364, 'first_omega_0': 5.40942395434765, 'hidden_omega_0': 44.33377393931699}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.024379  PSNR(vs clean)=21.91  SSIM=0.5776
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.023841  PSNR(vs clean)=22.95  SSIM=0.6740
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.030999  PSNR(vs clean)=20.49  SSIM=0.3298
+    trial  12  mean=21.78  per_img=['21.91', '22.95', '20.49']  params={'lr': 0.00015621204464427385, 'first_omega_0': 5.373101675626415, 'hidden_omega_0': 48.204901858060026}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.020271  PSNR(vs clean)=21.44  SSIM=0.5361
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.018390  PSNR(vs clean)=21.12  SSIM=0.5878
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.028230  PSNR(vs clean)=20.54  SSIM=0.3409
+    trial  13  mean=21.03  per_img=['21.44', '21.12', '20.54']  params={'lr': 1.4019388768283986e-05, 'first_omega_0': 15.680604302613808, 'hidden_omega_0': 52.505226963574096}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015981  PSNR(vs clean)=19.69  SSIM=0.4788
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.016151  PSNR(vs clean)=19.80  SSIM=0.5303
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.018573  PSNR(vs clean)=17.85  SSIM=0.2574
+    trial  14  mean=19.11  per_img=['19.69', '19.80', '17.85']  params={'lr': 0.00017569022952400188, 'first_omega_0': 13.36707474198818, 'hidden_omega_0': 46.062134490674296}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013175  PSNR(vs clean)=18.99  SSIM=0.4445
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.012501  PSNR(vs clean)=18.64  SSIM=0.4712
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014899  PSNR(vs clean)=17.13  SSIM=0.2260
+    trial  15  mean=18.25  per_img=['18.99', '18.64', '17.13']  params={'lr': 8.820274792855652e-05, 'first_omega_0': 22.208359969813074, 'hidden_omega_0': 41.333738511207486}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.027153  PSNR(vs clean)=22.63  SSIM=0.5953
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.025660  PSNR(vs clean)=23.83  SSIM=0.7102
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.042703  PSNR(vs clean)=24.84  SSIM=0.6933
+    trial  16  mean=23.77  per_img=['22.63', '23.83', '24.84']  params={'lr': 1.3634038670405325e-05, 'first_omega_0': 5.304348353132718, 'hidden_omega_0': 52.08626189104324}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.020408  PSNR(vs clean)=21.66  SSIM=0.5472
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.017644  PSNR(vs clean)=20.91  SSIM=0.5756
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.032571  PSNR(vs clean)=22.15  SSIM=0.4177
+    trial  17  mean=21.58  per_img=['21.66', '20.91', '22.15']  params={'lr': 1.2066371414973913e-05, 'first_omega_0': 15.99408671165915, 'hidden_omega_0': 54.06492280420005}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.011835  PSNR(vs clean)=18.67  SSIM=0.4269
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.010863  PSNR(vs clean)=18.23  SSIM=0.4482
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.012303  PSNR(vs clean)=16.80  SSIM=0.2141
+    trial  18  mean=17.90  per_img=['18.67', '18.23', '16.80']  params={'lr': 3.819962260682001e-05, 'first_omega_0': 30.144232844549766, 'hidden_omega_0': 39.073080812174574}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.022658  PSNR(vs clean)=21.95  SSIM=0.5640
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.020144  PSNR(vs clean)=21.65  SSIM=0.6149
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.038531  PSNR(vs clean)=24.36  SSIM=0.5509
+    trial  19  mean=22.65  per_img=['21.95', '21.65', '24.36']  params={'lr': 2.5194979699265543e-05, 'first_omega_0': 11.14798633920076, 'hidden_omega_0': 59.389657780243134}
+
+  >>> incode best mean=23.77 per_img=[22.63117790222168, 23.83218765258789, 24.843568801879883]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_incode.txt  (892,455 params)
+
+============================================================
+  Tuning sl2a  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.019176  PSNR(vs clean)=20.88  SSIM=0.5299
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.018030  PSNR(vs clean)=20.58  SSIM=0.5689
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.024188  PSNR(vs clean)=18.69  SSIM=0.2735
+    trial   0  mean=20.05  per_img=['20.88', '20.58', '18.69']  params={'lr': 0.00024156772025296256}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.014334  PSNR(vs clean)=19.35  SSIM=0.4640
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013515  PSNR(vs clean)=18.99  SSIM=0.4979
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.017451  PSNR(vs clean)=17.35  SSIM=0.2309
+    trial   1  mean=18.56  per_img=['19.35', '18.99', '17.35']  params={'lr': 0.001754759256702473}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.016501  PSNR(vs clean)=20.04  SSIM=0.4938
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015703  PSNR(vs clean)=19.74  SSIM=0.5338
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.020202  PSNR(vs clean)=17.86  SSIM=0.2476
+    trial   2  mean=19.21  per_img=['20.04', '19.74', '17.86']  params={'lr': 0.0007506810936068548}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012009  PSNR(vs clean)=18.71  SSIM=0.4352
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.012055  PSNR(vs clean)=18.53  SSIM=0.4738
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014899  PSNR(vs clean)=16.98  SSIM=0.2214
+    trial   3  mean=18.07  per_img=['18.71', '18.53', '16.98']  params={'lr': 0.0037214926657368383}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012195  PSNR(vs clean)=18.75  SSIM=0.4390
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.012350  PSNR(vs clean)=18.63  SSIM=0.4804
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.014862  PSNR(vs clean)=16.96  SSIM=0.2221
+    trial   4  mean=18.11  per_img=['18.75', '18.63', '16.96']  params={'lr': 0.0036303760732131728}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.018356  PSNR(vs clean)=20.64  SSIM=0.5189
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.017552  PSNR(vs clean)=20.41  SSIM=0.5621
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.023017  PSNR(vs clean)=18.41  SSIM=0.2629
+    trial   5  mean=19.82  per_img=['20.64', '20.41', '18.41']  params={'lr': 0.00035090148857968553}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.018155  PSNR(vs clean)=20.56  SSIM=0.5170
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.017300  PSNR(vs clean)=20.33  SSIM=0.5602
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.023038  PSNR(vs clean)=18.42  SSIM=0.2633
+    trial   6  mean=19.77  per_img=['20.56', '20.33', '18.42']  params={'lr': 0.0003572140318996377}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013388  PSNR(vs clean)=19.07  SSIM=0.4561
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013060  PSNR(vs clean)=18.86  SSIM=0.4918
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.016219  PSNR(vs clean)=17.16  SSIM=0.2287
+    trial   7  mean=18.36  per_img=['19.07', '18.86', '17.16']  params={'lr': 0.004015543686135838}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.025873  PSNR(vs clean)=21.77  SSIM=0.5605
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.023262  PSNR(vs clean)=21.51  SSIM=0.6171
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.031955  PSNR(vs clean)=20.56  SSIM=0.3449
+    trial   8  mean=21.28  per_img=['21.77', '21.51', '20.56']  params={'lr': 0.008246671732726023}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.016706  PSNR(vs clean)=19.90  SSIM=0.5035
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015891  PSNR(vs clean)=19.61  SSIM=0.5334
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.021971  PSNR(vs clean)=18.16  SSIM=0.2639
+    trial   9  mean=19.22  per_img=['19.90', '19.61', '18.16']  params={'lr': 0.005647617424572882}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.026047  PSNR(vs clean)=21.91  SSIM=0.5752
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.026074  PSNR(vs clean)=21.94  SSIM=0.6250
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.033193  PSNR(vs clean)=20.86  SSIM=0.3533
+    trial  10  mean=21.57  per_img=['21.91', '21.94', '20.86']  params={'lr': 0.008323673661841077}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.025801  PSNR(vs clean)=21.84  SSIM=0.5741
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.025490  PSNR(vs clean)=21.65  SSIM=0.6194
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.036653  PSNR(vs clean)=21.83  SSIM=0.3860
+    trial  11  mean=21.77  per_img=['21.84', '21.65', '21.83']  params={'lr': 0.008751518419977877}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.027837  PSNR(vs clean)=21.75  SSIM=0.5447
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.024625  PSNR(vs clean)=21.51  SSIM=0.6138
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.042568  PSNR(vs clean)=23.13  SSIM=0.4853
+    trial  12  mean=22.13  per_img=['21.75', '21.51', '23.13']  params={'lr': 0.009915579390207643}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.020640  PSNR(vs clean)=21.29  SSIM=0.5431
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.019523  PSNR(vs clean)=21.21  SSIM=0.5985
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.028658  PSNR(vs clean)=19.88  SSIM=0.3125
+    trial  13  mean=20.79  per_img=['21.29', '21.21', '19.88']  params={'lr': 0.00011667005469831128}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013891  PSNR(vs clean)=19.26  SSIM=0.4599
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013592  PSNR(vs clean)=19.00  SSIM=0.4963
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.017694  PSNR(vs clean)=17.39  SSIM=0.2322
+    trial  14  mean=18.55  per_img=['19.26', '19.00', '17.39']  params={'lr': 0.0017802042428468757}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.013745  PSNR(vs clean)=19.20  SSIM=0.4592
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.013663  PSNR(vs clean)=18.98  SSIM=0.4950
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.016205  PSNR(vs clean)=17.17  SSIM=0.2255
+    trial  15  mean=18.45  per_img=['19.20', '18.98', '17.17']  params={'lr': 0.002072646223343145}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.030843  PSNR(vs clean)=21.35  SSIM=0.5112
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.027894  PSNR(vs clean)=22.04  SSIM=0.6262
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.043059  PSNR(vs clean)=21.94  SSIM=0.4158
+    trial  16  mean=21.78  per_img=['21.35', '22.04', '21.94']  params={'lr': 0.009994915665849827}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015795  PSNR(vs clean)=19.84  SSIM=0.4875
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.015197  PSNR(vs clean)=19.55  SSIM=0.5286
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.019637  PSNR(vs clean)=17.75  SSIM=0.2439
+    trial  17  mean=19.05  per_img=['19.84', '19.55', '17.75']  params={'lr': 0.0009017960134808721}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.015537  PSNR(vs clean)=19.66  SSIM=0.4867
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.014964  PSNR(vs clean)=19.33  SSIM=0.5148
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.020263  PSNR(vs clean)=17.87  SSIM=0.2532
+    trial  18  mean=18.95  per_img=['19.66', '19.33', '17.87']  params={'lr': 0.005113764841031794}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012618  PSNR(vs clean)=18.90  SSIM=0.4455
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.012537  PSNR(vs clean)=18.71  SSIM=0.4846
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.019216  PSNR(vs clean)=17.66  SSIM=0.2405
+    trial  19  mean=18.42  per_img=['18.90', '18.71', '17.66']  params={'lr': 0.0027817042333515983}
+
+  >>> sl2a best mean=22.13 per_img=[21.745868682861328, 21.513593673706055, 23.132366180419922]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_sl2a.txt  (264,707 params)
+
+============================================================
+  Tuning cosmo  (20 trials × 3 images)
+============================================================
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009708  PSNR(vs clean)=18.19  SSIM=0.4103
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009082  PSNR(vs clean)=17.84  SSIM=0.4322
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.010934  PSNR(vs clean)=16.60  SSIM=0.2107
+    trial   0  mean=17.54  per_img=['18.19', '17.84', '16.60']  params={'lr': 0.002415677202529624, 'beta0': 0.31483329780951763}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009859  PSNR(vs clean)=18.14  SSIM=0.3986
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.017558  PSNR(vs clean)=19.41  SSIM=0.4833
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.011681  PSNR(vs clean)=16.54  SSIM=0.2041
+    trial   1  mean=18.03  per_img=['18.14', '19.41', '16.54']  params={'lr': 0.007506810936068544, 'beta0': 0.3948257060197469}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.026961  PSNR(vs clean)=20.98  SSIM=0.5111
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.070723  PSNR(vs clean)=13.61  SSIM=0.1676
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.113415  PSNR(vs clean)=11.38  SSIM=0.1294
+    trial   2  mean=15.32  per_img=['20.98', '13.61', '11.38']  params={'lr': 0.036303760732131735, 'beta0': 0.1435703765884944}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.008532  PSNR(vs clean)=17.97  SSIM=0.3988
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009302  PSNR(vs clean)=17.75  SSIM=0.4235
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.008090  PSNR(vs clean)=16.20  SSIM=0.2022
+    trial   3  mean=17.31  per_img=['17.97', '17.75', '16.20']  params={'lr': 0.003572140318996374, 'beta0': 0.40291736699215946}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104341  PSNR(vs clean)=11.13  SSIM=0.2125
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.075907  PSNR(vs clean)=13.12  SSIM=0.1231
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119712  PSNR(vs clean)=11.03  SSIM=0.4915
+    trial   4  mean=11.76  per_img=['11.13', '13.12', '11.03']  params={'lr': 0.08246671732726024, 'beta0': 0.4392069910236264}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009920  PSNR(vs clean)=18.08  SSIM=0.3957
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009394  PSNR(vs clean)=17.75  SSIM=0.4223
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.010273  PSNR(vs clean)=16.44  SSIM=0.2063
+    trial   5  mean=17.42  per_img=['18.08', '17.75', '16.44']  params={'lr': 0.005195586024325666, 'beta0': 0.25548761150649474}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.068237  PSNR(vs clean)=13.87  SSIM=0.2857
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.016351  PSNR(vs clean)=18.42  SSIM=0.4252
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.016337  PSNR(vs clean)=17.01  SSIM=0.2078
+    trial   6  mean=16.43  per_img=['13.87', '18.42', '17.01']  params={'lr': 0.023276939100527697, 'beta0': 0.3592239932216211}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.012251  PSNR(vs clean)=18.61  SSIM=0.4159
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009690  PSNR(vs clean)=17.79  SSIM=0.4237
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.017114  PSNR(vs clean)=17.22  SSIM=0.2155
+    trial   7  mean=17.87  per_img=['18.61', '17.79', '17.22']  params={'lr': 0.0055017583288459885, 'beta0': 0.2849861311721562}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.014643  PSNR(vs clean)=18.95  SSIM=0.4180
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.011699  PSNR(vs clean)=17.80  SSIM=0.4084
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.012534  PSNR(vs clean)=16.60  SSIM=0.2053
+    trial   8  mean=17.78  per_img=['18.95', '17.80', '16.60']  params={'lr': 0.010142997784304343, 'beta0': 0.016746540299434298}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.056670  PSNR(vs clean)=15.29  SSIM=0.2967
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.020146  PSNR(vs clean)=19.89  SSIM=0.4991
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.042848  PSNR(vs clean)=23.22  SSIM=0.5207
+    trial   9  mean=19.47  per_img=['15.29', '19.89', '23.22']  params={'lr': 0.03512798537016722, 'beta0': 0.4424941834116971}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.009506  PSNR(vs clean)=18.45  SSIM=0.4288
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.009494  PSNR(vs clean)=18.11  SSIM=0.4461
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.009093  PSNR(vs clean)=16.46  SSIM=0.2095
+    trial  10  mean=17.67  per_img=['18.45', '18.11', '16.46']  params={'lr': 0.0012640135474979244, 'beta0': 0.4855636272819101}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.023294  PSNR(vs clean)=19.91  SSIM=0.4279
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.035738  PSNR(vs clean)=20.12  SSIM=0.5229
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.051385  PSNR(vs clean)=19.70  SSIM=0.5665
+    trial  11  mean=19.91  per_img=['19.91', '20.12', '19.70']  params={'lr': 0.015510857090949601, 'beta0': 0.4906445535979676}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.101481  PSNR(vs clean)=11.29  SSIM=0.1506
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.018792  PSNR(vs clean)=19.01  SSIM=0.4490
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.070501  PSNR(vs clean)=15.31  SSIM=0.5205
+    trial  12  mean=15.20  per_img=['11.29', '19.01', '15.31']  params={'lr': 0.019758715435974284, 'beta0': 0.4920902321479772}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.104307  PSNR(vs clean)=11.13  SSIM=0.2083
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.070372  PSNR(vs clean)=13.61  SSIM=0.2073
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.050295  PSNR(vs clean)=20.15  SSIM=0.5632
+    trial  13  mean=14.96  per_img=['11.13', '13.61', '20.15']  params={'lr': 0.0705692551301241, 'beta0': 0.19040744177597796}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.019606  PSNR(vs clean)=19.77  SSIM=0.4383
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.072664  PSNR(vs clean)=13.42  SSIM=0.1633
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.033310  PSNR(vs clean)=20.54  SSIM=0.2999
+    trial  14  mean=17.91  per_img=['19.77', '13.42', '20.54']  params={'lr': 0.014356153515765552, 'beta0': 0.4948818241879616}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.022883  PSNR(vs clean)=21.24  SSIM=0.5159
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.076631  PSNR(vs clean)=13.06  SSIM=0.1573
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.071978  PSNR(vs clean)=15.10  SSIM=0.5214
+    trial  15  mean=16.47  per_img=['21.24', '13.06', '15.10']  params={'lr': 0.040274459073901814, 'beta0': 0.43363828233408763}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.023119  PSNR(vs clean)=20.15  SSIM=0.4583
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077320  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.051744  PSNR(vs clean)=19.54  SSIM=0.5321
+    trial  16  mean=17.56  per_img=['20.15', '13.00', '19.54']  params={'lr': 0.03963466126653586, 'beta0': 0.3387227421052136}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.053651  PSNR(vs clean)=15.76  SSIM=0.3072
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.014688  PSNR(vs clean)=18.78  SSIM=0.4600
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.013426  PSNR(vs clean)=16.80  SSIM=0.2110
+    trial  17  mean=17.11  per_img=['15.76', '18.78', '16.80']  params={'lr': 0.013523071553795275, 'beta0': 0.1965491070156736}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.016717  PSNR(vs clean)=19.29  SSIM=0.4314
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077322  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.023421  PSNR(vs clean)=18.17  SSIM=0.2323
+    trial  18  mean=16.82  per_img=['19.29', '13.00', '18.17']  params={'lr': 0.02183143409703667, 'beta0': 0.0710716651792925}
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.68 dB
+  [0214] epoch  4000/4000  loss=0.065821  PSNR(vs clean)=14.14  SSIM=0.1657
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=16.24 dB
+  [0221] epoch  4000/4000  loss=0.077320  PSNR(vs clean)=13.00  SSIM=0.1567
+  noise: {'noise_type': 'poisson_gaussian', 'tau': 20.0, 'readout_snr': 2.0}  noisy-vs-clean PSNR=15.32 dB
+  [0527] epoch  4000/4000  loss=0.119650  PSNR(vs clean)=11.03  SSIM=0.4742
+    trial  19  mean=12.72  per_img=['14.14', '13.00', '11.03']  params={'lr': 0.057626080321783825, 'beta0': 0.43212075357556057}
+
+  >>> cosmo best mean=19.91 per_img=[19.91498565673828, 20.122112274169922, 19.704021453857422]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_cosmo.txt  (1,090,734 params)
+
+[saved] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_den_div2k_214_221_527_pg_t20_r2p0_mean_best_params.json  (8 methods total)
+==========================================
+ Done: Tue Apr 28 06:14:46 EDT 2026
+==========================================

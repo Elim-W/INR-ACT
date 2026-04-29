@@ -61,7 +61,9 @@ def _bandlimit_filter(data, cutoff_low, cutoff_high):
     return np.real(fft.ifftn(data_fft * mask))
 
 
-_CUTOFFS = _generate_bandlimits(0.0015, 0.7, 9, base=300)
+_CUTOFFS_2D = _generate_bandlimits(0.0015, 0.7, 9, base=300)  # length=1000, min_freq=0.001
+_CUTOFFS_3D = _generate_bandlimits(0.015,  0.7, 9, base=300)  # length=100,  min_freq=0.01
+_CUTOFFS = _CUTOFFS_2D  # backward-compat alias
 
 # --------------- Fourier analysis helpers ----------------------------------
 
@@ -114,14 +116,17 @@ def _compute_radial_spectrum_nd(arr, n_bins=200):
     return centers, mean_power
 
 
-def compute_oob_leakage(pred, bandwidth_label):
+def compute_oob_leakage(pred, bandwidth_label, cutoffs=None):
     """
     Fraction of prediction's Fourier energy outside the GT bandwidth cutoff.
-    Works for N-D arrays. GT was constructed with cutoff radius = _CUTOFFS[idx] / sqrt(2)
+    Works for N-D arrays. GT was constructed with cutoff radius = cutoffs[idx] / sqrt(2)
     (the sqrt(2) factor comes from _bandlimit_filter, which uses the same divisor for all dims).
+    Pass cutoffs=_CUTOFFS_3D for 3D signals, _CUTOFFS_2D (default) for 2D.
     """
+    if cutoffs is None:
+        cutoffs = _CUTOFFS_2D
     idx = int(round(bandwidth_label * 10)) - 1
-    cutoff_r = _CUTOFFS[idx] / np.sqrt(2)
+    cutoff_r = cutoffs[idx] / np.sqrt(2)
     power = np.abs(fft.fftn(pred)) ** 2
     in_band = _radial_freq_mask_nd(pred.shape, 0.0, cutoff_r + 1e-10)
     return float(power[~in_band].sum() / (power.sum() + 1e-12))
@@ -218,7 +223,7 @@ def make_bandlimited_3d(length, bandwidth_label, seed):
         length += 1
     signal = np.random.uniform(size=(length, length, length))
     idx = int(round(bandwidth_label * 10)) - 1
-    signal = _bandlimit_filter(signal, 0.0, _CUTOFFS[idx])
+    signal = _bandlimit_filter(signal, 0.0, _CUTOFFS_3D[idx])
     return signal.astype(np.float32)
 
 
@@ -511,6 +516,8 @@ def main():
     L = args.signal_length
     print(f'[run_synthetic] signal={args.signal}  device={device}  '
           f'size={L}{"³" if is_3d else "²"}  iters={args.iters}')
+    if is_3d and cfg.get('fourier_bw'):
+        print(f'  [3D] using _CUTOFFS_3D: {_CUTOFFS_3D.round(4)}')
     os.makedirs(args.out_dir, exist_ok=True)
 
     # Resume: load already-completed runs
@@ -697,7 +704,8 @@ def main():
                         # to a Fourier cutoff (bandlimited signals); for sphere /
                         # sierpinski the label is not a frequency parameter.
                         if cfg['fourier_bw']:
-                            fm['oob_leakage'] = compute_oob_leakage(best_output, bw)
+                            cutoffs = _CUTOFFS_3D if is_3d else _CUTOFFS_2D
+                            fm['oob_leakage'] = compute_oob_leakage(best_output, bw, cutoffs=cutoffs)
                         else:
                             fm['oob_leakage'] = float('nan')
                         frow = {'method': method, 'bandwidth': bw, 'seed': seed}

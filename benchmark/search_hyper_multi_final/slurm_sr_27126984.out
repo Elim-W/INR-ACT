@@ -1,0 +1,1630 @@
+==========================================
+ Job: image_super_resolution started Sun Apr 26 13:46:22 EDT 2026
+ Host: lh1300.arc-ts.umich.edu   GPU: GPU 0: NVIDIA A100-SXM4-80GB (UUID: GPU-edd54382-0b22-1ca1-7f29-26cc3ba5ef69)
+==========================================
+[hparam_search_sr_multi] device=cuda  agg=mean  scale=8  eval_epoch=0  n_trials=20  iters/trial=4000
+    [0] 0214  HR=(1356x2040)  LR≈(169x255)
+    [1] 0221  HR=(1356x2040)  LR≈(169x255)
+    [2] 0527  HR=(1044x2040)  LR≈(130x255)
+
+============================================================
+  Tuning siren  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000150  PSNR(HR)=17.29  SSIM=0.3550
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000093  PSNR(HR)=23.24  SSIM=0.6281
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000227  PSNR(HR)=22.94  SSIM=0.6663
+    trial   0  mean=21.16  per_img=['17.29', '23.24', '22.94']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.78  SSIM=0.2448
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=20.99  SSIM=0.4039
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=20.58  SSIM=0.3376
+    trial   1  mean=19.45  per_img=['16.78', '20.99', '20.58']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000017  PSNR(HR)=17.27  SSIM=0.3577
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000010  PSNR(HR)=23.27  SSIM=0.6361
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000021  PSNR(HR)=22.98  SSIM=0.6703
+    trial   2  mean=21.18  per_img=['17.27', '23.27', '22.98']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.058756  PSNR(HR)=10.41  SSIM=0.1730
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.021858  PSNR(HR)=12.75  SSIM=0.2012
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.048409  PSNR(HR)=10.81  SSIM=0.3408
+    trial   3  mean=11.33  per_img=['10.41', '12.75', '10.81']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000002  PSNR(HR)=17.17  SSIM=0.3289
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000001  PSNR(HR)=22.69  SSIM=0.5742
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=22.29  SSIM=0.5490
+    trial   4  mean=20.72  per_img=['17.17', '22.69', '22.29']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000116  PSNR(HR)=17.22  SSIM=0.3504
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000105  PSNR(HR)=23.26  SSIM=0.6335
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000137  PSNR(HR)=22.96  SSIM=0.6663
+    trial   5  mean=21.15  per_img=['17.22', '23.26', '22.96']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.43  SSIM=0.2059
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=19.82  SSIM=0.3167
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=18.81  SSIM=0.2262
+    trial   6  mean=18.35  per_img=['16.43', '19.82', '18.81']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000060  PSNR(HR)=17.25  SSIM=0.3455
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000051  PSNR(HR)=23.17  SSIM=0.6254
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000077  PSNR(HR)=22.77  SSIM=0.6456
+    trial   7  mean=21.07  per_img=['17.25', '23.17', '22.77']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.066905  PSNR(HR)=10.42  SSIM=0.1982
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.041661  PSNR(HR)=12.86  SSIM=0.3444
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.064955  PSNR(HR)=10.84  SSIM=0.5000
+    trial   8  mean=11.38  per_img=['10.42', '12.86', '10.84']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.002394  PSNR(HR)=8.43  SSIM=0.0140
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=16.25  SSIM=0.1386
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000179  PSNR(HR)=8.72  SSIM=0.0164
+    trial   9  mean=11.14  per_img=['8.43', '16.25', '8.72']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000014  PSNR(HR)=17.30  SSIM=0.3588
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000009  PSNR(HR)=23.27  SSIM=0.6360
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000012  PSNR(HR)=22.99  SSIM=0.6704
+    trial  10  mean=21.19  per_img=['17.30', '23.27', '22.99']  params={'lr': 7.314877088359556e-05, 'first_omega_0': 58.14707363160215, 'hidden_omega_0': 59.82435743032896}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000016  PSNR(HR)=17.28  SSIM=0.3560
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000010  PSNR(HR)=23.28  SSIM=0.6390
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000011  PSNR(HR)=22.92  SSIM=0.6674
+    trial  11  mean=21.16  per_img=['17.28', '23.28', '22.92']  params={'lr': 7.292364440010678e-05, 'first_omega_0': 59.679411983437774, 'hidden_omega_0': 59.1552710101827}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000004  PSNR(HR)=17.28  SSIM=0.3553
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=23.27  SSIM=0.6344
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000006  PSNR(HR)=22.98  SSIM=0.6681
+    trial  12  mean=21.18  per_img=['17.28', '23.27', '22.98']  params={'lr': 0.00015506103998682812, 'first_omega_0': 56.75336915400034, 'hidden_omega_0': 58.51000658421875}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000005  PSNR(HR)=17.27  SSIM=0.3541
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=23.23  SSIM=0.6285
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000008  PSNR(HR)=22.99  SSIM=0.6673
+    trial  13  mean=21.16  per_img=['17.27', '23.23', '22.99']  params={'lr': 0.00017430931081747274, 'first_omega_0': 58.59346515190141, 'hidden_omega_0': 48.17267505719674}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000281  PSNR(HR)=17.27  SSIM=0.3577
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000327  PSNR(HR)=23.13  SSIM=0.6274
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000430  PSNR(HR)=22.82  SSIM=0.6623
+    trial  14  mean=21.07  per_img=['17.27', '23.13', '22.82']  params={'lr': 1.0454500197193723e-05, 'first_omega_0': 54.455196721615444, 'hidden_omega_0': 47.91151647895042}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000012  PSNR(HR)=17.27  SSIM=0.3501
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000010  PSNR(HR)=23.16  SSIM=0.6219
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000013  PSNR(HR)=22.98  SSIM=0.6653
+    trial  15  mean=21.14  per_img=['17.27', '23.16', '22.98']  params={'lr': 0.00021451493896648, 'first_omega_0': 31.07461801717021, 'hidden_omega_0': 49.03031830333995}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.003840  PSNR(HR)=16.64  SSIM=0.3272
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002114  PSNR(HR)=21.85  SSIM=0.5700
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.002226  PSNR(HR)=21.54  SSIM=0.6389
+    trial  16  mean=20.01  per_img=['16.64', '21.85', '21.54']  params={'lr': 1.3634038670405325e-05, 'first_omega_0': 7.175872408972253, 'hidden_omega_0': 41.76771778710827}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000033  PSNR(HR)=17.26  SSIM=0.3578
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000020  PSNR(HR)=23.25  SSIM=0.6372
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000051  PSNR(HR)=22.91  SSIM=0.6686
+    trial  17  mean=21.14  per_img=['17.26', '23.25', '22.91']  params={'lr': 3.5950344485335006e-05, 'first_omega_0': 53.458157374134586, 'hidden_omega_0': 52.61829438764978}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000025  PSNR(HR)=17.27  SSIM=0.3505
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000012  PSNR(HR)=23.21  SSIM=0.6266
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000027  PSNR(HR)=22.96  SSIM=0.6686
+    trial  18  mean=21.15  per_img=['17.27', '23.21', '22.96']  params={'lr': 0.00012468171280802552, 'first_omega_0': 34.03816063834083, 'hidden_omega_0': 41.66037344242213}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000013  PSNR(HR)=17.22  SSIM=0.3304
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000011  PSNR(HR)=23.18  SSIM=0.6233
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000016  PSNR(HR)=22.92  SSIM=0.6562
+    trial  19  mean=21.11  per_img=['17.22', '23.18', '22.92']  params={'lr': 0.0003417847592213206, 'first_omega_0': 17.9839264841663, 'hidden_omega_0': 54.49350913819135}
+
+  >>> siren best HR-mean=21.19 per_img=[17.298105239868164, 23.269264221191406, 22.990638732910156]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_siren.txt  (198,915 params)
+
+============================================================
+  Tuning wire  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=8.98  SSIM=0.0209
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=10.45  SSIM=0.0266
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=8.38  SSIM=0.0190
+    trial   0  mean=9.27  per_img=['8.98', '10.45', '8.38']  params={'lr': 0.0003754553966912878, 'first_omega_0': 26.773806986394113, 'hidden_omega_0': 20.320470865249007, 'scale': 14.456722894737819}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.016085  PSNR(HR)=14.09  SSIM=0.2437
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.013565  PSNR(HR)=15.77  SSIM=0.2971
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.007783  PSNR(HR)=17.72  SSIM=0.3991
+    trial   1  mean=15.86  per_img=['14.09', '15.77', '17.72']  params={'lr': 0.021873960541613266, 'first_omega_0': 14.540741184892457, 'hidden_omega_0': 14.676248930008384, 'scale': 15.291934777093275}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.071773  PSNR(HR)=10.42  SSIM=0.1992
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.046474  PSNR(HR)=12.86  SSIM=0.3502
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.076754  PSNR(HR)=10.85  SSIM=0.5645
+    trial   2  mean=11.38  per_img=['10.42', '12.86', '10.85']  params={'lr': 0.07488900510447863, 'first_omega_0': 35.65764221597331, 'hidden_omega_0': 17.523604448525333, 'scale': 5.495795301092298}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.018345  PSNR(HR)=9.66  SSIM=0.0447
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.020276  PSNR(HR)=12.31  SSIM=0.1089
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.022871  PSNR(HR)=10.17  SSIM=0.0990
+    trial   3  mean=10.72  per_img=['9.66', '12.31', '10.17']  params={'lr': 0.011230233998349255, 'first_omega_0': 29.944570944401505, 'hidden_omega_0': 17.95877641766382, 'scale': 6.744578511276775}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000230  PSNR(HR)=15.10  SSIM=0.1627
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000078  PSNR(HR)=17.25  SSIM=0.2214
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000041  PSNR(HR)=16.78  SSIM=0.1357
+    trial   4  mean=16.38  per_img=['15.10', '17.25', '16.78']  params={'lr': 0.0032303493779340005, 'first_omega_0': 5.481895735673879, 'hidden_omega_0': 32.04893175643309, 'scale': 20.126490980313903}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=10.39  SSIM=0.0330
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=12.22  SSIM=0.0495
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.91  SSIM=0.0271
+    trial   5  mean=10.84  per_img=['10.39', '12.22', '9.91']  params={'lr': 0.0012435348237922871, 'first_omega_0': 26.53886624517228, 'hidden_omega_0': 7.638343457504179, 'scale': 3.5058859061301124}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072522  PSNR(HR)=10.43  SSIM=0.2046
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047216  PSNR(HR)=12.86  SSIM=0.3593
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077311  PSNR(HR)=10.85  SSIM=0.5712
+    trial   6  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.06301157076762004, 'first_omega_0': 27.79823501293021, 'hidden_omega_0': 18.902090220415396, 'scale': 14.623457200774693}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072522  PSNR(HR)=10.43  SSIM=0.2047
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047220  PSNR(HR)=12.86  SSIM=0.3594
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077316  PSNR(HR)=10.85  SSIM=0.5717
+    trial   7  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.0008922948091189508, 'first_omega_0': 24.883452841912423, 'hidden_omega_0': 35.41945863464291, 'scale': 4.408400420867113}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.070675  PSNR(HR)=10.42  SSIM=0.1909
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.044043  PSNR(HR)=12.88  SSIM=0.3020
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.072789  PSNR(HR)=10.86  SSIM=0.4207
+    trial   8  mean=11.39  per_img=['10.42', '12.88', '10.86']  params={'lr': 0.0254942902698997, 'first_omega_0': 10.03183885800976, 'hidden_omega_0': 29.64913398914174, 'scale': 10.98378506847382}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.69  SSIM=0.0270
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=11.24  SSIM=0.0368
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.13  SSIM=0.0263
+    trial   9  mean=10.02  per_img=['9.69', '11.24', '9.13']  params={'lr': 0.0004532901866195531, 'first_omega_0': 37.37036700154478, 'hidden_omega_0': 20.47492643914618, 'scale': 22.037885902852185}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072522  PSNR(HR)=10.43  SSIM=0.2047
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047220  PSNR(HR)=12.86  SSIM=0.3594
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077316  PSNR(HR)=10.85  SSIM=0.5717
+    trial  10  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.003943979706968568, 'first_omega_0': 5.2359486068454935, 'hidden_omega_0': 39.854281917730056, 'scale': 1.1206076361772583}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000028  PSNR(HR)=16.84  SSIM=0.3123
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000011  PSNR(HR)=21.31  SSIM=0.4538
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000013  PSNR(HR)=21.14  SSIM=0.4946
+    trial  11  mean=19.76  per_img=['16.84', '21.31', '21.14']  params={'lr': 0.006388194897101019, 'first_omega_0': 14.13559407207673, 'hidden_omega_0': 9.41783121452076, 'scale': 23.389185921415706}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000014  PSNR(HR)=15.12  SSIM=0.1643
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000016  PSNR(HR)=17.27  SSIM=0.2044
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000003  PSNR(HR)=16.78  SSIM=0.1856
+    trial  12  mean=16.39  per_img=['15.12', '17.27', '16.78']  params={'lr': 0.00344511604767811, 'first_omega_0': 16.841658481003975, 'hidden_omega_0': 27.06123865883641, 'scale': 28.837338187289163}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000012  PSNR(HR)=11.18  SSIM=0.0505
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000011  PSNR(HR)=12.65  SSIM=0.0676
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000007  PSNR(HR)=10.93  SSIM=0.0466
+    trial  13  mean=11.59  per_img=['11.18', '12.65', '10.93']  params={'lr': 0.0001110347227503285, 'first_omega_0': 16.19225547949783, 'hidden_omega_0': 5.961700066978091, 'scale': 29.995974386387235}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000112  PSNR(HR)=15.85  SSIM=0.2316
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000137  PSNR(HR)=18.97  SSIM=0.3152
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000036  PSNR(HR)=18.75  SSIM=0.2776
+    trial  14  mean=17.85  per_img=['15.85', '18.97', '18.75']  params={'lr': 0.006351484886685541, 'first_omega_0': 18.75939114793597, 'hidden_omega_0': 25.818597120770747, 'scale': 28.83271259080348}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000008  PSNR(HR)=16.67  SSIM=0.2540
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=20.70  SSIM=0.3871
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000006  PSNR(HR)=20.72  SSIM=0.3837
+    trial  15  mean=19.36  per_img=['16.67', '20.70', '20.72']  params={'lr': 0.006178881746246731, 'first_omega_0': 19.328465727615598, 'hidden_omega_0': 11.758703906686025, 'scale': 8.727631897671825}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.070597  PSNR(HR)=10.32  SSIM=0.1312
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.045764  PSNR(HR)=12.66  SSIM=0.2185
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.073360  PSNR(HR)=10.65  SSIM=0.2502
+    trial  16  mean=11.21  per_img=['10.32', '12.66', '10.65']  params={'lr': 0.011063756579033045, 'first_omega_0': 21.123944318062055, 'hidden_omega_0': 11.285558701109329, 'scale': 2.5398709858970214}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000001  PSNR(HR)=16.16  SSIM=0.1940
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000001  PSNR(HR)=19.38  SSIM=0.3101
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=18.24  SSIM=0.2154
+    trial  17  mean=17.93  per_img=['16.16', '19.38', '18.24']  params={'lr': 0.0013316995650972242, 'first_omega_0': 13.074767954923386, 'hidden_omega_0': 11.273891468299185, 'scale': 8.71402192555752}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072484  PSNR(HR)=10.42  SSIM=0.2032
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047210  PSNR(HR)=12.86  SSIM=0.3552
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077310  PSNR(HR)=10.85  SSIM=0.5652
+    trial  18  mean=11.38  per_img=['10.42', '12.86', '10.85']  params={'lr': 0.019778581150404703, 'first_omega_0': 9.797339096417067, 'hidden_omega_0': 10.928522261337108, 'scale': 2.0880125147333857}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000114  PSNR(HR)=15.64  SSIM=0.1903
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000002  PSNR(HR)=18.45  SSIM=0.2473
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000502  PSNR(HR)=17.14  SSIM=0.1370
+    trial  19  mean=17.08  per_img=['15.64', '18.45', '17.14']  params={'lr': 0.00786395328859869, 'first_omega_0': 22.59789992167785, 'hidden_omega_0': 14.705157204537542, 'scale': 8.579159921461262}
+
+  >>> wire best HR-mean=19.76 per_img=[16.83734893798828, 21.307350158691406, 21.142473220825195]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_wire.txt  (199,287 params)
+
+============================================================
+  Tuning gauss  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000535  PSNR(HR)=17.26  SSIM=0.3466
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000742  PSNR(HR)=22.89  SSIM=0.6066
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000609  PSNR(HR)=22.67  SSIM=0.6532
+    trial   0  mean=20.94  per_img=['17.26', '22.89', '22.67']  params={'lr': 0.00024156772025296256, 'scale': 8.29717191136948}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000008  PSNR(HR)=16.48  SSIM=0.2185
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000004  PSNR(HR)=20.60  SSIM=0.3845
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=19.81  SSIM=0.3060
+    trial   1  mean=18.96  per_img=['16.48', '20.60', '19.81']  params={'lr': 0.0007506810936068548, 'scale': 14.456722894737819}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.005295  PSNR(HR)=16.37  SSIM=0.3205
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.004481  PSNR(HR)=20.52  SSIM=0.5252
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001973  PSNR(HR)=21.70  SSIM=0.6414
+    trial   2  mean=19.53  per_img=['16.37', '20.52', '21.70']  params={'lr': 0.0036303760732131728, 'scale': 2.5272740097364994}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000002  PSNR(HR)=15.85  SSIM=0.1715
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000001  PSNR(HR)=18.82  SSIM=0.2774
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.86  SSIM=0.2033
+    trial   3  mean=17.51  per_img=['15.85', '18.82', '17.86']  params={'lr': 0.0003572140318996377, 'scale': 15.291934777093275}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000091  PSNR(HR)=16.69  SSIM=0.2854
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000088  PSNR(HR)=21.18  SSIM=0.4376
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000028  PSNR(HR)=21.32  SSIM=0.4503
+    trial   4  mean=19.73  per_img=['16.69', '21.18', '21.32']  params={'lr': 0.008246671732726023, 'scale': 19.672461882015565}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001687  PSNR(HR)=17.09  SSIM=0.3402
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001672  PSNR(HR)=22.18  SSIM=0.5792
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001165  PSNR(HR)=22.27  SSIM=0.6491
+    trial   5  mean=20.51  per_img=['17.09', '22.18', '22.27']  params={'lr': 0.000519558602432567, 'scale': 5.495795301092298}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000045  PSNR(HR)=17.18  SSIM=0.3278
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000042  PSNR(HR)=22.79  SSIM=0.5783
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000040  PSNR(HR)=22.64  SSIM=0.6001
+    trial   6  mean=20.87  per_img=['17.18', '22.79', '22.64']  params={'lr': 0.0023276939100527693, 'scale': 11.291387512427898}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000914  PSNR(HR)=17.23  SSIM=0.3456
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001089  PSNR(HR)=22.60  SSIM=0.5957
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000675  PSNR(HR)=22.64  SSIM=0.6564
+    trial   7  mean=20.82  per_img=['17.23', '22.60', '22.64']  params={'lr': 0.0005501758328845987, 'scale': 6.744578511276775}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.012985  PSNR(HR)=15.09  SSIM=0.3034
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.025843  PSNR(HR)=15.19  SSIM=0.4066
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.007626  PSNR(HR)=19.04  SSIM=0.6251
+    trial   8  mean=16.44  per_img=['15.09', '15.19', '19.04']  params={'lr': 0.001014299778430435, 'scale': 1.0479430205298899}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000019  PSNR(HR)=16.61  SSIM=0.2362
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000014  PSNR(HR)=20.62  SSIM=0.3861
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000002  PSNR(HR)=20.53  SSIM=0.3284
+    trial   9  mean=19.25  per_img=['16.61', '20.62', '20.53']  params={'lr': 0.003512798537016723, 'scale': 20.126490980313903}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.010361  PSNR(HR)=15.48  SSIM=0.3080
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.011042  PSNR(HR)=18.11  SSIM=0.4676
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.004112  PSNR(HR)=20.49  SSIM=0.6298
+    trial  10  mean=18.03  per_img=['15.48', '18.11', '20.49']  params={'lr': 0.00011458757931978318, 'scale': 2.677604738409018}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001674  PSNR(HR)=17.08  SSIM=0.3358
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001241  PSNR(HR)=22.51  SSIM=0.5900
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000838  PSNR(HR)=22.47  SSIM=0.6477
+    trial  11  mean=20.69  per_img=['17.08', '22.51', '22.47']  params={'lr': 0.00011818961054190157, 'scale': 8.1854030007542}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000065  PSNR(HR)=17.22  SSIM=0.3345
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000089  PSNR(HR)=22.99  SSIM=0.5978
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000074  PSNR(HR)=22.74  SSIM=0.6238
+    trial  12  mean=20.98  per_img=['17.22', '22.99', '22.74']  params={'lr': 0.0017802042428468757, 'scale': 10.241329591795388}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.006820  PSNR(HR)=16.08  SSIM=0.3162
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.004979  PSNR(HR)=20.28  SSIM=0.5186
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.002921  PSNR(HR)=21.13  SSIM=0.6343
+    trial  13  mean=19.16  per_img=['16.08', '20.28', '21.13']  params={'lr': 0.0002465846262193029, 'scale': 3.498196636448901}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000010  PSNR(HR)=14.52  SSIM=0.1151
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=15.32  SSIM=0.1218
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=14.88  SSIM=0.0938
+    trial  14  mean=14.91  per_img=['14.52', '15.32', '14.88']  params={'lr': 0.0015580930568949412, 'scale': 27.751230213872343}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000152  PSNR(HR)=17.19  SSIM=0.3250
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000241  PSNR(HR)=22.93  SSIM=0.5912
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000158  PSNR(HR)=22.28  SSIM=0.5618
+    trial  15  mean=20.80  per_img=['17.19', '22.93', '22.28']  params={'lr': 0.0002403977345714342, 'scale': 10.609663038082713}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000267  PSNR(HR)=17.28  SSIM=0.3497
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000282  PSNR(HR)=23.12  SSIM=0.6174
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000180  PSNR(HR)=22.97  SSIM=0.6643
+    trial  16  mean=21.12  per_img=['17.28', '23.12', '22.97']  params={'lr': 0.001328540553245974, 'scale': 7.986182058096781}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.003743  PSNR(HR)=16.67  SSIM=0.3265
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002695  PSNR(HR)=21.50  SSIM=0.5558
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001605  PSNR(HR)=21.96  SSIM=0.6438
+    trial  17  mean=20.04  per_img=['16.67', '21.50', '21.96']  params={'lr': 0.0013840506505480776, 'scale': 3.8179093799850854}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.009830  PSNR(HR)=15.57  SSIM=0.3081
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.026670  PSNR(HR)=15.06  SSIM=0.4005
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077316  PSNR(HR)=10.85  SSIM=0.5717
+    trial  18  mean=13.83  per_img=['15.57', '15.06', '10.85']  params={'lr': 0.009171395497563552, 'scale': 1.5279268424735888}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001148  PSNR(HR)=17.13  SSIM=0.3420
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001273  PSNR(HR)=22.44  SSIM=0.5872
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000624  PSNR(HR)=22.65  SSIM=0.6572
+    trial  19  mean=20.74  per_img=['17.13', '22.44', '22.65']  params={'lr': 0.004587583368975649, 'scale': 4.5503680681659615}
+
+  >>> gauss best HR-mean=21.12 per_img=[17.282438278198242, 23.121688842773438, 22.96638298034668]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_gauss.txt  (198,915 params)
+
+============================================================
+  Tuning finer  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000043  PSNR(HR)=17.28  SSIM=0.3502
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000036  PSNR(HR)=23.27  SSIM=0.6307
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000093  PSNR(HR)=22.97  SSIM=0.6649
+    trial   0  mean=21.17  per_img=['17.28', '23.27', '22.97']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.14  SSIM=0.1706
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.03  SSIM=0.1716
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=18.17  SSIM=0.1924
+    trial   1  mean=17.11  per_img=['16.14', '17.03', '18.17']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000010  PSNR(HR)=17.26  SSIM=0.3537
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000006  PSNR(HR)=23.22  SSIM=0.6301
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000010  PSNR(HR)=22.96  SSIM=0.6638
+    trial   2  mean=21.15  per_img=['17.26', '23.22', '22.96']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072509  PSNR(HR)=10.43  SSIM=0.2044
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047174  PSNR(HR)=12.86  SSIM=0.3590
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077148  PSNR(HR)=10.85  SSIM=0.5697
+    trial   3  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.24  SSIM=0.1724
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=22.01  SSIM=0.4886
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=20.62  SSIM=0.3905
+    trial   4  mean=19.62  per_img=['16.24', '22.01', '20.62']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000008  PSNR(HR)=17.24  SSIM=0.3359
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000005  PSNR(HR)=23.05  SSIM=0.6067
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000007  PSNR(HR)=22.56  SSIM=0.6064
+    trial   5  mean=20.95  per_img=['17.24', '23.05', '22.56']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=10.91  SSIM=0.0474
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=12.38  SSIM=0.0540
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=10.46  SSIM=0.0409
+    trial   6  mean=11.25  per_img=['10.91', '12.38', '10.46']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000014  PSNR(HR)=17.17  SSIM=0.3096
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000012  PSNR(HR)=23.19  SSIM=0.6230
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000021  PSNR(HR)=22.77  SSIM=0.6308
+    trial   7  mean=21.04  per_img=['17.17', '23.19', '22.77']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072526  PSNR(HR)=10.43  SSIM=0.2044
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047218  PSNR(HR)=12.86  SSIM=0.3591
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077323  PSNR(HR)=10.85  SSIM=0.5700
+    trial   8  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.070397  PSNR(HR)=10.43  SSIM=0.2032
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.041641  PSNR(HR)=12.86  SSIM=0.3389
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.049274  PSNR(HR)=10.76  SSIM=0.2842
+    trial   9  mean=11.35  per_img=['10.43', '12.86', '10.76']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.002620  PSNR(HR)=16.88  SSIM=0.3336
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001705  PSNR(HR)=22.11  SSIM=0.5807
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001866  PSNR(HR)=21.76  SSIM=0.6413
+    trial  10  mean=20.25  per_img=['16.88', '22.11', '21.76']  params={'lr': 1.2266094817403999e-05, 'first_omega_0': 5.3707763821857775, 'hidden_omega_0': 46.46609943286623}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000016  PSNR(HR)=17.27  SSIM=0.3531
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000009  PSNR(HR)=23.22  SSIM=0.6304
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000012  PSNR(HR)=23.00  SSIM=0.6638
+    trial  11  mean=21.16  per_img=['17.27', '23.22', '23.00']  params={'lr': 5.0244697534179826e-05, 'first_omega_0': 59.39265668626158, 'hidden_omega_0': 58.40926154184062}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000008  PSNR(HR)=17.27  SSIM=0.3500
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000004  PSNR(HR)=23.18  SSIM=0.6249
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000008  PSNR(HR)=22.89  SSIM=0.6547
+    trial  12  mean=21.12  per_img=['17.27', '23.18', '22.89']  params={'lr': 8.277821763138702e-05, 'first_omega_0': 55.61226668796227, 'hidden_omega_0': 42.70143274434125}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000034  PSNR(HR)=17.25  SSIM=0.3582
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000019  PSNR(HR)=23.22  SSIM=0.6355
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000031  PSNR(HR)=22.94  SSIM=0.6688
+    trial  13  mean=21.14  per_img=['17.25', '23.22', '22.94']  params={'lr': 3.337129488351902e-05, 'first_omega_0': 35.537574923542444, 'hidden_omega_0': 59.04578958868864}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000005  PSNR(HR)=17.24  SSIM=0.3305
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=23.03  SSIM=0.6007
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000006  PSNR(HR)=22.77  SSIM=0.6193
+    trial  14  mean=21.01  per_img=['17.24', '23.03', '22.77']  params={'lr': 0.0001603853943494141, 'first_omega_0': 56.22272382283909, 'hidden_omega_0': 13.386119212640942}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000182  PSNR(HR)=17.28  SSIM=0.3579
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000183  PSNR(HR)=23.20  SSIM=0.6325
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000318  PSNR(HR)=22.89  SSIM=0.6641
+    trial  15  mean=21.12  per_img=['17.28', '23.20', '22.89']  params={'lr': 1.5035255426729895e-05, 'first_omega_0': 23.715530334862706, 'hidden_omega_0': 44.90338614446854}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000001  PSNR(HR)=17.20  SSIM=0.3309
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000001  PSNR(HR)=22.87  SSIM=0.5952
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000002  PSNR(HR)=22.54  SSIM=0.6269
+    trial  16  mean=20.87  per_img=['17.20', '22.87', '22.54']  params={'lr': 0.00017714447327222242, 'first_omega_0': 59.07667167027046, 'hidden_omega_0': 52.086261891043236}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000042  PSNR(HR)=17.24  SSIM=0.3538
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000018  PSNR(HR)=23.22  SSIM=0.6331
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000047  PSNR(HR)=22.97  SSIM=0.6669
+    trial  17  mean=21.14  per_img=['17.24', '23.22', '22.97']  params={'lr': 3.426704688573952e-05, 'first_omega_0': 40.66394099410897, 'hidden_omega_0': 41.385896883572364}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000090  PSNR(HR)=17.24  SSIM=0.3567
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000051  PSNR(HR)=23.25  SSIM=0.6350
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000159  PSNR(HR)=22.99  SSIM=0.6671
+    trial  18  mean=21.16  per_img=['17.24', '23.25', '22.99']  params={'lr': 2.9479800212585065e-05, 'first_omega_0': 27.82100794703868, 'hidden_omega_0': 36.05717968417139}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000013  PSNR(HR)=17.07  SSIM=0.2857
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000007  PSNR(HR)=23.21  SSIM=0.6242
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000013  PSNR(HR)=22.98  SSIM=0.6659
+    trial  19  mean=21.09  per_img=['17.07', '23.21', '22.98']  params={'lr': 0.00021794603752404326, 'first_omega_0': 13.91852031585324, 'hidden_omega_0': 52.070066084707534}
+
+  >>> finer best HR-mean=21.17 per_img=[17.27806854248047, 23.269014358520508, 22.97318458557129]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_finer.txt  (198,915 params)
+
+============================================================
+  Tuning gf  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.52  SSIM=0.0229
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=11.64  SSIM=0.0369
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.55  SSIM=0.0270
+    trial   0  mean=10.23  per_img=['9.52', '11.64', '9.55']  params={'lr': 0.00024156772025296256, 'scale': 6.410033324878403, 'omega': 13.69410443120632, 'first_bias_scale': 3.9482570601974696}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072509  PSNR(HR)=10.43  SSIM=0.2045
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047206  PSNR(HR)=12.86  SSIM=0.3592
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077302  PSNR(HR)=10.85  SSIM=0.5705
+    trial   1  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.0036303760732131728, 'scale': 3.0896297501850953, 'omega': 9.017463399149804, 'first_bias_scale': 4.029173669921595}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072520  PSNR(HR)=10.43  SSIM=0.2045
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047213  PSNR(HR)=12.86  SSIM=0.3592
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077305  PSNR(HR)=10.85  SSIM=0.5708
+    trial   2  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.008246671732726023, 'scale': 8.821360030049899, 'omega': 11.376700828778134, 'first_bias_scale': 2.554876115064948}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072457  PSNR(HR)=10.43  SSIM=0.2045
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047140  PSNR(HR)=12.86  SSIM=0.3592
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077275  PSNR(HR)=10.85  SSIM=0.5711
+    trial   3  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.0023276939100527693, 'scale': 7.270669256337552, 'omega': 11.737271888921454, 'first_bias_scale': 2.8498613117215625}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072677  PSNR(HR)=10.42  SSIM=0.1811
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047255  PSNR(HR)=12.83  SSIM=0.2869
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077478  PSNR(HR)=10.82  SSIM=0.3956
+    trial   4  mean=11.36  per_img=['10.42', '12.83', '10.82']  params={'lr': 0.001014299778430435, 'scale': 0.6308002711114813, 'omega': 23.411972026758846, 'first_bias_scale': 4.4249418341169715}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=11.28  SSIM=0.0425
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=12.69  SSIM=0.0577
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=11.23  SSIM=0.0457
+    trial   5  mean=11.73  per_img=['11.28', '12.69', '11.23']  params={'lr': 0.000536749894569821, 'scale': 6.34626369511819, 'omega': 3.18605600764632, 'first_bias_scale': 1.9072376294096753}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072518  PSNR(HR)=10.43  SSIM=0.2045
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047215  PSNR(HR)=12.86  SSIM=0.3592
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077308  PSNR(HR)=10.85  SSIM=0.5708
+    trial   6  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.0073498792462323385, 'scale': 6.688092360652485, 'omega': 12.518874754058471, 'first_bias_scale': 3.964777700409653}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.055633  PSNR(HR)=10.41  SSIM=0.1709
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000019  PSNR(HR)=11.24  SSIM=0.0276
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000013  PSNR(HR)=9.42  SSIM=0.0215
+    trial   7  mean=10.36  per_img=['10.41', '11.24', '9.42']  params={'lr': 0.00043020182095898635, 'scale': 5.896937199947657, 'omega': 26.204694297275548, 'first_bias_scale': 2.237249777088829}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072544  PSNR(HR)=10.43  SSIM=0.2021
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047231  PSNR(HR)=12.86  SSIM=0.3572
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077379  PSNR(HR)=10.85  SSIM=0.5248
+    trial   8  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.004020640881061957, 'scale': 1.8657848328883635, 'omega': 21.423568162431728, 'first_bias_scale': 3.552448410128906}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000028  PSNR(HR)=8.86  SSIM=0.0158
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000007  PSNR(HR)=11.41  SSIM=0.0314
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=9.19  SSIM=0.0212
+    trial   9  mean=9.82  per_img=['8.86', '11.41', '9.19']  params={'lr': 0.000273895067570749, 'scale': 9.286242471847867, 'omega': 13.822081906721122, 'first_bias_scale': 4.555648198965115}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001383  PSNR(HR)=16.88  SSIM=0.2871
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000442  PSNR(HR)=22.32  SSIM=0.5369
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000548  PSNR(HR)=21.72  SSIM=0.5095
+    trial  10  mean=20.31  per_img=['16.88', '22.32', '21.72']  params={'lr': 0.00012633434782079146, 'scale': 3.9617913914157192, 'omega': 1.1627214017886445, 'first_bias_scale': 0.7527896971272496}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000790  PSNR(HR)=17.04  SSIM=0.3049
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000738  PSNR(HR)=22.30  SSIM=0.5440
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000383  PSNR(HR)=21.83  SSIM=0.5068
+    trial  11  mean=20.39  per_img=['17.04', '22.30', '21.83']  params={'lr': 0.00010761709355041595, 'scale': 4.009376826043058, 'omega': 1.5430664660493019, 'first_bias_scale': 0.5560816818020646}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001107  PSNR(HR)=16.92  SSIM=0.2914
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000793  PSNR(HR)=22.10  SSIM=0.5177
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000421  PSNR(HR)=21.61  SSIM=0.4923
+    trial  12  mean=20.21  per_img=['16.92', '22.10', '21.61']  params={'lr': 0.00011251840616442396, 'scale': 3.7141644448439366, 'omega': 1.2980493382503693, 'first_bias_scale': 0.2887505945549034}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000005  PSNR(HR)=15.90  SSIM=0.1706
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=19.10  SSIM=0.2978
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=18.80  SSIM=0.2525
+    trial  13  mean=17.93  per_img=['15.90', '19.10', '18.80']  params={'lr': 0.00010170569175839993, 'scale': 4.229922607811165, 'omega': 5.2739961288915636, 'first_bias_scale': 0.26918714353789774}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=12.38  SSIM=0.0573
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=13.98  SSIM=0.0847
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=12.43  SSIM=0.0617
+    trial  14  mean=12.93  per_img=['12.38', '13.98', '12.43']  params={'lr': 0.00018267080614363246, 'scale': 4.607882212485026, 'omega': 7.240450067118308, 'first_bias_scale': 1.1511617999244474}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000004  PSNR(HR)=15.95  SSIM=0.1595
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000002  PSNR(HR)=18.65  SSIM=0.2300
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=19.33  SSIM=0.2382
+    trial  15  mean=17.98  per_img=['15.95', '18.65', '19.33']  params={'lr': 0.0008544469599950802, 'scale': 2.965017150348224, 'omega': 19.804623433257454, 'first_bias_scale': 1.1834924891650935}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.002529  PSNR(HR)=16.87  SSIM=0.3238
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002041  PSNR(HR)=21.86  SSIM=0.5626
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001169  PSNR(HR)=22.20  SSIM=0.6318
+    trial  16  mean=20.31  per_img=['16.87', '21.86', '22.20']  params={'lr': 0.00015561499306210398, 'scale': 2.0955803757357643, 'omega': 1.381529166643347, 'first_bias_scale': 1.0797398258194737}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=14.36  SSIM=0.0970
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.13  SSIM=0.1440
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=15.46  SSIM=0.1118
+    trial  17  mean=15.32  per_img=['14.36', '16.13', '15.46']  params={'lr': 0.0003586036503963145, 'scale': 4.894564207442541, 'omega': 5.546131956944905, 'first_bias_scale': 0.7422879946955592}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072384  PSNR(HR)=10.43  SSIM=0.2045
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047111  PSNR(HR)=12.86  SSIM=0.3592
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.076711  PSNR(HR)=10.85  SSIM=0.5167
+    trial  18  mean=11.38  per_img=['10.43', '12.86', '10.85']  params={'lr': 0.0008387304892358467, 'scale': 7.908710891556671, 'omega': 29.922866484601627, 'first_bias_scale': 1.7616584579384635}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.78  SSIM=0.0248
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=11.77  SSIM=0.0386
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=10.09  SSIM=0.0310
+    trial  19  mean=10.55  per_img=['9.78', '11.77', '10.09']  params={'lr': 0.0001608950526145197, 'scale': 5.593416620160234, 'omega': 17.453683430389706, 'first_bias_scale': 1.571134968902214}
+
+  >>> gf best HR-mean=20.39 per_img=[17.039884567260742, 22.297531127929688, 21.831514358520508]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_gf.txt  (198,915 params)
+
+============================================================
+  Tuning wf  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000635  PSNR(HR)=10.11  SSIM=0.0466
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000930  PSNR(HR)=12.21  SSIM=0.0502
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000228  PSNR(HR)=11.02  SSIM=0.0426
+    trial   0  mean=11.11  per_img=['10.11', '12.21', '11.02']  params={'lr': 0.00024156772025296256, 'scale': 6.410033324878403, 'omega_w': 7.128188346099603, 'omega': 11.995020171992769, 'first_bias_scale': 3.9218814597821376}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial   1  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.00035090148857968553, 'scale': 3.1264104238594186, 'omega_w': 12.22621048549027, 'omega': 14.413950951571872, 'first_bias_scale': 4.392069910236264}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000159  PSNR(HR)=13.64  SSIM=0.1258
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000283  PSNR(HR)=14.17  SSIM=0.1044
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000795  PSNR(HR)=21.20  SSIM=0.5607
+    trial   2  mean=16.34  per_img=['13.64', '14.17', '21.20']  params={'lr': 0.000519558602432567, 'scale': 5.259453692472857, 'omega_w': 10.568481092409908, 'omega': 10.977828377760602, 'first_bias_scale': 1.9142286984729353}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000214  PSNR(HR)=13.73  SSIM=0.0959
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001545  PSNR(HR)=13.35  SSIM=0.0708
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.005009  PSNR(HR)=11.62  SSIM=0.1422
+    trial   3  mean=12.90  per_img=['13.73', '13.35', '11.62']  params={'lr': 0.0013255385789985395, 'scale': 5.279290070424192, 'omega_w': 1.1927582942695514, 'omega': 11.819572702573236, 'first_bias_scale': 4.4249418341169715}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000017  PSNR(HR)=14.86  SSIM=0.1610
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000027  PSNR(HR)=15.87  SSIM=0.1553
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000023  PSNR(HR)=17.88  SSIM=0.2470
+    trial   4  mean=16.20  per_img=['14.86', '15.87', '17.88']  params={'lr': 0.000536749894569821, 'scale': 6.34626369511819, 'omega_w': 2.055337383001672, 'omega': 6.163536084027643, 'first_bias_scale': 4.672386499714356}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial   5  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.002007965683910147, 'scale': 4.273424488398465, 'omega_w': 12.042222001170437, 'omega': 5.435705710364197, 'first_bias_scale': 2.883683397867739}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial   6  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.005473369642905612, 'scale': 4.643647527008954, 'omega_w': 12.230066989122227, 'omega': 3.0127355432039042, 'first_bias_scale': 3.550878758479844}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial   7  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.002565444456718595, 'scale': 2.5785250039038417, 'omega_w': 13.948146800617911, 'omega': 7.189970575658473, 'first_bias_scale': 4.555648198965115}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000054  PSNR(HR)=17.20  SSIM=0.3471
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000060  PSNR(HR)=22.63  SSIM=0.5766
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000040  PSNR(HR)=22.64  SSIM=0.6484
+    trial   8  mean=20.82  per_img=['17.20', '22.63', '22.64']  params={'lr': 0.00013170990774640117, 'scale': 2.2507272962312297, 'omega_w': 1.6629739032212119, 'omega': 10.448333210152622, 'first_bias_scale': 3.0136614216788}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial   9  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.001165790000863127, 'scale': 0.9115785956006331, 'omega_w': 8.86006312088757, 'omega': 5.61535823869281, 'first_bias_scale': 2.56453748225183}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000238  PSNR(HR)=17.25  SSIM=0.3489
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000183  PSNR(HR)=23.13  SSIM=0.6197
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000217  PSNR(HR)=22.89  SSIM=0.6635
+    trial  10  mean=21.09  per_img=['17.25', '23.13', '22.89']  params={'lr': 0.00016741279038560018, 'scale': 6.268340209075603, 'omega_w': 8.92322500270744, 'omega': 1.094696867860039, 'first_bias_scale': 3.125464373141056}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial  11  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.006671842305866797, 'scale': 8.009979264041817, 'omega_w': 14.88914052663706, 'omega': 14.423224670140131, 'first_bias_scale': 3.980624262929035}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000020  PSNR(HR)=17.17  SSIM=0.3473
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000016  PSNR(HR)=22.81  SSIM=0.5995
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000010  PSNR(HR)=22.61  SSIM=0.6563
+    trial  12  mean=20.86  per_img=['17.17', '22.81', '22.61']  params={'lr': 0.00037196486564335443, 'scale': 6.436708700406155, 'omega_w': 7.693313139389444, 'omega': 3.7394525013225755, 'first_bias_scale': 1.973355514954382}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000081  PSNR(HR)=17.05  SSIM=0.3338
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000070  PSNR(HR)=22.59  SSIM=0.5827
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000032  PSNR(HR)=22.58  SSIM=0.6543
+    trial  13  mean=20.74  per_img=['17.05', '22.59', '22.58']  params={'lr': 0.0001281584866075842, 'scale': 4.790659878478161, 'omega_w': 14.748066381307362, 'omega': 2.7351978068174816, 'first_bias_scale': 0.6849663998386172}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000065  PSNR(HR)=17.08  SSIM=0.3437
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000084  PSNR(HR)=22.46  SSIM=0.5697
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000021  PSNR(HR)=22.59  SSIM=0.6469
+    trial  14  mean=20.71  per_img=['17.08', '22.46', '22.59']  params={'lr': 0.0029994809793642352, 'scale': 6.079384517907854, 'omega_w': 7.6028554804851485, 'omega': 2.499775440714128, 'first_bias_scale': 1.223170970757028}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000076  PSNR(HR)=17.09  SSIM=0.3290
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000068  PSNR(HR)=22.50  SSIM=0.5652
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000033  PSNR(HR)=22.62  SSIM=0.6396
+    trial  15  mean=20.74  per_img=['17.09', '22.50', '22.62']  params={'lr': 0.0063085622040667385, 'scale': 4.459158609125586, 'omega_w': 8.501923275442621, 'omega': 1.0869192322198116, 'first_bias_scale': 1.5731443582744757}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.003728  PSNR(HR)=15.76  SSIM=0.2550
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.006709  PSNR(HR)=16.87  SSIM=0.2144
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.002377  PSNR(HR)=20.24  SSIM=0.5641
+    trial  16  mean=17.62  per_img=['15.76', '16.87', '20.24']  params={'lr': 0.0011586611567065805, 'scale': 9.411907211206877, 'omega_w': 12.496893145959199, 'omega': 7.671635798639001, 'first_bias_scale': 3.1636510878530695}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000006  PSNR(HR)=17.04  SSIM=0.3265
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000014  PSNR(HR)=22.17  SSIM=0.5419
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000005  PSNR(HR)=22.28  SSIM=0.6262
+    trial  17  mean=20.49  per_img=['17.04', '22.17', '22.28']  params={'lr': 0.0003221878225867344, 'scale': 8.406821368105495, 'omega_w': 4.838825577740415, 'omega': 4.762837025024558, 'first_bias_scale': 2.507686543027873}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000011  PSNR(HR)=17.11  SSIM=0.3343
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000016  PSNR(HR)=22.44  SSIM=0.5623
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000007  PSNR(HR)=22.51  SSIM=0.6452
+    trial  18  mean=20.69  per_img=['17.11', '22.44', '22.51']  params={'lr': 0.00025891446694547985, 'scale': 7.846439646662226, 'omega_w': 5.239664030314707, 'omega': 4.491276633643219, 'first_bias_scale': 2.3617462958917343}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=nan  PSNR(HR)=nan  SSIM=nan
+    trial  19  mean=nan  per_img=['nan', 'nan', 'nan']  params={'lr': 0.0005773310649631392, 'scale': 2.5232834499291665, 'omega_w': 10.132613922833396, 'omega': 14.93359878505069, 'first_bias_scale': 3.493569830916377}
+
+  >>> wf best HR-mean=21.09 per_img=[17.249631881713867, 23.128265380859375, 22.893163681030273]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_wf.txt  (199,287 params)
+
+============================================================
+  Tuning staf  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=8.16  SSIM=0.0118
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000172  PSNR(HR)=17.29  SSIM=0.1961
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=8.56  SSIM=0.0189
+    trial   0  mean=11.34  per_img=['8.16', '17.29', '8.56']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=15.87  SSIM=0.1619
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.10  SSIM=0.1489
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=14.21  SSIM=0.0865
+    trial   1  mean=15.39  per_img=['15.87', '16.10', '14.21']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=7.85  SSIM=0.0138
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=9.51  SSIM=0.0166
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=4.45  SSIM=0.0129
+    trial   2  mean=7.27  per_img=['7.85', '9.51', '4.45']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000027  PSNR(HR)=16.30  SSIM=0.2005
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.08  SSIM=0.1778
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=22.02  SSIM=0.5482
+    trial   3  mean=18.47  per_img=['16.30', '17.08', '22.02']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.32  SSIM=0.1996
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=20.53  SSIM=0.3829
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=21.09  SSIM=0.4217
+    trial   4  mean=19.31  per_img=['16.32', '20.53', '21.09']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000509  PSNR(HR)=17.26  SSIM=0.3455
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000744  PSNR(HR)=22.86  SSIM=0.6061
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000491  PSNR(HR)=22.78  SSIM=0.6590
+    trial   5  mean=20.97  per_img=['17.26', '22.86', '22.78']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=13.25  SSIM=0.0896
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=19.00  SSIM=0.2698
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=11.52  SSIM=0.0464
+    trial   6  mean=14.59  per_img=['13.25', '19.00', '11.52']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000027  PSNR(HR)=17.08  SSIM=0.3047
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000008  PSNR(HR)=22.32  SSIM=0.5290
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000035  PSNR(HR)=21.98  SSIM=0.5084
+    trial   7  mean=20.46  per_img=['17.08', '22.32', '21.98']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000002  PSNR(HR)=16.88  SSIM=0.2549
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.51  SSIM=0.1628
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=19.73  SSIM=0.2824
+    trial   8  mean=17.71  per_img=['16.88', '16.51', '19.73']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000031  PSNR(HR)=15.28  SSIM=0.1415
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000001  PSNR(HR)=20.90  SSIM=0.3836
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000009  PSNR(HR)=11.51  SSIM=0.0416
+    trial   9  mean=15.90  per_img=['15.28', '20.90', '11.51']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.002188  PSNR(HR)=16.97  SSIM=0.3322
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001466  PSNR(HR)=22.33  SSIM=0.5847
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003728  PSNR(HR)=20.68  SSIM=0.6309
+    trial  10  mean=19.99  per_img=['16.97', '22.33', '20.68']  params={'lr': 0.000207058458959498, 'first_omega_0': 29.166438699629467, 'hidden_omega_0': 5.30716939963112}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001439  PSNR(HR)=17.12  SSIM=0.3375
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.005687  PSNR(HR)=19.95  SSIM=0.5094
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001063  PSNR(HR)=22.37  SSIM=0.6509
+    trial  11  mean=19.81  per_img=['17.12', '19.95', '22.37']  params={'lr': 0.00036094727742433125, 'first_omega_0': 7.563820494333683, 'hidden_omega_0': 6.0518367062643215}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000038  PSNR(HR)=11.70  SSIM=0.0480
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000281  PSNR(HR)=15.59  SSIM=0.1720
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000023  PSNR(HR)=20.01  SSIM=0.3565
+    trial  12  mean=15.77  per_img=['11.70', '15.59', '20.01']  params={'lr': 0.00040338408605638626, 'first_omega_0': 10.119284183492542, 'hidden_omega_0': 43.6922739222509}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001764  PSNR(HR)=17.05  SSIM=0.3302
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001536  PSNR(HR)=22.27  SSIM=0.5800
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001309  PSNR(HR)=22.14  SSIM=0.6442
+    trial  13  mean=20.49  per_img=['17.05', '22.27', '22.14']  params={'lr': 0.00011954708994671709, 'first_omega_0': 17.427651570273255, 'hidden_omega_0': 14.705509879341724}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.002960  PSNR(HR)=16.78  SSIM=0.3040
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.004692  PSNR(HR)=20.41  SSIM=0.5204
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.002143  PSNR(HR)=21.60  SSIM=0.6287
+    trial  14  mean=19.60  per_img=['16.78', '20.41', '21.60']  params={'lr': 1.1103472275032877e-05, 'first_omega_0': 18.894389011282975, 'hidden_omega_0': 13.261028119362905}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000008  PSNR(HR)=16.95  SSIM=0.2800
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001354  PSNR(HR)=22.41  SSIM=0.5846
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=20.16  SSIM=0.3360
+    trial  15  mean=19.84  per_img=['16.95', '22.41', '20.16']  params={'lr': 0.00013871946011362844, 'first_omega_0': 31.07461801717021, 'hidden_omega_0': 14.912558187585782}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.003873  PSNR(HR)=16.63  SSIM=0.3186
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002703  PSNR(HR)=21.49  SSIM=0.5518
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001773  PSNR(HR)=21.83  SSIM=0.6406
+    trial  16  mean=19.98  per_img=['16.63', '21.49', '21.83']  params={'lr': 5.706826875869916e-05, 'first_omega_0': 16.272673104368902, 'hidden_omega_0': 12.601756776398254}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.005615  PSNR(HR)=16.28  SSIM=0.3124
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.004383  PSNR(HR)=20.57  SSIM=0.5221
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003741  PSNR(HR)=20.67  SSIM=0.6316
+    trial  17  mean=19.17  per_img=['16.28', '20.57', '20.67']  params={'lr': 1.9421080332987247e-05, 'first_omega_0': 33.98506041755517, 'hidden_omega_0': 8.621963954957407}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000019  PSNR(HR)=15.90  SSIM=0.1767
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001270  PSNR(HR)=22.47  SSIM=0.5859
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001464  PSNR(HR)=22.04  SSIM=0.6434
+    trial  18  mean=20.14  per_img=['15.90', '22.47', '22.04']  params={'lr': 0.00012342050319770235, 'first_omega_0': 15.085461361181263, 'hidden_omega_0': 19.351402466972637}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000100  PSNR(HR)=10.66  SSIM=0.0328
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000003  PSNR(HR)=15.44  SSIM=0.1356
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=4.78  SSIM=0.0160
+    trial  19  mean=10.29  per_img=['10.66', '15.44', '4.78']  params={'lr': 0.0007829880001537827, 'first_omega_0': 57.90825266380631, 'hidden_omega_0': 40.523871000798685}
+
+  >>> staf best HR-mean=20.97 per_img=[17.25930404663086, 22.858051300048828, 22.778385162353516]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_staf.txt  (198,975 params)
+
+============================================================
+  Tuning pemlp  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000783  PSNR(HR)=14.42  SSIM=0.1761
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001316  PSNR(HR)=16.09  SSIM=0.1985
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000353  PSNR(HR)=20.89  SSIM=0.5355
+    trial   0  mean=17.13  per_img=['14.42', '16.09', '20.89']  params={'lr': 0.00024156772025296256}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000288  PSNR(HR)=14.48  SSIM=0.2023
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000412  PSNR(HR)=15.75  SSIM=0.1999
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000177  PSNR(HR)=21.27  SSIM=0.5526
+    trial   1  mean=17.16  per_img=['14.48', '15.75', '21.27']  params={'lr': 0.001754759256702473}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000323  PSNR(HR)=14.18  SSIM=0.1830
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000616  PSNR(HR)=15.58  SSIM=0.1911
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000231  PSNR(HR)=21.01  SSIM=0.5529
+    trial   2  mean=16.92  per_img=['14.18', '15.58', '21.01']  params={'lr': 0.0007506810936068548}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001236  PSNR(HR)=13.25  SSIM=0.2170
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002415  PSNR(HR)=13.17  SSIM=0.1252
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000253  PSNR(HR)=21.36  SSIM=0.5703
+    trial   3  mean=15.92  per_img=['13.25', '13.17', '21.36']  params={'lr': 0.0037214926657368383}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000556  PSNR(HR)=13.85  SSIM=0.2185
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001321  PSNR(HR)=13.64  SSIM=0.1472
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000245  PSNR(HR)=21.33  SSIM=0.5612
+    trial   4  mean=16.28  per_img=['13.85', '13.64', '21.33']  params={'lr': 0.0036303760732131728}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000603  PSNR(HR)=14.34  SSIM=0.1673
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001309  PSNR(HR)=15.36  SSIM=0.1807
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000267  PSNR(HR)=20.96  SSIM=0.5342
+    trial   5  mean=16.89  per_img=['14.34', '15.36', '20.96']  params={'lr': 0.00035090148857968553}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000701  PSNR(HR)=14.73  SSIM=0.1855
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001107  PSNR(HR)=15.57  SSIM=0.1881
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000286  PSNR(HR)=20.94  SSIM=0.5288
+    trial   6  mean=17.08  per_img=['14.73', '15.57', '20.94']  params={'lr': 0.0003572140318996377}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001206  PSNR(HR)=13.33  SSIM=0.1816
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002827  PSNR(HR)=13.41  SSIM=0.1372
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000253  PSNR(HR)=21.21  SSIM=0.5890
+    trial   7  mean=15.99  per_img=['13.33', '13.41', '21.21']  params={'lr': 0.004015543686135838}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.003845  PSNR(HR)=12.51  SSIM=0.2214
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047220  PSNR(HR)=12.86  SSIM=0.3594
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.002425  PSNR(HR)=20.17  SSIM=0.5429
+    trial   8  mean=15.18  per_img=['12.51', '12.86', '20.17']  params={'lr': 0.008246671732726023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000789  PSNR(HR)=13.69  SSIM=0.2123
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.003044  PSNR(HR)=13.55  SSIM=0.1361
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000586  PSNR(HR)=20.95  SSIM=0.5788
+    trial   9  mean=16.06  per_img=['13.69', '13.55', '20.95']  params={'lr': 0.005647617424572882}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000295  PSNR(HR)=14.11  SSIM=0.1900
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000626  PSNR(HR)=15.42  SSIM=0.1945
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000199  PSNR(HR)=21.08  SSIM=0.5432
+    trial  10  mean=16.87  per_img=['14.11', '15.42', '21.08']  params={'lr': 0.001201875587630063}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001430  PSNR(HR)=14.53  SSIM=0.1782
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002002  PSNR(HR)=15.08  SSIM=0.1626
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000586  PSNR(HR)=20.91  SSIM=0.5386
+    trial  11  mean=16.84  per_img=['14.53', '15.08', '20.91']  params={'lr': 0.00013136860726111578}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000283  PSNR(HR)=13.80  SSIM=0.1858
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000499  PSNR(HR)=15.14  SSIM=0.1840
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000213  PSNR(HR)=21.14  SSIM=0.5508
+    trial  12  mean=16.69  per_img=['13.80', '15.14', '21.14']  params={'lr': 0.0013714705406623505}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.001665  PSNR(HR)=14.46  SSIM=0.1725
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.002121  PSNR(HR)=15.83  SSIM=0.1822
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000592  PSNR(HR)=20.88  SSIM=0.5371
+    trial  13  mean=17.06  per_img=['14.46', '15.83', '20.88']  params={'lr': 0.00011667005469831128}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000418  PSNR(HR)=14.29  SSIM=0.1813
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000777  PSNR(HR)=15.26  SSIM=0.1868
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000253  PSNR(HR)=20.92  SSIM=0.5253
+    trial  14  mean=16.82  per_img=['14.29', '15.26', '20.92']  params={'lr': 0.0005181206084547352}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000316  PSNR(HR)=14.40  SSIM=0.1810
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000492  PSNR(HR)=15.37  SSIM=0.1798
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000203  PSNR(HR)=21.12  SSIM=0.5590
+    trial  15  mean=16.96  per_img=['14.40', '15.37', '21.12']  params={'lr': 0.0019268266961292324}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000896  PSNR(HR)=14.58  SSIM=0.1716
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001386  PSNR(HR)=15.44  SSIM=0.1740
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000331  PSNR(HR)=20.89  SSIM=0.5359
+    trial  16  mean=16.97  per_img=['14.58', '15.44', '20.89']  params={'lr': 0.0002465846262193029}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000264  PSNR(HR)=14.38  SSIM=0.2077
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000472  PSNR(HR)=15.35  SSIM=0.1810
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000166  PSNR(HR)=21.35  SSIM=0.5668
+    trial  17  mean=17.03  per_img=['14.38', '15.35', '21.35']  params={'lr': 0.002154343841783832}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000925  PSNR(HR)=14.45  SSIM=0.1723
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001452  PSNR(HR)=15.60  SSIM=0.1801
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000372  PSNR(HR)=20.87  SSIM=0.5361
+    trial  18  mean=16.98  per_img=['14.45', '15.60', '20.87']  params={'lr': 0.000228869213120423}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000387  PSNR(HR)=14.30  SSIM=0.1679
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000687  PSNR(HR)=15.69  SSIM=0.1950
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000207  PSNR(HR)=21.03  SSIM=0.5457
+    trial  19  mean=17.01  per_img=['14.30', '15.69', '21.03']  params={'lr': 0.0006834188039480833}
+
+  >>> pemlp best HR-mean=17.16 per_img=[14.475906372070312, 15.747384071350098, 21.265995025634766]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_pemlp.txt  (209,155 params)
+
+============================================================
+  Tuning incode  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000005  PSNR(HR)=17.27  SSIM=0.3432
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000007  PSNR(HR)=23.23  SSIM=0.6232
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000014  PSNR(HR)=22.88  SSIM=0.6573
+    trial   0  mean=21.13  per_img=['17.27', '23.23', '22.88']  params={'lr': 3.754553966912877e-05, 'first_omega_0': 39.21598240719075, 'hidden_omega_0': 29.075025645391296}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.47  SSIM=0.2142
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.47  SSIM=0.1780
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=20.26  SSIM=0.3256
+    trial   1  mean=17.73  per_img=['16.47', '16.47', '20.26']  params={'lr': 0.0022702608040701578, 'first_omega_0': 47.89866944653419, 'hidden_omega_0': 19.992593290545287}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.29  SSIM=0.3473
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000002  PSNR(HR)=23.24  SSIM=0.6272
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=22.90  SSIM=0.6545
+    trial   2  mean=21.14  per_img=['17.29', '23.24', '22.90']  params={'lr': 6.751383304677267e-05, 'first_omega_0': 49.10296976442606, 'hidden_omega_0': 57.69766445260378}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072463  PSNR(HR)=10.43  SSIM=0.2046
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000243  PSNR(HR)=23.08  SSIM=0.6216
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.036548  PSNR(HR)=10.30  SSIM=0.0617
+    trial   3  mean=14.60  per_img=['10.43', '23.08', '10.30']  params={'lr': 0.0042442201629244135, 'first_omega_0': 24.679949847682668, 'hidden_omega_0': 32.55473190379023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.92  SSIM=0.2870
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=22.55  SSIM=0.5546
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000010  PSNR(HR)=22.66  SSIM=0.6175
+    trial   4  mean=20.71  per_img=['16.92', '22.55', '22.66']  params={'lr': 0.0011230233998349253, 'first_omega_0': 44.19861148405951, 'hidden_omega_0': 25.36379151347172}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000020  PSNR(HR)=17.24  SSIM=0.3458
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000014  PSNR(HR)=23.18  SSIM=0.6211
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000022  PSNR(HR)=22.80  SSIM=0.6519
+    trial   5  mean=21.07  per_img=['17.24', '23.18', '22.80']  params={'lr': 0.00048260137861767664, 'first_omega_0': 32.66957409192953, 'hidden_omega_0': 5.757264727487524}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=16.89  SSIM=0.2644
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=21.77  SSIM=0.4739
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000002  PSNR(HR)=22.02  SSIM=0.5257
+    trial   6  mean=20.23  per_img=['16.89', '21.77', '22.02']  params={'lr': 0.0020819958755619586, 'first_omega_0': 53.54526548498641, 'hidden_omega_0': 25.068729114575476}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000060  PSNR(HR)=17.23  SSIM=0.3402
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000037  PSNR(HR)=23.10  SSIM=0.6166
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000056  PSNR(HR)=22.83  SSIM=0.6509
+    trial   7  mean=21.06  per_img=['17.23', '23.10', '22.83']  params={'lr': 0.0007017598793000424, 'first_omega_0': 9.14596829036371, 'hidden_omega_0': 25.285320330108597}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072292  PSNR(HR)=10.43  SSIM=0.2044
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.046998  PSNR(HR)=12.86  SSIM=0.3591
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.018409  PSNR(HR)=16.34  SSIM=0.6073
+    trial   8  mean=13.21  per_img=['10.43', '12.86', '16.34']  params={'lr': 0.006301157076762003, 'first_omega_0': 40.82579787746176, 'hidden_omega_0': 26.84614177493848}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.004820  PSNR(HR)=16.12  SSIM=0.2258
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001564  PSNR(HR)=22.24  SSIM=0.5781
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077315  PSNR(HR)=10.85  SSIM=0.5717
+    trial   9  mean=16.40  per_img=['16.12', '22.24', '10.85']  params={'lr': 0.002323755489981263, 'first_omega_0': 22.42598671928792, 'hidden_omega_0': 36.24542589443381}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.29  SSIM=0.3472
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=23.25  SSIM=0.6259
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=22.89  SSIM=0.6507
+    trial  10  mean=21.14  per_img=['17.29', '23.25', '22.89']  params={'lr': 7.314877088359556e-05, 'first_omega_0': 58.14707363160215, 'hidden_omega_0': 59.82435743032896}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.30  SSIM=0.3495
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=23.16  SSIM=0.6163
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000001  PSNR(HR)=22.89  SSIM=0.6498
+    trial  11  mean=21.12  per_img=['17.30', '23.16', '22.89']  params={'lr': 7.292364440010678e-05, 'first_omega_0': 59.679411983437774, 'hidden_omega_0': 59.1552710101827}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000000  PSNR(HR)=17.28  SSIM=0.3471
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000000  PSNR(HR)=23.16  SSIM=0.6172
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000000  PSNR(HR)=22.86  SSIM=0.6463
+    trial  12  mean=21.10  per_img=['17.28', '23.16', '22.86']  params={'lr': 0.00015506103998682812, 'first_omega_0': 56.75336915400034, 'hidden_omega_0': 58.51000658421875}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000014  PSNR(HR)=17.30  SSIM=0.3492
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000014  PSNR(HR)=23.27  SSIM=0.6290
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000050  PSNR(HR)=22.99  SSIM=0.6651
+    trial  13  mean=21.19  per_img=['17.30', '23.27', '22.99']  params={'lr': 1.2079539541232503e-05, 'first_omega_0': 50.46378284378654, 'hidden_omega_0': 48.228942195466026}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000020  PSNR(HR)=17.30  SSIM=0.3495
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000022  PSNR(HR)=23.28  SSIM=0.6301
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000083  PSNR(HR)=23.00  SSIM=0.6654
+    trial  14  mean=21.20  per_img=['17.30', '23.28', '23.00']  params={'lr': 1.0426649486130482e-05, 'first_omega_0': 50.39340186887212, 'hidden_omega_0': 47.74807934774146}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000024  PSNR(HR)=17.31  SSIM=0.3503
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000039  PSNR(HR)=23.27  SSIM=0.6290
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000083  PSNR(HR)=23.01  SSIM=0.6671
+    trial  15  mean=21.20  per_img=['17.31', '23.27', '23.01']  params={'lr': 1.1972091441499331e-05, 'first_omega_0': 33.45016640092943, 'hidden_omega_0': 46.87561027535149}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000051  PSNR(HR)=17.30  SSIM=0.3493
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000068  PSNR(HR)=23.28  SSIM=0.6306
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000190  PSNR(HR)=22.98  SSIM=0.6659
+    trial  16  mean=21.19  per_img=['17.30', '23.28', '22.98']  params={'lr': 1.0273700080762563e-05, 'first_omega_0': 31.818031081439653, 'hidden_omega_0': 44.17841708795934}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000068  PSNR(HR)=17.28  SSIM=0.3506
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000043  PSNR(HR)=23.24  SSIM=0.6289
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000311  PSNR(HR)=22.91  SSIM=0.6637
+    trial  17  mean=21.15  per_img=['17.28', '23.24', '22.91']  params={'lr': 2.623324138744081e-05, 'first_omega_0': 15.906794414712706, 'hidden_omega_0': 48.73833186440629}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000012  PSNR(HR)=17.27  SSIM=0.3436
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000010  PSNR(HR)=23.21  SSIM=0.6217
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000025  PSNR(HR)=23.01  SSIM=0.6675
+    trial  18  mean=21.16  per_img=['17.27', '23.21', '23.01']  params={'lr': 2.2180694557043692e-05, 'first_omega_0': 33.208883375184314, 'hidden_omega_0': 40.50222716296896}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000006  PSNR(HR)=17.19  SSIM=0.3193
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000002  PSNR(HR)=23.20  SSIM=0.6236
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000006  PSNR(HR)=22.31  SSIM=0.5238
+    trial  19  mean=20.90  per_img=['17.19', '23.20', '22.31']  params={'lr': 0.00021794603752404326, 'first_omega_0': 28.07951697936898, 'hidden_omega_0': 51.388675207662104}
+
+  >>> incode best HR-mean=21.20 per_img=[17.303850173950195, 23.284000396728516, 23.00137710571289]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_incode.txt  (892,455 params)
+
+============================================================
+  Tuning sl2a  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000066  PSNR(HR)=17.25  SSIM=0.3384
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000065  PSNR(HR)=23.15  SSIM=0.6153
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000080  PSNR(HR)=22.75  SSIM=0.6200
+    trial   0  mean=21.05  per_img=['17.25', '23.15', '22.75']  params={'lr': 0.00024156772025296256}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000015  PSNR(HR)=17.24  SSIM=0.3396
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000013  PSNR(HR)=23.15  SSIM=0.6135
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000011  PSNR(HR)=22.72  SSIM=0.6105
+    trial   1  mean=21.04  per_img=['17.24', '23.15', '22.72']  params={'lr': 0.001754759256702473}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000027  PSNR(HR)=17.24  SSIM=0.3377
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000025  PSNR(HR)=23.14  SSIM=0.6136
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000028  PSNR(HR)=22.60  SSIM=0.6031
+    trial   2  mean=20.99  per_img=['17.24', '23.14', '22.60']  params={'lr': 0.0007506810936068548}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000025  PSNR(HR)=17.21  SSIM=0.3316
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000012  PSNR(HR)=23.10  SSIM=0.6092
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000009  PSNR(HR)=22.69  SSIM=0.6133
+    trial   3  mean=21.00  per_img=['17.21', '23.10', '22.69']  params={'lr': 0.0037214926657368383}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000019  PSNR(HR)=17.22  SSIM=0.3344
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000022  PSNR(HR)=23.06  SSIM=0.6036
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000007  PSNR(HR)=22.60  SSIM=0.5993
+    trial   4  mean=20.96  per_img=['17.22', '23.06', '22.60']  params={'lr': 0.0036303760732131728}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000055  PSNR(HR)=17.24  SSIM=0.3376
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000050  PSNR(HR)=23.17  SSIM=0.6156
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000058  PSNR(HR)=22.78  SSIM=0.6214
+    trial   5  mean=21.06  per_img=['17.24', '23.17', '22.78']  params={'lr': 0.00035090148857968553}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000055  PSNR(HR)=17.25  SSIM=0.3394
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000045  PSNR(HR)=23.16  SSIM=0.6155
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000052  PSNR(HR)=22.74  SSIM=0.6142
+    trial   6  mean=21.05  per_img=['17.25', '23.16', '22.74']  params={'lr': 0.0003572140318996377}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000030  PSNR(HR)=17.20  SSIM=0.3312
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000027  PSNR(HR)=23.06  SSIM=0.6022
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000020  PSNR(HR)=22.59  SSIM=0.5974
+    trial   7  mean=20.95  per_img=['17.20', '23.06', '22.59']  params={'lr': 0.004015543686135838}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000730  PSNR(HR)=16.80  SSIM=0.2906
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001078  PSNR(HR)=21.16  SSIM=0.4903
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000280  PSNR(HR)=21.73  SSIM=0.5193
+    trial   8  mean=19.90  per_img=['16.80', '21.16', '21.73']  params={'lr': 0.008246671732726023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000182  PSNR(HR)=17.02  SSIM=0.3067
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000079  PSNR(HR)=22.67  SSIM=0.5693
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000065  PSNR(HR)=22.46  SSIM=0.5802
+    trial   9  mean=20.72  per_img=['17.02', '22.67', '22.46']  params={'lr': 0.005647617424572882}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000145  PSNR(HR)=17.25  SSIM=0.3404
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000145  PSNR(HR)=23.12  SSIM=0.6139
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000175  PSNR(HR)=22.73  SSIM=0.6174
+    trial  10  mean=21.03  per_img=['17.25', '23.12', '22.73']  params={'lr': 0.00011894424613259241}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000081  PSNR(HR)=17.26  SSIM=0.3414
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000085  PSNR(HR)=23.15  SSIM=0.6152
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000115  PSNR(HR)=22.78  SSIM=0.6260
+    trial  11  mean=21.06  per_img=['17.26', '23.15', '22.78']  params={'lr': 0.0001804801430337689}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000141  PSNR(HR)=17.26  SSIM=0.3406
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000150  PSNR(HR)=23.13  SSIM=0.6137
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000207  PSNR(HR)=22.74  SSIM=0.6203
+    trial  12  mean=21.04  per_img=['17.26', '23.13', '22.74']  params={'lr': 0.00010215364696724896}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000050  PSNR(HR)=17.24  SSIM=0.3387
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000050  PSNR(HR)=23.15  SSIM=0.6151
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000049  PSNR(HR)=22.80  SSIM=0.6233
+    trial  13  mean=21.07  per_img=['17.24', '23.15', '22.80']  params={'lr': 0.0003922160452538744}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000034  PSNR(HR)=17.23  SSIM=0.3384
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000026  PSNR(HR)=23.16  SSIM=0.6145
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000032  PSNR(HR)=22.76  SSIM=0.6127
+    trial  14  mean=21.05  per_img=['17.23', '23.16', '22.76']  params={'lr': 0.0007005397983165844}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000079  PSNR(HR)=17.27  SSIM=0.3405
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000075  PSNR(HR)=23.15  SSIM=0.6153
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000102  PSNR(HR)=22.75  SSIM=0.6189
+    trial  15  mean=21.06  per_img=['17.27', '23.15', '22.75']  params={'lr': 0.00020024701511789914}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000021  PSNR(HR)=17.22  SSIM=0.3355
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000016  PSNR(HR)=23.14  SSIM=0.6130
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000013  PSNR(HR)=22.66  SSIM=0.6033
+    trial  16  mean=21.01  per_img=['17.22', '23.14', '22.66']  params={'lr': 0.0014179281906459534}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000048  PSNR(HR)=17.24  SSIM=0.3388
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000036  PSNR(HR)=23.16  SSIM=0.6150
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000041  PSNR(HR)=22.74  SSIM=0.6145
+    trial  17  mean=21.05  per_img=['17.24', '23.16', '22.74']  params={'lr': 0.0004549849935450674}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000093  PSNR(HR)=17.26  SSIM=0.3400
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000083  PSNR(HR)=23.16  SSIM=0.6158
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000114  PSNR(HR)=22.69  SSIM=0.6053
+    trial  18  mean=21.04  per_img=['17.26', '23.16', '22.69']  params={'lr': 0.0001867320613796446}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000043  PSNR(HR)=17.24  SSIM=0.3385
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000034  PSNR(HR)=23.16  SSIM=0.6145
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000043  PSNR(HR)=22.80  SSIM=0.6218
+    trial  19  mean=21.07  per_img=['17.24', '23.16', '22.80']  params={'lr': 0.0004749700210868798}
+
+  >>> sl2a best HR-mean=21.07 per_img=[17.238744735717773, 23.156944274902344, 22.80240821838379]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_sl2a.txt  (264,707 params)
+
+============================================================
+  Tuning cosmo  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000050  PSNR(HR)=16.38  SSIM=0.1923
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000027  PSNR(HR)=19.78  SSIM=0.2949
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000023  PSNR(HR)=20.32  SSIM=0.3178
+    trial   0  mean=18.82  per_img=['16.38', '19.78', '20.32']  params={'lr': 0.002415677202529624, 'beta0': 0.31483329780951763}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000069  PSNR(HR)=16.20  SSIM=0.2043
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.008971  PSNR(HR)=18.63  SSIM=0.4850
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000016  PSNR(HR)=20.05  SSIM=0.3063
+    trial   1  mean=18.29  per_img=['16.20', '18.63', '20.05']  params={'lr': 0.007506810936068544, 'beta0': 0.3948257060197469}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000449  PSNR(HR)=15.79  SSIM=0.1618
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.001096  PSNR(HR)=17.62  SSIM=0.1937
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.077146  PSNR(HR)=10.85  SSIM=0.4985
+    trial   2  mean=14.75  per_img=['15.79', '17.62', '10.85']  params={'lr': 0.036303760732131735, 'beta0': 0.1435703765884944}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000057  PSNR(HR)=16.22  SSIM=0.1780
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000030  PSNR(HR)=18.99  SSIM=0.2519
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000007  PSNR(HR)=19.91  SSIM=0.2898
+    trial   3  mean=18.37  per_img=['16.22', '18.99', '19.91']  params={'lr': 0.003572140318996374, 'beta0': 0.40291736699215946}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072219  PSNR(HR)=10.41  SSIM=0.1694
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047318  PSNR(HR)=12.85  SSIM=0.3451
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.027506  PSNR(HR)=14.91  SSIM=0.6033
+    trial   4  mean=12.73  per_img=['10.41', '12.85', '14.91']  params={'lr': 0.08246671732726024, 'beta0': 0.4392069910236264}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000075  PSNR(HR)=16.16  SSIM=0.1761
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000017  PSNR(HR)=19.13  SSIM=0.2579
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000007  PSNR(HR)=19.74  SSIM=0.3243
+    trial   5  mean=18.34  per_img=['16.16', '19.13', '19.74']  params={'lr': 0.005195586024325666, 'beta0': 0.25548761150649474}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.016439  PSNR(HR)=14.61  SSIM=0.2917
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000342  PSNR(HR)=18.45  SSIM=0.2290
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.001196  PSNR(HR)=18.83  SSIM=0.2381
+    trial   6  mean=17.30  per_img=['14.61', '18.45', '18.83']  params={'lr': 0.023276939100527697, 'beta0': 0.3592239932216211}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000061  PSNR(HR)=16.22  SSIM=0.1930
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000117  PSNR(HR)=20.24  SSIM=0.3310
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000031  PSNR(HR)=20.17  SSIM=0.3093
+    trial   7  mean=18.88  per_img=['16.22', '20.24', '20.17']  params={'lr': 0.0055017583288459885, 'beta0': 0.2849861311721562}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000071  PSNR(HR)=15.99  SSIM=0.1734
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000086  PSNR(HR)=20.14  SSIM=0.3166
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000055  PSNR(HR)=19.97  SSIM=0.3293
+    trial   8  mean=18.70  per_img=['15.99', '20.14', '19.97']  params={'lr': 0.010142997784304343, 'beta0': 0.016746540299434298}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.041011  PSNR(HR)=12.28  SSIM=0.2623
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.046824  PSNR(HR)=12.85  SSIM=0.3027
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.027435  PSNR(HR)=14.93  SSIM=0.6030
+    trial   9  mean=13.35  per_img=['12.28', '12.85', '14.93']  params={'lr': 0.03512798537016722, 'beta0': 0.4424941834116971}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000040  PSNR(HR)=16.35  SSIM=0.1924
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000030  PSNR(HR)=19.65  SSIM=0.2938
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000027  PSNR(HR)=20.71  SSIM=0.3135
+    trial  10  mean=18.90  per_img=['16.35', '19.65', '20.71']  params={'lr': 0.0012640135474979244, 'beta0': 0.1606568030685402}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000049  PSNR(HR)=16.10  SSIM=0.1807
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000025  PSNR(HR)=19.84  SSIM=0.2997
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000019  PSNR(HR)=20.90  SSIM=0.3465
+    trial  11  mean=18.95  per_img=['16.10', '19.84', '20.90']  params={'lr': 0.0010197828501294721, 'beta0': 0.18155101780110977}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000039  PSNR(HR)=16.24  SSIM=0.1772
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000028  PSNR(HR)=19.77  SSIM=0.2971
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000011  PSNR(HR)=20.65  SSIM=0.3102
+    trial  12  mean=18.89  per_img=['16.24', '19.77', '20.65']  params={'lr': 0.0010347277808456165, 'beta0': 0.148288742163676}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000060  PSNR(HR)=16.47  SSIM=0.2074
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000036  PSNR(HR)=19.86  SSIM=0.3032
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000024  PSNR(HR)=20.44  SSIM=0.3039
+    trial  13  mean=18.92  per_img=['16.47', '19.86', '20.44']  params={'lr': 0.001089674919335384, 'beta0': 0.16875585924656966}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000069  PSNR(HR)=16.35  SSIM=0.1941
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000040  PSNR(HR)=20.03  SSIM=0.3113
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000015  PSNR(HR)=20.52  SSIM=0.3251
+    trial  14  mean=18.97  per_img=['16.35', '20.03', '20.52']  params={'lr': 0.0022563176718752376, 'beta0': 0.056339043575325765}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000057  PSNR(HR)=16.32  SSIM=0.1913
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000028  PSNR(HR)=19.84  SSIM=0.3064
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000021  PSNR(HR)=20.18  SSIM=0.3018
+    trial  15  mean=18.78  per_img=['16.32', '19.84', '20.18']  params={'lr': 0.002098185812912433, 'beta0': 0.02111781555006774}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000051  PSNR(HR)=16.31  SSIM=0.1867
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000037  PSNR(HR)=19.85  SSIM=0.2998
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000025  PSNR(HR)=20.52  SSIM=0.3258
+    trial  16  mean=18.89  per_img=['16.31', '19.85', '20.52']  params={'lr': 0.001964245770238844, 'beta0': 0.0830073813436465}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000124  PSNR(HR)=16.56  SSIM=0.2288
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000332  PSNR(HR)=19.34  SSIM=0.2696
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.004636  PSNR(HR)=20.22  SSIM=0.6249
+    trial  17  mean=18.71  per_img=['16.56', '19.34', '20.22']  params={'lr': 0.012831654739925199, 'beta0': 0.20652167337883895}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000049  PSNR(HR)=16.28  SSIM=0.1942
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000033  PSNR(HR)=19.44  SSIM=0.2770
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000018  PSNR(HR)=20.32  SSIM=0.3117
+    trial  18  mean=18.68  per_img=['16.28', '19.44', '20.32']  params={'lr': 0.002822144159218211, 'beta0': 0.08787917348922145}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.000051  PSNR(HR)=16.03  SSIM=0.1711
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.000014  PSNR(HR)=19.11  SSIM=0.2547
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.000009  PSNR(HR)=20.21  SSIM=0.3076
+    trial  19  mean=18.45  per_img=['16.03', '19.11', '20.21']  params={'lr': 0.004636214783109537, 'beta0': 0.07863816431176145}
+
+  >>> cosmo best HR-mean=18.97 per_img=[16.345783233642578, 20.027456283569336, 20.524797439575195]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_cosmo.txt  (1,090,734 params)
+
+[saved] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_best_params.json  (12 methods total)
+==========================================
+ Done: Mon Apr 27 00:10:59 EDT 2026
+==========================================

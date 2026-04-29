@@ -1,0 +1,31 @@
+task:            image_super_resolution
+method:          siren
+tag:             multi_sr_div2k_214_221_527_x8_mean
+n_images:        3
+  image[0]:     0214 (1356x2040)  best_HR_PSNR=17.2981
+  image[1]:     0221 (1356x2040)  best_HR_PSNR=23.2693
+  image[2]:     0527 (1044x2040)  best_HR_PSNR=22.9906
+scale_factor:    8
+eval_epoch:      0
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-26 14:08:45
+best_score:      21.1860  (mean of per-image HR-PSNRs)
+best_trial_#:    10
+n_params:        198,915
+
+searched params (Optuna):
+  lr: 7.314877088359556e-05
+  first_omega_0: 58.14707363160215
+  hidden_omega_0: 59.82435743032896
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.outermost_linear: True
+  training.scale_factor: 8
+  training.eval_epoch: 0
+  training.scheduler: cosine

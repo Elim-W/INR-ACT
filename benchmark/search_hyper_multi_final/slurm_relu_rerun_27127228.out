@@ -1,0 +1,415 @@
+==========================================
+ Job: relu rerun (fitting/inpaint/sr) started Sun Apr 26 21:50:59 EDT 2026
+ Host: lh1200.arc-ts.umich.edu   GPU: GPU 0: NVIDIA L40S (UUID: GPU-d43615c7-d815-8792-6c41-a09b65abcb3e)
+==========================================
+
+------ [1/3] image_fitting (relu) ------
+[hparam_search_image_multi] device=cuda  agg=mean  n_trials=20  iters/trial=4000
+  images:
+    [0] 0214  (339x510)
+    [1] 0221  (339x510)
+    [2] 0527  (261x510)
+
+============================================================
+  Tuning relu  (20 trials × 3 images)
+============================================================
+  [0214] epoch  4000/4000  loss=0.016256  PSNR=17.89  SSIM=0.3548
+  [0221] epoch  4000/4000  loss=0.023372  PSNR=16.31  SSIM=0.2740
+  [0527] epoch  4000/4000  loss=0.006958  PSNR=21.58  SSIM=0.5972
+    trial   0  mean=18.59  per_img=['17.89', '16.31', '21.58']  params={'lr': 0.00024156772025296256}
+  [0214] epoch  4000/4000  loss=0.012351  PSNR=19.08  SSIM=0.4098
+  [0221] epoch  4000/4000  loss=0.012599  PSNR=19.01  SSIM=0.4098
+  [0527] epoch  4000/4000  loss=0.004847  PSNR=23.15  SSIM=0.6426
+    trial   1  mean=20.41  per_img=['19.08', '19.01', '23.15']  params={'lr': 0.001754759256702473}
+  [0214] epoch  4000/4000  loss=0.014690  PSNR=18.33  SSIM=0.3781
+  [0221] epoch  4000/4000  loss=0.020763  PSNR=16.83  SSIM=0.3100
+  [0527] epoch  4000/4000  loss=0.006000  PSNR=22.22  SSIM=0.6128
+    trial   2  mean=19.13  per_img=['18.33', '16.83', '22.22']  params={'lr': 0.0007506810936068548}
+  [0214] epoch  4000/4000  loss=0.013326  PSNR=18.75  SSIM=0.3965
+  [0221] epoch  4000/4000  loss=0.013574  PSNR=18.69  SSIM=0.3957
+  [0527] epoch  4000/4000  loss=0.005140  PSNR=22.89  SSIM=0.6344
+    trial   3  mean=20.11  per_img=['18.75', '18.69', '22.89']  params={'lr': 0.0037214926657368383}
+  [0214] epoch  4000/4000  loss=0.012311  PSNR=19.10  SSIM=0.4156
+  [0221] epoch  4000/4000  loss=0.022266  PSNR=16.53  SSIM=0.2851
+  [0527] epoch  4000/4000  loss=0.004882  PSNR=23.11  SSIM=0.6415
+    trial   4  mean=19.58  per_img=['19.10', '16.53', '23.11']  params={'lr': 0.0036303760732131728}
+  [0214] epoch  4000/4000  loss=0.015111  PSNR=18.21  SSIM=0.3727
+  [0221] epoch  4000/4000  loss=0.021533  PSNR=16.67  SSIM=0.2925
+  [0527] epoch  4000/4000  loss=0.007627  PSNR=21.18  SSIM=0.5899
+    trial   5  mean=18.69  per_img=['18.21', '16.67', '21.18']  params={'lr': 0.00035090148857968553}
+  [0214] epoch  4000/4000  loss=0.015188  PSNR=18.19  SSIM=0.3695
+  [0221] epoch  4000/4000  loss=0.021412  PSNR=16.70  SSIM=0.2929
+  [0527] epoch  4000/4000  loss=0.006619  PSNR=21.79  SSIM=0.6058
+    trial   6  mean=18.89  per_img=['18.19', '16.70', '21.79']  params={'lr': 0.0003572140318996377}
+  [0214] epoch  4000/4000  loss=0.012211  PSNR=19.14  SSIM=0.4131
+  [0221] epoch  4000/4000  loss=0.009380  PSNR=20.30  SSIM=0.4832
+  [0527] epoch  4000/4000  loss=0.005286  PSNR=22.77  SSIM=0.6296
+    trial   7  mean=20.73  per_img=['19.14', '20.30', '22.77']  params={'lr': 0.004015543686135838}
+  [0214] epoch  4000/4000  loss=0.019393  PSNR=17.12  SSIM=0.3431
+  [0221] epoch  4000/4000  loss=0.029759  PSNR=15.26  SSIM=0.2279
+  [0527] epoch  4000/4000  loss=0.008375  PSNR=20.77  SSIM=0.5883
+    trial   8  mean=17.72  per_img=['17.12', '15.26', '20.77']  params={'lr': 0.008246671732726023}
+  [0214] epoch  4000/4000  loss=0.012531  PSNR=19.02  SSIM=0.4117
+  [0221] epoch  4000/4000  loss=0.012424  PSNR=19.08  SSIM=0.4105
+  [0527] epoch  4000/4000  loss=0.007706  PSNR=21.13  SSIM=0.5844
+    trial   9  mean=19.74  per_img=['19.02', '19.08', '21.13']  params={'lr': 0.005647617424572882}
+  [0214] epoch  4000/4000  loss=0.013315  PSNR=18.76  SSIM=0.3938
+  [0221] epoch  4000/4000  loss=0.017577  PSNR=17.56  SSIM=0.3396
+  [0527] epoch  4000/4000  loss=0.005207  PSNR=22.83  SSIM=0.6279
+    trial  10  mean=19.72  per_img=['18.76', '17.56', '22.83']  params={'lr': 0.0011586611567065805}
+  [0214] epoch  4000/4000  loss=0.012629  PSNR=18.99  SSIM=0.4096
+  [0221] epoch  4000/4000  loss=0.014631  PSNR=18.36  SSIM=0.3809
+  [0527] epoch  4000/4000  loss=0.004815  PSNR=23.17  SSIM=0.6408
+    trial  11  mean=20.17  per_img=['18.99', '18.36', '23.17']  params={'lr': 0.0017383582481646546}
+  [0214] epoch  4000/4000  loss=0.012213  PSNR=19.13  SSIM=0.4157
+  [0221] epoch  4000/4000  loss=0.015511  PSNR=18.10  SSIM=0.3813
+  [0527] epoch  4000/4000  loss=0.005138  PSNR=22.89  SSIM=0.6348
+    trial  12  mean=20.04  per_img=['19.13', '18.10', '22.89']  params={'lr': 0.001935552857643043}
+  [0214] epoch  4000/4000  loss=0.017275  PSNR=17.63  SSIM=0.3468
+  [0221] epoch  4000/4000  loss=0.027469  PSNR=15.61  SSIM=0.2425
+  [0527] epoch  4000/4000  loss=0.008885  PSNR=20.51  SSIM=0.5813
+    trial  13  mean=17.92  per_img=['17.63', '15.61', '20.51']  params={'lr': 0.00011667005469831128}
+  [0214] epoch  4000/4000  loss=0.011754  PSNR=19.30  SSIM=0.4220
+  [0221] epoch  4000/4000  loss=0.013065  PSNR=18.85  SSIM=0.3976
+  [0527] epoch  4000/4000  loss=0.005046  PSNR=22.97  SSIM=0.6339
+    trial  14  mean=20.37  per_img=['19.30', '18.85', '22.97']  params={'lr': 0.0024680750652196683}
+  [0214] epoch  4000/4000  loss=0.013741  PSNR=18.62  SSIM=0.3898
+  [0221] epoch  4000/4000  loss=0.018687  PSNR=17.29  SSIM=0.3246
+  [0527] epoch  4000/4000  loss=0.005916  PSNR=22.28  SSIM=0.6181
+    trial  15  mean=19.40  per_img=['18.62', '17.29', '22.28']  params={'lr': 0.0010106153982179119}
+  [0214] epoch  4000/4000  loss=0.014567  PSNR=18.37  SSIM=0.3782
+  [0221] epoch  4000/4000  loss=0.050094  PSNR=13.00  SSIM=0.1567
+  [0527] epoch  4000/4000  loss=0.009417  PSNR=20.26  SSIM=0.5819
+    trial  16  mean=17.21  per_img=['18.37', '13.00', '20.26']  params={'lr': 0.009989139024422111}
+  [0214] epoch  4000/4000  loss=0.012837  PSNR=18.92  SSIM=0.4037
+  [0221] epoch  4000/4000  loss=0.010487  PSNR=19.81  SSIM=0.4572
+  [0527] epoch  4000/4000  loss=0.004590  PSNR=23.38  SSIM=0.6506
+    trial  17  mean=20.70  per_img=['18.92', '19.81', '23.38']  params={'lr': 0.004046944128882779}
+  [0214] epoch  4000/4000  loss=0.011126  PSNR=19.54  SSIM=0.4440
+  [0221] epoch  4000/4000  loss=0.010300  PSNR=19.90  SSIM=0.4587
+  [0527] epoch  4000/4000  loss=0.006152  PSNR=22.11  SSIM=0.6126
+    trial  18  mean=20.51  per_img=['19.54', '19.90', '22.11']  params={'lr': 0.005113764841031794}
+  [0214] epoch  4000/4000  loss=0.012204  PSNR=19.14  SSIM=0.4175
+  [0221] epoch  4000/4000  loss=0.014498  PSNR=18.40  SSIM=0.3855
+  [0527] epoch  4000/4000  loss=0.005298  PSNR=22.76  SSIM=0.6248
+    trial  19  mean=20.10  per_img=['19.14', '18.40', '22.76']  params={'lr': 0.0031360583677111924}
+
+  >>> relu best mean=20.73 (per-image=[19.135143280029297, 20.299528121948242, 22.7689266204834])
+      params: {'lr': 0.004015543686135838}
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_div2k_214_221_527_mean_relu.txt  (198,915 params)
+
+[saved] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_div2k_214_221_527_mean_best_params.json  (1 methods total)
+
+------ [2/3] image_inpainting (relu) ------
+[hparam_search_inpaint_multi] device=cuda  agg=mean  sampling_ratio=0.2  mask_seed=0  n_trials=20  iters/trial=4000
+    [0] 0214  (339x510)
+    [1] 0221  (339x510)
+    [2] 0527  (261x510)
+
+============================================================
+  Tuning relu  (20 trials × 3 images)
+============================================================
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.016159  PSNR(full)=17.87  SSIM=0.3542
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.023115  PSNR(full)=16.26  SSIM=0.2748
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.006878  PSNR(full)=21.40  SSIM=0.5938
+    trial   0  mean=18.51  per_img=['17.87', '16.26', '21.40']  params={'lr': 0.00024156772025296256}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012221  PSNR(full)=18.83  SSIM=0.4049
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.011422  PSNR(full)=19.08  SSIM=0.4179
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004753  PSNR(full)=22.84  SSIM=0.6299
+    trial   1  mean=20.25  per_img=['18.83', '19.08', '22.84']  params={'lr': 0.001754759256702473}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.014602  PSNR(full)=18.25  SSIM=0.3747
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.019044  PSNR(full)=17.04  SSIM=0.3177
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.006021  PSNR(full)=21.94  SSIM=0.6065
+    trial   2  mean=19.08  per_img=['18.25', '17.04', '21.94']  params={'lr': 0.0007506810936068548}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012354  PSNR(full)=18.80  SSIM=0.4023
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.016152  PSNR(full)=17.68  SSIM=0.3553
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.005164  PSNR(full)=22.50  SSIM=0.6214
+    trial   3  mean=19.66  per_img=['18.80', '17.68', '22.50']  params={'lr': 0.0037214926657368383}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.011800  PSNR(full)=18.94  SSIM=0.4071
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.024123  PSNR(full)=16.05  SSIM=0.2681
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004960  PSNR(full)=22.58  SSIM=0.6297
+    trial   4  mean=19.19  per_img=['18.94', '16.05', '22.58']  params={'lr': 0.0036303760732131728}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.015549  PSNR(full)=18.03  SSIM=0.3637
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.022883  PSNR(full)=16.28  SSIM=0.2746
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.007250  PSNR(full)=21.18  SSIM=0.5901
+    trial   5  mean=18.50  per_img=['18.03', '16.28', '21.18']  params={'lr': 0.00035090148857968553}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.015127  PSNR(full)=18.13  SSIM=0.3687
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.021794  PSNR(full)=16.46  SSIM=0.2836
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.006515  PSNR(full)=21.60  SSIM=0.5996
+    trial   6  mean=18.73  per_img=['18.13', '16.46', '21.60']  params={'lr': 0.0003572140318996377}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.011654  PSNR(full)=18.97  SSIM=0.4100
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.009918  PSNR(full)=19.57  SSIM=0.4475
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004717  PSNR(full)=22.80  SSIM=0.6319
+    trial   7  mean=20.45  per_img=['18.97', '19.57', '22.80']  params={'lr': 0.004015543686135838}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.076896  PSNR(full)=11.13  SSIM=0.2137
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.027903  PSNR(full)=15.43  SSIM=0.2365
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.007449  PSNR(full)=21.03  SSIM=0.5846
+    trial   8  mean=15.86  per_img=['11.13', '15.43', '21.03']  params={'lr': 0.008246671732726023}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012293  PSNR(full)=18.77  SSIM=0.4012
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.012232  PSNR(full)=18.79  SSIM=0.4034
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.007342  PSNR(full)=21.12  SSIM=0.5912
+    trial   9  mean=19.56  per_img=['18.77', '18.79', '21.12']  params={'lr': 0.005647617424572882}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.013758  PSNR(full)=18.43  SSIM=0.3824
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.017154  PSNR(full)=17.42  SSIM=0.3375
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.005411  PSNR(full)=22.29  SSIM=0.6190
+    trial  10  mean=19.38  per_img=['18.43', '17.42', '22.29']  params={'lr': 0.0011586611567065805}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012598  PSNR(full)=18.75  SSIM=0.4020
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.015287  PSNR(full)=17.91  SSIM=0.3624
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004663  PSNR(full)=22.90  SSIM=0.6346
+    trial  11  mean=19.85  per_img=['18.75', '17.91', '22.90']  params={'lr': 0.0017383582481646546}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012394  PSNR(full)=18.80  SSIM=0.4016
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.015857  PSNR(full)=17.76  SSIM=0.3615
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004722  PSNR(full)=22.85  SSIM=0.6308
+    trial  12  mean=19.80  per_img=['18.80', '17.76', '22.85']  params={'lr': 0.001935552857643043}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.017606  PSNR(full)=17.54  SSIM=0.3438
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.027462  PSNR(full)=15.53  SSIM=0.2399
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.008433  PSNR(full)=20.59  SSIM=0.5805
+    trial  13  mean=17.88  per_img=['17.54', '15.53', '20.59']  params={'lr': 0.00011667005469831128}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.011121  PSNR(full)=19.14  SSIM=0.4171
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.012260  PSNR(full)=18.78  SSIM=0.3956
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004767  PSNR(full)=22.80  SSIM=0.6324
+    trial  14  mean=20.24  per_img=['19.14', '18.78', '22.80']  params={'lr': 0.0024680750652196683}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.013942  PSNR(full)=18.39  SSIM=0.3825
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.018599  PSNR(full)=17.15  SSIM=0.3229
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.005336  PSNR(full)=22.43  SSIM=0.6171
+    trial  15  mean=19.32  per_img=['18.39', '17.15', '22.43']  params={'lr': 0.0010106153982179119}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.014571  PSNR(full)=18.23  SSIM=0.3808
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.050235  PSNR(full)=13.00  SSIM=0.1567
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.007796  PSNR(full)=20.91  SSIM=0.5836
+    trial  16  mean=17.38  per_img=['18.23', '13.00', '20.91']  params={'lr': 0.009989139024422111}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012994  PSNR(full)=18.62  SSIM=0.3965
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.011986  PSNR(full)=18.82  SSIM=0.4104
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004492  PSNR(full)=23.00  SSIM=0.6353
+    trial  17  mean=20.15  per_img=['18.62', '18.82', '23.00']  params={'lr': 0.004046944128882779}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.012487  PSNR(full)=18.76  SSIM=0.3991
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.012755  PSNR(full)=18.63  SSIM=0.3947
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.004626  PSNR(full)=22.95  SSIM=0.6324
+    trial  18  mean=20.11  per_img=['18.76', '18.63', '22.95']  params={'lr': 0.002349422863027476}
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0214] epoch  4000/4000  loss=0.014598  PSNR(full)=18.25  SSIM=0.3783
+  mask: keeping 34578/172890 pixels (20.0%)
+  [0221] epoch  4000/4000  loss=0.018571  PSNR(full)=17.13  SSIM=0.3210
+  mask: keeping 26622/133110 pixels (20.0%)
+  [0527] epoch  4000/4000  loss=0.006754  PSNR(full)=21.45  SSIM=0.5951
+    trial  19  mean=18.94  per_img=['18.25', '17.13', '21.45']  params={'lr': 0.0006643820378890532}
+
+  >>> relu best mean=20.45 per_img=[18.969066619873047, 19.573871612548828, 22.803747177124023]
+      params: {'lr': 0.004015543686135838}
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_inp_div2k_214_221_527_r0p20_mean_relu.txt  (198,915 params)
+
+[saved] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_inp_div2k_214_221_527_r0p20_mean_best_params.json  (1 methods total)
+
+------ [3/3] image_super_resolution (relu) ------
+[hparam_search_sr_multi] device=cuda  agg=mean  scale=8  eval_epoch=0  n_trials=20  iters/trial=4000
+    [0] 0214  HR=(1356x2040)  LR≈(169x255)
+    [1] 0221  HR=(1356x2040)  LR≈(169x255)
+    [2] 0527  HR=(1044x2040)  LR≈(130x255)
+
+============================================================
+  Tuning relu  (20 trials × 3 images)
+============================================================
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.012063  PSNR(HR)=15.21  SSIM=0.3054
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.020614  PSNR(HR)=16.00  SSIM=0.4276
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.005436  PSNR(HR)=19.88  SSIM=0.6296
+    trial   0  mean=17.03  per_img=['15.21', '16.00', '19.88']  params={'lr': 0.00024156772025296256}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.008237  PSNR(HR)=15.83  SSIM=0.3158
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.009521  PSNR(HR)=18.54  SSIM=0.4808
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003276  PSNR(HR)=20.92  SSIM=0.6346
+    trial   1  mean=18.43  per_img=['15.83', '18.54', '20.92']  params={'lr': 0.001754759256702473}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.010174  PSNR(HR)=15.51  SSIM=0.3108
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.017718  PSNR(HR)=16.53  SSIM=0.4386
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.004310  PSNR(HR)=20.39  SSIM=0.6310
+    trial   2  mean=17.48  per_img=['15.51', '16.53', '20.39']  params={'lr': 0.0007506810936068548}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.009080  PSNR(HR)=15.68  SSIM=0.3137
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.012730  PSNR(HR)=17.63  SSIM=0.4627
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003631  PSNR(HR)=20.73  SSIM=0.6331
+    trial   3  mean=18.01  per_img=['15.68', '17.63', '20.73']  params={'lr': 0.0037214926657368383}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.008178  PSNR(HR)=15.84  SSIM=0.3156
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.020350  PSNR(HR)=16.04  SSIM=0.4278
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003231  PSNR(HR)=20.95  SSIM=0.6354
+    trial   4  mean=17.61  per_img=['15.84', '16.04', '20.95']  params={'lr': 0.0036303760732131728}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.010890  PSNR(HR)=15.39  SSIM=0.3091
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.020147  PSNR(HR)=16.08  SSIM=0.4297
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.005912  PSNR(HR)=19.68  SSIM=0.6291
+    trial   5  mean=17.05  per_img=['15.39', '16.08', '19.68']  params={'lr': 0.00035090148857968553}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.010912  PSNR(HR)=15.39  SSIM=0.3084
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.017916  PSNR(HR)=16.50  SSIM=0.4367
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.004844  PSNR(HR)=20.14  SSIM=0.6305
+    trial   6  mean=17.34  per_img=['15.39', '16.50', '20.14']  params={'lr': 0.0003572140318996377}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.007834  PSNR(HR)=15.90  SSIM=0.3156
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.008024  PSNR(HR)=19.05  SSIM=0.4885
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003653  PSNR(HR)=20.71  SSIM=0.6338
+    trial   7  mean=18.55  per_img=['15.90', '19.05', '20.71']  params={'lr': 0.004015543686135838}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.072522  PSNR(HR)=10.43  SSIM=0.2047
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.027355  PSNR(HR)=14.96  SSIM=0.4034
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.008300  PSNR(HR)=18.81  SSIM=0.6244
+    trial   8  mean=14.73  per_img=['10.43', '14.96', '18.81']  params={'lr': 0.008246671732726023}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.008371  PSNR(HR)=15.80  SSIM=0.3140
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.009376  PSNR(HR)=18.58  SSIM=0.4814
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.005880  PSNR(HR)=19.70  SSIM=0.6278
+    trial   9  mean=18.03  per_img=['15.80', '18.58', '19.70']  params={'lr': 0.005647617424572882}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.009575  PSNR(HR)=15.61  SSIM=0.3118
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.012529  PSNR(HR)=17.70  SSIM=0.4644
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003858  PSNR(HR)=20.60  SSIM=0.6324
+    trial  10  mean=17.97  per_img=['15.61', '17.70', '20.60']  params={'lr': 0.0011586611567065805}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.008706  PSNR(HR)=15.75  SSIM=0.3153
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.013766  PSNR(HR)=17.39  SSIM=0.4583
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003500  PSNR(HR)=20.78  SSIM=0.6339
+    trial  11  mean=17.97  per_img=['15.75', '17.39', '20.78']  params={'lr': 0.0017383582481646546}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.008359  PSNR(HR)=15.81  SSIM=0.3160
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.012334  PSNR(HR)=17.72  SSIM=0.4676
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003474  PSNR(HR)=20.81  SSIM=0.6344
+    trial  12  mean=18.12  per_img=['15.81', '17.72', '20.81']  params={'lr': 0.001935552857643043}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.013128  PSNR(HR)=15.06  SSIM=0.3040
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.024317  PSNR(HR)=15.40  SSIM=0.4131
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.006859  PSNR(HR)=19.31  SSIM=0.6276
+    trial  13  mean=16.59  per_img=['15.06', '15.40', '19.31']  params={'lr': 0.00011667005469831128}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.007806  PSNR(HR)=15.91  SSIM=0.3168
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.011246  PSNR(HR)=18.03  SSIM=0.4672
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003483  PSNR(HR)=20.80  SSIM=0.6338
+    trial  14  mean=18.25  per_img=['15.91', '18.03', '20.80']  params={'lr': 0.0024680750652196683}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.009399  PSNR(HR)=15.64  SSIM=0.3125
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.015939  PSNR(HR)=16.89  SSIM=0.4446
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.004206  PSNR(HR)=20.44  SSIM=0.6318
+    trial  15  mean=17.66  per_img=['15.64', '16.89', '20.44']  params={'lr': 0.0010106153982179119}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.010179  PSNR(HR)=15.52  SSIM=0.3110
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.047220  PSNR(HR)=12.86  SSIM=0.3594
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.005881  PSNR(HR)=19.70  SSIM=0.6288
+    trial  16  mean=16.03  per_img=['15.52', '12.86', '19.70']  params={'lr': 0.009989139024422111}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.008426  PSNR(HR)=15.79  SSIM=0.3149
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.008524  PSNR(HR)=18.87  SSIM=0.4865
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003231  PSNR(HR)=20.93  SSIM=0.6348
+    trial  17  mean=18.53  per_img=['15.79', '18.87', '20.93']  params={'lr': 0.004046944128882779}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.006905  PSNR(HR)=16.06  SSIM=0.3208
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.008245  PSNR(HR)=18.96  SSIM=0.4866
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.006255  PSNR(HR)=19.55  SSIM=0.6287
+    trial  18  mean=18.19  per_img=['16.06', '18.96', '19.55']  params={'lr': 0.005113764841031794}
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0214] epoch  4000/4000  loss=0.007961  PSNR(HR)=15.88  SSIM=0.3162
+  SR: HR=1352x2040 → LR=169x255  (scale=8)
+  [0221] epoch  4000/4000  loss=0.013283  PSNR(HR)=17.50  SSIM=0.4596
+  SR: HR=1040x2040 → LR=130x255  (scale=8)
+  [0527] epoch  4000/4000  loss=0.003916  PSNR(HR)=20.58  SSIM=0.6314
+    trial  19  mean=17.99  per_img=['15.88', '17.50', '20.58']  params={'lr': 0.0031360583677111924}
+
+  >>> relu best HR-mean=18.55 per_img=[15.898442268371582, 19.045360565185547, 20.71293067932129]
+  [saved txt] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_relu.txt  (198,915 params)
+
+[saved] /scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/multi_sr_div2k_214_221_527_x8_mean_best_params.json  (1 methods total)
+==========================================
+ Done: Sun Apr 26 23:09:34 EDT 2026
+==========================================

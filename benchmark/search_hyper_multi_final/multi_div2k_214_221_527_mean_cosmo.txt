@@ -1,0 +1,27 @@
+task:            image_fitting
+method:          cosmo
+tag:             multi_div2k_214_221_527_mean
+n_images:        3
+  image[0]:     0214 (339x510)  best_PSNR=33.9038
+  image[1]:     0221 (339x510)  best_PSNR=33.2383
+  image[2]:     0527 (261x510)  best_PSNR=36.9264
+agg:             mean
+n_trials:        20
+iters_per_trial: 4000
+timestamp:       2026-04-26 15:34:35
+best_score:      34.6895  (mean of per-image PSNRs)
+best_trial_#:    18
+n_params:        1,090,734
+
+searched params (Optuna):
+  lr: 0.0015748393930611771
+  beta0: 0.0710716651792925
+
+fixed params (BENCHMARK_DEFAULTS):
+  model.in_features: 2
+  model.hidden_features: 256
+  model.hidden_layers: 3
+  model.out_features: 3
+  model.T_range: (0.5, 5.0)
+  model.c_range: (0.0, 3.0)
+  training.scheduler: cosine
