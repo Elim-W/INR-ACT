@@ -35,9 +35,8 @@ if _ROOT not in sys.path:
 from benchmark.run_synthetic import _CUTOFFS
 
 def bw_to_freq(bw):
-    """Convert bandwidth label (0.1–0.9) to actual Fourier cutoff frequency."""
     idx = int(round(bw * 10)) - 1
-    return float(_CUTOFFS[idx])
+    return float(_CUTOFFS[idx] / np.sqrt(2))
 
 # ---------------------------------------------------------------------------
 # Display config

@@ -3,6 +3,7 @@ cd /scratch/liyues_root/liyues/shared_data/yiting_donghua
 source .venv/bin/activate
 
 我今天心凉了呜呜呜呜呜呜4/27/2026
+别心凉bro4/28/2026
 
 python benchmark/run_fitting_groups.py --config_dir configs/experiments/image_fitting_3mean --out_root results/image_fitting_groupss --downscale 4
 

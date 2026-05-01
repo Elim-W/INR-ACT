@@ -3,10 +3,14 @@
 #SBATCH --nodes=1
 #SBATCH --account=liyues
 #SBATCH --partition=liyues-a100
+
+#SBATCH --account=liyues1
+#SBATCH --partition=spgpu
+
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=96G
-#SBATCH --time=24:00:00
+#SBATCH --mem=32G
+#SBATCH --time=04:00:00
 #SBATCH --output=/scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/slurm_sr_%j.out
 #SBATCH --error=/scratch/liyues_root/liyues/shared_data/yiting_donghua/benchmark/search_hyper_multi/slurm_sr_%j.err
 #SBATCH --mail-type=BEGIN,END,FAIL
@@ -15,7 +19,7 @@
 # image_super_resolution only (full HR, scale_factor=8, 3 images)
 
 set -e
-cd /scratch/liyues_root/liyues/shared_data/yiting_donghua
+cd /scratch/liyues_root/liyues0/shared_data/INR-ACT
 source .venv/bin/activate
 unset CUDA_VISIBLE_DEVICES
 export PYTHONUNBUFFERED=1

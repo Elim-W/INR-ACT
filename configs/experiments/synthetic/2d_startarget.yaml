@@ -26,11 +26,10 @@ methods:
     hidden_omega_0: 10.958122380999
     scheduler: cosine
   gf:
-    lr: 0.0006587542355827943
-    scale: 3.4868339582947634
-    omega: 22.3082160838731
-    first_bias_scale: 1.2952413944323864
-    scheduler: cosine
+    lr: 0.00012246224778500437
+    scale: 4.4308485216452045
+    omega: 28.978741988946222
+    first_bias_scale: 0.23594742202465752
   wf:
     lr: 0.0002610803867288326
     scale: 6.690403029807663
@@ -54,12 +53,9 @@ methods:
     hidden_omega_0: 54.16121227969755
     scheduler: cosine
   sl2a:
-    lr: 0.0027258463969359295
-    degree: 128
+    lr: 0.003980247221803208
+    degree: 256
     rank: 128
-    nonlinearity: relu
-    scheduler: lambda
   cosmo:
-    lr: 0.002660301220072908
-    beta0: 0.05475511475262285
-    scheduler: cosine
+    lr: 0.0010791767121044798
+    beta0: 0.15351661816964834

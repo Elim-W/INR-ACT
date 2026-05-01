@@ -1,7 +1,9 @@
 signal: 3d_sphere
+
 seeds:
 - 1234
 iters: 10000
+
 eval_every: 100
 batch_size: 65536
 methods:
@@ -9,6 +11,7 @@ methods:
     lr: 0.0011230233998349253
     first_omega_0: 44.19861148405951
     hidden_omega_0: 25.36379151347172
+
   wire:
     lr: 0.0012435348237922871
     first_omega_0: 26.53886624517228
@@ -32,6 +35,7 @@ methods:
     omega_w: 3.5857024224993546
     omega: 1.1339127725791913
     first_bias_scale: 2.3747017817138754
+
   staf:
     lr: 0.0020819958755619586
     first_omega_0: 53.54526548498641

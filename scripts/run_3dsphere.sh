@@ -8,6 +8,6 @@ python benchmark/run_synthetic.py \
     --signal 3d_sphere \
     --bandwidths 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 \
     --seeds 1234 \
-    --iters 1000 \
+    --iters 30000 \
     --out_dir results/3d_sphere \
     "$@"
