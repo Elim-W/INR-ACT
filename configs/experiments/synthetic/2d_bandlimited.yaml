@@ -10,76 +10,78 @@ methods:
   siren:
     hidden_features: 256
     hidden_layers: 5
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 0.0001
+    first_omega_0: 51.31227
+    hidden_omega_0: 48.13819
+    lr: 0.00021
     scheduler: cosine
   wire:
     hidden_features: 300
     hidden_layers: 3
-    first_omega_0: 20.0
-    hidden_omega_0: 20.0
-    scale: 10.0
-    lr: 0.005
+    first_omega_0: 12.85104
+    hidden_omega_0: 10.59640
+    scale: 7.64295
+    lr: 0.01017
     scheduler: lambda
   gauss:
     hidden_features: 256
     hidden_layers: 3
-    scale: 10.0
-    lr: 0.001
+    scale: 6.74458
+    lr: 0.00055
     scheduler: cosine
   finer:
     hidden_features: 256
     hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    lr: 0.0001
+    first_omega_0: 17.71466
+    hidden_omega_0: 41.76408
+    lr: 0.00022
     scheduler: cosine
   gf:
     hidden_features: 256
     hidden_layers: 3
-    scale: 3.0
-    omega: 10.0
-    first_bias_scale: 1.0
-    lr: 0.001
+    scale: 2.23410
+    omega: 6.01599
+    first_bias_scale: 0.13738
+    lr: 0.00085
     scheduler: cosine
   wf:
     hidden_features: 300
     hidden_layers: 3
-    scale: 2.0
-    omega_w: 4.0
-    omega: 5.0
-    first_bias_scale: 1.0
-    lr: 0.001
+    scale: 8.27974
+    omega_w: 6.31085
+    omega: 1.30853
+    first_bias_scale: 0.34901
+    lr: 0.00028
     scheduler: cosine
   staf:
     hidden_features: 256
     hidden_layers: 3
-    first_omega_0: 30.0
-    hidden_omega_0: 30.0
-    tau: 5
-    skip_conn: false
-    lr: 0.0001
+    first_omega_0: 24.78319
+    hidden_omega_0: 9.14780
+    tau: 4
+    skip_conn: true
+    lr: 0.00023
     scheduler: cosine
   pemlp:
     hidden_features: 256
     hidden_layers: 4
-    lr: 0.0005
+    lr: 0.00253
     scheduler: cosine
   incode:
     hidden_features: 256
     hidden_layers: 3
-    lr: 0.0001
+    first_omega_0: 39.26791
+    hidden_omega_0: 53.18115
+    lr: 0.00025
     scheduler: cosine
   sl2a:
     hidden_features: 256
     hidden_layers: 3
-    degree: 256
+    degree: 128
     rank: 128
     init_method: xavier_uniform
     linear_init_type: kaiming_uniform
     nonlinearity: relu
-    lr: 0.001
+    lr: 0.00339
     scheduler: cosine
   cosmo:
     lr: 0.0010347005764343989

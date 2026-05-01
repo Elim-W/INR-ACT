@@ -1,0 +1,1496 @@
+[
+  {
+    "group": "high_5",
+    "method": "siren",
+    "n_images": 5,
+    "avg_best_psnr": 22.331352615356444,
+    "avg_best_ssim": 0.7061099886894227,
+    "avg_final_psnr": 22.29042282104492,
+    "avg_final_ssim": 0.6953869462013245,
+    "avg_noisy_psnr": 15.886768341064453,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 21.574172973632812,
+        "best_ssim": 0.7263004779815674,
+        "final_psnr": 21.574172973632812,
+        "final_ssim": 0.7263004779815674,
+        "noisy_input_psnr": 15.54716682434082,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 21.793298721313477,
+        "best_ssim": 0.7422885298728943,
+        "final_psnr": 21.793298721313477,
+        "final_ssim": 0.7422885298728943,
+        "noisy_input_psnr": 16.309537887573242,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 23.805553436279297,
+        "best_ssim": 0.6651259660720825,
+        "final_psnr": 23.60090446472168,
+        "final_ssim": 0.6115107536315918,
+        "noisy_input_psnr": 16.7716007232666,
+        "best_epoch": 2000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 22.466773986816406,
+        "best_ssim": 0.7182435393333435,
+        "final_psnr": 22.466773986816406,
+        "final_ssim": 0.7182435393333435,
+        "noisy_input_psnr": 15.542606353759766,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 22.016963958740234,
+        "best_ssim": 0.6785914301872253,
+        "final_psnr": 22.016963958740234,
+        "final_ssim": 0.6785914301872253,
+        "noisy_input_psnr": 15.262929916381836,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 6.444584274291991
+  },
+  {
+    "group": "high_5",
+    "method": "wire",
+    "n_images": 5,
+    "avg_best_psnr": 19.375748443603516,
+    "avg_best_ssim": 0.5567329406738282,
+    "avg_final_psnr": 17.933747482299804,
+    "avg_final_ssim": 0.5087531805038452,
+    "avg_noisy_psnr": 15.886494827270507,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 20.0784912109375,
+        "best_ssim": 0.6613982319831848,
+        "final_psnr": 18.298927307128906,
+        "final_ssim": 0.6265320181846619,
+        "noisy_input_psnr": 15.572380065917969,
+        "best_epoch": 2200,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.450828552246094,
+        "best_ssim": 0.4313572645187378,
+        "final_psnr": 16.449201583862305,
+        "final_ssim": 0.4313572645187378,
+        "noisy_input_psnr": 16.30881118774414,
+        "best_epoch": 3800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 21.45792007446289,
+        "best_ssim": 0.5912029147148132,
+        "final_psnr": 18.374801635742188,
+        "final_ssim": 0.46302470564842224,
+        "noisy_input_psnr": 16.763084411621094,
+        "best_epoch": 1400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 20.038223266601562,
+        "best_ssim": 0.5962262749671936,
+        "final_psnr": 18.156005859375,
+        "final_ssim": 0.533426821231842,
+        "noisy_input_psnr": 15.521928787231445,
+        "best_epoch": 2200,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 18.85327911376953,
+        "best_ssim": 0.5034800171852112,
+        "final_psnr": 18.389801025390625,
+        "final_ssim": 0.48942509293556213,
+        "noisy_input_psnr": 15.26626968383789,
+        "best_epoch": 3000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 3.4892536163330092
+  },
+  {
+    "group": "high_5",
+    "method": "gauss",
+    "n_images": 5,
+    "avg_best_psnr": 21.069203186035157,
+    "avg_best_ssim": 0.6231349587440491,
+    "avg_final_psnr": 21.069203186035157,
+    "avg_final_ssim": 0.6231349587440491,
+    "avg_noisy_psnr": 15.883918571472169,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 20.24871063232422,
+        "best_ssim": 0.6170122623443604,
+        "final_psnr": 20.24871063232422,
+        "final_ssim": 0.6170122623443604,
+        "noisy_input_psnr": 15.546883583068848,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 19.800167083740234,
+        "best_ssim": 0.5956519246101379,
+        "final_psnr": 19.800167083740234,
+        "final_ssim": 0.5956519246101379,
+        "noisy_input_psnr": 16.318471908569336,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.94976234436035,
+        "best_ssim": 0.6480752825737,
+        "final_psnr": 22.94976234436035,
+        "final_ssim": 0.6480752825737,
+        "noisy_input_psnr": 16.76089859008789,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.515254974365234,
+        "best_ssim": 0.6559615135192871,
+        "final_psnr": 21.515254974365234,
+        "final_ssim": 0.6559615135192871,
+        "noisy_input_psnr": 15.530204772949219,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 20.832120895385742,
+        "best_ssim": 0.59897381067276,
+        "final_psnr": 20.832120895385742,
+        "final_ssim": 0.59897381067276,
+        "noisy_input_psnr": 15.263134002685547,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 5.185284614562988
+  },
+  {
+    "group": "high_5",
+    "method": "finer",
+    "n_images": 5,
+    "avg_best_psnr": 22.144831466674805,
+    "avg_best_ssim": 0.6924654483795166,
+    "avg_final_psnr": 22.144831466674805,
+    "avg_final_ssim": 0.6899787902832031,
+    "avg_noisy_psnr": 15.885079956054687,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 21.466018676757812,
+        "best_ssim": 0.710533082485199,
+        "final_psnr": 21.466018676757812,
+        "final_ssim": 0.710533082485199,
+        "noisy_input_psnr": 15.545109748840332,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 21.38267707824707,
+        "best_ssim": 0.7151713967323303,
+        "final_psnr": 21.38267707824707,
+        "final_ssim": 0.7151713967323303,
+        "noisy_input_psnr": 16.31403923034668,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 23.974058151245117,
+        "best_ssim": 0.6784963607788086,
+        "final_psnr": 23.974058151245117,
+        "final_ssim": 0.6660630702972412,
+        "noisy_input_psnr": 16.757841110229492,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 22.18051528930664,
+        "best_ssim": 0.696511447429657,
+        "final_psnr": 22.18051528930664,
+        "final_ssim": 0.696511447429657,
+        "noisy_input_psnr": 15.538858413696289,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 21.720888137817383,
+        "best_ssim": 0.6616149544715881,
+        "final_psnr": 21.720888137817383,
+        "final_ssim": 0.6616149544715881,
+        "noisy_input_psnr": 15.269551277160645,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 6.259751510620118
+  },
+  {
+    "group": "high_5",
+    "method": "gf",
+    "n_images": 5,
+    "avg_best_psnr": 16.46516056060791,
+    "avg_best_ssim": 0.4425434470176697,
+    "avg_final_psnr": 16.42748146057129,
+    "avg_final_ssim": 0.44168158769607546,
+    "avg_noisy_psnr": 15.881321144104003,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.001264572143555,
+        "best_ssim": 0.5619137287139893,
+        "final_psnr": 16.902624130249023,
+        "final_ssim": 0.5592848658561707,
+        "noisy_input_psnr": 15.546642303466797,
+        "best_epoch": 2600,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.604755401611328,
+        "best_ssim": 0.5220540165901184,
+        "final_psnr": 16.604755401611328,
+        "final_ssim": 0.5220540165901184,
+        "noisy_input_psnr": 16.30280113220215,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 17.03070068359375,
+        "best_ssim": 0.31057214736938477,
+        "final_psnr": 17.0108585357666,
+        "final_ssim": 0.31017547845840454,
+        "noisy_input_psnr": 16.756582260131836,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 15.403641700744629,
+        "best_ssim": 0.3946399688720703,
+        "final_psnr": 15.388872146606445,
+        "final_ssim": 0.3943406045436859,
+        "noisy_input_psnr": 15.52839183807373,
+        "best_epoch": 2600,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 16.28544044494629,
+        "best_ssim": 0.42353737354278564,
+        "final_psnr": 16.230297088623047,
+        "final_ssim": 0.4225529730319977,
+        "noisy_input_psnr": 15.272188186645508,
+        "best_epoch": 2600,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 0.5838394165039062
+  },
+  {
+    "group": "high_5",
+    "method": "wf",
+    "n_images": 5,
+    "avg_best_psnr": 19.427262115478516,
+    "avg_best_ssim": 0.5512980401515961,
+    "avg_final_psnr": 19.268390655517578,
+    "avg_final_ssim": 0.5465375006198883,
+    "avg_noisy_psnr": 15.877673721313476,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 19.15424156188965,
+        "best_ssim": 0.6079196333885193,
+        "final_psnr": 19.151578903198242,
+        "final_ssim": 0.6079196333885193,
+        "noisy_input_psnr": 15.539358139038086,
+        "best_epoch": 3600,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 19.003427505493164,
+        "best_ssim": 0.5834743976593018,
+        "final_psnr": 18.981786727905273,
+        "final_ssim": 0.5833405256271362,
+        "noisy_input_psnr": 16.307235717773438,
+        "best_epoch": 3400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 20.32861328125,
+        "best_ssim": 0.4894988238811493,
+        "final_psnr": 19.73624610900879,
+        "final_ssim": 0.46914491057395935,
+        "noisy_input_psnr": 16.75054359436035,
+        "best_epoch": 2400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 19.414705276489258,
+        "best_ssim": 0.5523859858512878,
+        "final_psnr": 19.387924194335938,
+        "final_ssim": 0.5519376397132874,
+        "noisy_input_psnr": 15.523625373840332,
+        "best_epoch": 3200,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.235322952270508,
+        "best_ssim": 0.5232113599777222,
+        "final_psnr": 19.08441734313965,
+        "final_ssim": 0.5203447937965393,
+        "noisy_input_psnr": 15.267605781555176,
+        "best_epoch": 2400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 3.54958839416504
+  },
+  {
+    "group": "high_5",
+    "method": "staf",
+    "n_images": 5,
+    "avg_best_psnr": 20.37922592163086,
+    "avg_best_ssim": 0.5712874293327331,
+    "avg_final_psnr": 20.37922592163086,
+    "avg_final_ssim": 0.5712874293327331,
+    "avg_noisy_psnr": 15.87971534729004,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 19.1392822265625,
+        "best_ssim": 0.5209872126579285,
+        "final_psnr": 19.1392822265625,
+        "final_ssim": 0.5209872126579285,
+        "noisy_input_psnr": 15.536705017089844,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 19.556926727294922,
+        "best_ssim": 0.5782642960548401,
+        "final_psnr": 19.556926727294922,
+        "final_ssim": 0.5782642960548401,
+        "noisy_input_psnr": 16.30279541015625,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.304893493652344,
+        "best_ssim": 0.6196014285087585,
+        "final_psnr": 22.304893493652344,
+        "final_ssim": 0.6196014285087585,
+        "noisy_input_psnr": 16.75780487060547,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.0983829498291,
+        "best_ssim": 0.6253347992897034,
+        "final_psnr": 21.0983829498291,
+        "final_ssim": 0.6253347992897034,
+        "noisy_input_psnr": 15.524572372436523,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.79664421081543,
+        "best_ssim": 0.5122494101524353,
+        "final_psnr": 19.79664421081543,
+        "final_ssim": 0.5122494101524353,
+        "noisy_input_psnr": 15.27669906616211,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 4.499510574340819
+  },
+  {
+    "group": "high_5",
+    "method": "relu",
+    "n_images": 5,
+    "avg_best_psnr": 16.668196296691896,
+    "avg_best_ssim": 0.29726565182209014,
+    "avg_final_psnr": 16.668196296691896,
+    "avg_final_ssim": 0.29726565182209014,
+    "avg_noisy_psnr": 15.891080856323242,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 15.839495658874512,
+        "best_ssim": 0.22114057838916779,
+        "final_psnr": 15.839495658874512,
+        "final_ssim": 0.22114057838916779,
+        "noisy_input_psnr": 15.564277648925781,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.140750885009766,
+        "best_ssim": 0.2765651047229767,
+        "final_psnr": 16.140750885009766,
+        "final_ssim": 0.2765651047229767,
+        "noisy_input_psnr": 16.339611053466797,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 17.53614044189453,
+        "best_ssim": 0.4120901823043823,
+        "final_psnr": 17.53614044189453,
+        "final_ssim": 0.4120901823043823,
+        "noisy_input_psnr": 16.765892028808594,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 16.528623580932617,
+        "best_ssim": 0.25087878108024597,
+        "final_psnr": 16.528623580932617,
+        "final_ssim": 0.25087878108024597,
+        "noisy_input_psnr": 15.524035453796387,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 17.295970916748047,
+        "best_ssim": 0.325653612613678,
+        "final_psnr": 17.295970916748047,
+        "final_ssim": 0.325653612613678,
+        "noisy_input_psnr": 15.261588096618652,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 0.7771154403686538
+  },
+  {
+    "group": "high_5",
+    "method": "sl2a",
+    "n_images": 5,
+    "avg_best_psnr": 20.39561996459961,
+    "avg_best_ssim": 0.6055516719818115,
+    "avg_final_psnr": 20.39561996459961,
+    "avg_final_ssim": 0.6055516719818115,
+    "avg_noisy_psnr": 15.882404327392578,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 20.201610565185547,
+        "best_ssim": 0.6671550869941711,
+        "final_psnr": 20.201610565185547,
+        "final_ssim": 0.6671550869941711,
+        "noisy_input_psnr": 15.552206039428711,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0463",
+        "best_psnr": 19.81731605529785,
+        "best_ssim": 0.6076228618621826,
+        "final_psnr": 19.81731605529785,
+        "final_ssim": 0.6076228618621826,
+        "noisy_input_psnr": 16.309755325317383,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0465",
+        "best_psnr": 21.831186294555664,
+        "best_ssim": 0.5576643347740173,
+        "final_psnr": 21.831186294555664,
+        "final_ssim": 0.5576643347740173,
+        "noisy_input_psnr": 16.760746002197266,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0601",
+        "best_psnr": 19.877504348754883,
+        "best_ssim": 0.5965773463249207,
+        "final_psnr": 19.877504348754883,
+        "final_ssim": 0.5965773463249207,
+        "noisy_input_psnr": 15.528358459472656,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0778",
+        "best_psnr": 20.2504825592041,
+        "best_ssim": 0.5987387299537659,
+        "final_psnr": 20.2504825592041,
+        "final_ssim": 0.5987387299537659,
+        "noisy_input_psnr": 15.260955810546875,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 4.513215637207033
+  },
+  {
+    "group": "mid_5",
+    "method": "siren",
+    "n_images": 5,
+    "avg_best_psnr": 24.555184173583985,
+    "avg_best_ssim": 0.6936653017997741,
+    "avg_final_psnr": 24.531391143798828,
+    "avg_final_ssim": 0.66668781042099,
+    "avg_noisy_psnr": 15.305652046203614,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 24.135704040527344,
+        "best_ssim": 0.5911831855773926,
+        "final_psnr": 24.135133743286133,
+        "final_ssim": 0.5911831855773926,
+        "noisy_input_psnr": 15.348077774047852,
+        "best_epoch": 3400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 25.33601951599121,
+        "best_ssim": 0.7385444641113281,
+        "final_psnr": 25.239295959472656,
+        "final_ssim": 0.6588186621665955,
+        "noisy_input_psnr": 14.786067008972168,
+        "best_epoch": 2400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 25.811769485473633,
+        "best_ssim": 0.7558645606040955,
+        "final_psnr": 25.811769485473633,
+        "final_ssim": 0.7460312247276306,
+        "noisy_input_psnr": 16.08827018737793,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 23.374595642089844,
+        "best_ssim": 0.7011260986328125,
+        "final_psnr": 23.374595642089844,
+        "final_ssim": 0.6862643361091614,
+        "noisy_input_psnr": 15.203073501586914,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 24.11783218383789,
+        "best_ssim": 0.6816082000732422,
+        "final_psnr": 24.096160888671875,
+        "final_ssim": 0.6511416435241699,
+        "noisy_input_psnr": 15.102771759033203,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 9.249532127380371
+  },
+  {
+    "group": "mid_5",
+    "method": "wire",
+    "n_images": 5,
+    "avg_best_psnr": 22.241151428222658,
+    "avg_best_ssim": 0.5555090367794037,
+    "avg_final_psnr": 17.98631820678711,
+    "avg_final_ssim": 0.37108357846736906,
+    "avg_noisy_psnr": 15.310499954223634,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 21.91686248779297,
+        "best_ssim": 0.4874192178249359,
+        "final_psnr": 17.48896598815918,
+        "final_ssim": 0.34316980838775635,
+        "noisy_input_psnr": 15.332026481628418,
+        "best_epoch": 1400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.4973201751709,
+        "best_ssim": 0.47380363941192627,
+        "final_psnr": 17.110464096069336,
+        "final_ssim": 0.2461908608675003,
+        "noisy_input_psnr": 14.789128303527832,
+        "best_epoch": 1000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 23.535459518432617,
+        "best_ssim": 0.6649799346923828,
+        "final_psnr": 19.464557647705078,
+        "final_ssim": 0.42523595690727234,
+        "noisy_input_psnr": 16.0985107421875,
+        "best_epoch": 1400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 21.435916900634766,
+        "best_ssim": 0.5910207629203796,
+        "final_psnr": 17.783302307128906,
+        "final_ssim": 0.44107377529144287,
+        "noisy_input_psnr": 15.229162216186523,
+        "best_epoch": 1800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.82019805908203,
+        "best_ssim": 0.5603216290473938,
+        "final_psnr": 18.084300994873047,
+        "final_ssim": 0.39974749088287354,
+        "noisy_input_psnr": 15.10367202758789,
+        "best_epoch": 1800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 6.930651473999024
+  },
+  {
+    "group": "mid_5",
+    "method": "gauss",
+    "n_images": 5,
+    "avg_best_psnr": 23.58573112487793,
+    "avg_best_ssim": 0.6566791772842407,
+    "avg_final_psnr": 23.58573112487793,
+    "avg_final_ssim": 0.655522084236145,
+    "avg_noisy_psnr": 15.305500793457032,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.416580200195312,
+        "best_ssim": 0.5313838720321655,
+        "final_psnr": 23.416580200195312,
+        "final_ssim": 0.5313838720321655,
+        "noisy_input_psnr": 15.337711334228516,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 24.443649291992188,
+        "best_ssim": 0.7043450474739075,
+        "final_psnr": 24.443649291992188,
+        "final_ssim": 0.698559582233429,
+        "noisy_input_psnr": 14.780779838562012,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.619693756103516,
+        "best_ssim": 0.7218165993690491,
+        "final_psnr": 24.619693756103516,
+        "final_ssim": 0.7218165993690491,
+        "noisy_input_psnr": 16.085023880004883,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 22.4412899017334,
+        "best_ssim": 0.6784058213233948,
+        "final_psnr": 22.4412899017334,
+        "final_ssim": 0.6784058213233948,
+        "noisy_input_psnr": 15.211971282958984,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 23.007442474365234,
+        "best_ssim": 0.6474445462226868,
+        "final_psnr": 23.007442474365234,
+        "final_ssim": 0.6474445462226868,
+        "noisy_input_psnr": 15.112017631530762,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 8.2802303314209
+  },
+  {
+    "group": "mid_5",
+    "method": "finer",
+    "n_images": 5,
+    "avg_best_psnr": 24.411004638671876,
+    "avg_best_ssim": 0.6898529887199402,
+    "avg_final_psnr": 24.411004638671876,
+    "avg_final_ssim": 0.6852474570274353,
+    "avg_noisy_psnr": 15.303178977966308,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.995439529418945,
+        "best_ssim": 0.5745933055877686,
+        "final_psnr": 23.995439529418945,
+        "final_ssim": 0.5745933055877686,
+        "noisy_input_psnr": 15.335440635681152,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 25.439403533935547,
+        "best_ssim": 0.7446219325065613,
+        "final_psnr": 25.439403533935547,
+        "final_ssim": 0.7261857986450195,
+        "noisy_input_psnr": 14.785587310791016,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 25.38536834716797,
+        "best_ssim": 0.752971351146698,
+        "final_psnr": 25.38536834716797,
+        "final_ssim": 0.752971351146698,
+        "noisy_input_psnr": 16.084930419921875,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 23.291370391845703,
+        "best_ssim": 0.698493480682373,
+        "final_psnr": 23.291370391845703,
+        "final_ssim": 0.6964656710624695,
+        "noisy_input_psnr": 15.202035903930664,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 23.94344139099121,
+        "best_ssim": 0.6785848736763,
+        "final_psnr": 23.94344139099121,
+        "final_ssim": 0.676021158695221,
+        "noisy_input_psnr": 15.107900619506836,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 9.107825660705569
+  },
+  {
+    "group": "mid_5",
+    "method": "gf",
+    "n_images": 5,
+    "avg_best_psnr": 16.150444793701173,
+    "avg_best_ssim": 0.26104828119277956,
+    "avg_final_psnr": 16.111240959167482,
+    "avg_final_ssim": 0.26055614948272704,
+    "avg_noisy_psnr": 15.3128080368042,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 16.358367919921875,
+        "best_ssim": 0.2630177438259125,
+        "final_psnr": 16.317045211791992,
+        "final_ssim": 0.26219698786735535,
+        "noisy_input_psnr": 15.352001190185547,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 15.945063591003418,
+        "best_ssim": 0.18492597341537476,
+        "final_psnr": 15.8399019241333,
+        "final_ssim": 0.18402564525604248,
+        "noisy_input_psnr": 14.797178268432617,
+        "best_epoch": 2400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 17.13007164001465,
+        "best_ssim": 0.27279797196388245,
+        "final_psnr": 17.13007164001465,
+        "final_ssim": 0.2723954916000366,
+        "noisy_input_psnr": 16.090373992919922,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 15.835504531860352,
+        "best_ssim": 0.3339448869228363,
+        "final_psnr": 15.809324264526367,
+        "final_ssim": 0.3339437246322632,
+        "noisy_input_psnr": 15.201300621032715,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 15.483216285705566,
+        "best_ssim": 0.2505548298358917,
+        "final_psnr": 15.459861755371094,
+        "final_ssim": 0.2502188980579376,
+        "noisy_input_psnr": 15.123186111450195,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 0.8376367568969734
+  },
+  {
+    "group": "mid_5",
+    "method": "wf",
+    "n_images": 5,
+    "avg_best_psnr": 22.627099609375,
+    "avg_best_ssim": 0.5666789829730987,
+    "avg_final_psnr": 22.08287467956543,
+    "avg_final_ssim": 0.5144834041595459,
+    "avg_noisy_psnr": 15.30134983062744,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 22.862756729125977,
+        "best_ssim": 0.4916386902332306,
+        "final_psnr": 22.608558654785156,
+        "final_ssim": 0.4851694107055664,
+        "noisy_input_psnr": 15.328211784362793,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 24.179428100585938,
+        "best_ssim": 0.6106483936309814,
+        "final_psnr": 23.032142639160156,
+        "final_ssim": 0.48269370198249817,
+        "noisy_input_psnr": 14.778039932250977,
+        "best_epoch": 2400,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.303165435791016,
+        "best_ssim": 0.68436598777771,
+        "final_psnr": 23.620540618896484,
+        "final_ssim": 0.6072148680686951,
+        "noisy_input_psnr": 16.091655731201172,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.44918441772461,
+        "best_ssim": 0.5127500891685486,
+        "final_psnr": 20.37388801574707,
+        "final_ssim": 0.5037233829498291,
+        "noisy_input_psnr": 15.206554412841797,
+        "best_epoch": 3200,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.34096336364746,
+        "best_ssim": 0.5339917540550232,
+        "final_psnr": 20.77924346923828,
+        "final_ssim": 0.49361565709114075,
+        "noisy_input_psnr": 15.102287292480469,
+        "best_epoch": 2200,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 7.325749778747561
+  },
+  {
+    "group": "mid_5",
+    "method": "staf",
+    "n_images": 5,
+    "avg_best_psnr": 22.649828720092774,
+    "avg_best_ssim": 0.6243580520153046,
+    "avg_final_psnr": 22.649828720092774,
+    "avg_final_ssim": 0.6243580520153046,
+    "avg_noisy_psnr": 15.305183219909669,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 22.57936668395996,
+        "best_ssim": 0.46270284056663513,
+        "final_psnr": 22.57936668395996,
+        "final_ssim": 0.46270284056663513,
+        "noisy_input_psnr": 15.339620590209961,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 23.831066131591797,
+        "best_ssim": 0.7129973769187927,
+        "final_psnr": 23.831066131591797,
+        "final_ssim": 0.7129973769187927,
+        "noisy_input_psnr": 14.786828994750977,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 23.236398696899414,
+        "best_ssim": 0.6799325942993164,
+        "final_psnr": 23.236398696899414,
+        "final_ssim": 0.6799325942993164,
+        "noisy_input_psnr": 16.08802604675293,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 21.692792892456055,
+        "best_ssim": 0.651698112487793,
+        "final_psnr": 21.692792892456055,
+        "final_ssim": 0.651698112487793,
+        "noisy_input_psnr": 15.212514877319336,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.90951919555664,
+        "best_ssim": 0.6144593358039856,
+        "final_psnr": 21.90951919555664,
+        "final_ssim": 0.6144593358039856,
+        "noisy_input_psnr": 15.098925590515137,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 7.3446455001831055
+  },
+  {
+    "group": "mid_5",
+    "method": "relu",
+    "n_images": 5,
+    "avg_best_psnr": 20.485942840576172,
+    "avg_best_ssim": 0.5477971434593201,
+    "avg_final_psnr": 20.485942840576172,
+    "avg_final_ssim": 0.5477971434593201,
+    "avg_noisy_psnr": 15.316318702697753,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 21.58063507080078,
+        "best_ssim": 0.4109514057636261,
+        "final_psnr": 21.58063507080078,
+        "final_ssim": 0.4109514057636261,
+        "noisy_input_psnr": 15.348649978637695,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 21.507488250732422,
+        "best_ssim": 0.6622253060340881,
+        "final_psnr": 21.507488250732422,
+        "final_ssim": 0.6622253060340881,
+        "noisy_input_psnr": 14.801826477050781,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 21.703632354736328,
+        "best_ssim": 0.6302323937416077,
+        "final_psnr": 21.703632354736328,
+        "final_ssim": 0.6302323937416077,
+        "noisy_input_psnr": 16.104637145996094,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 17.745899200439453,
+        "best_ssim": 0.4927505552768707,
+        "final_psnr": 17.745899200439453,
+        "final_ssim": 0.4927505552768707,
+        "noisy_input_psnr": 15.226673126220703,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 19.892059326171875,
+        "best_ssim": 0.5428260564804077,
+        "final_psnr": 19.892059326171875,
+        "final_ssim": 0.5428260564804077,
+        "noisy_input_psnr": 15.099806785583496,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 5.169624137878419
+  },
+  {
+    "group": "mid_5",
+    "method": "sl2a",
+    "n_images": 5,
+    "avg_best_psnr": 22.39671516418457,
+    "avg_best_ssim": 0.5397148549556732,
+    "avg_final_psnr": 22.392098236083985,
+    "avg_final_ssim": 0.5345851480960846,
+    "avg_noisy_psnr": 15.308749580383301,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 22.509010314941406,
+        "best_ssim": 0.48036810755729675,
+        "final_psnr": 22.509010314941406,
+        "final_ssim": 0.48036810755729675,
+        "noisy_input_psnr": 15.342126846313477,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0209",
+        "best_psnr": 23.291030883789062,
+        "best_ssim": 0.5188643336296082,
+        "final_psnr": 23.267946243286133,
+        "final_ssim": 0.5090938210487366,
+        "noisy_input_psnr": 14.790555000305176,
+        "best_epoch": 2800,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0548",
+        "best_psnr": 23.643587112426758,
+        "best_ssim": 0.6096330881118774,
+        "final_psnr": 23.643587112426758,
+        "final_ssim": 0.5937550663948059,
+        "noisy_input_psnr": 16.091506958007812,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.97907829284668,
+        "best_ssim": 0.5663114190101624,
+        "final_psnr": 20.97907829284668,
+        "final_ssim": 0.5663114190101624,
+        "noisy_input_psnr": 15.219276428222656,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.560869216918945,
+        "best_ssim": 0.5233973264694214,
+        "final_psnr": 21.560869216918945,
+        "final_ssim": 0.5233973264694214,
+        "noisy_input_psnr": 15.100282669067383,
+        "best_epoch": 4000,
+        "noise_info": {
+          "noise_type": "poisson_gaussian",
+          "tau": 20.0,
+          "readout_snr": 2.0
+        }
+      }
+    ],
+    "gain": 7.087965583801269
+  }
+]

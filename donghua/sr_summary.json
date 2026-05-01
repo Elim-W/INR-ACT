@@ -1,0 +1,1893 @@
+[
+  {
+    "group": "high_5",
+    "method": "siren",
+    "n_images": 5,
+    "avg_best_psnr": 19.554725646972656,
+    "avg_best_ssim": 0.4925126016139984,
+    "avg_final_psnr": 19.49107246398926,
+    "avg_final_ssim": 0.48973397016525266,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.928085327148438,
+        "best_ssim": 0.36098507046699524,
+        "final_psnr": 17.82431411743164,
+        "final_ssim": 0.358081579208374,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.675098419189453,
+        "best_ssim": 0.3632865846157074,
+        "final_psnr": 16.631486892700195,
+        "final_ssim": 0.35946133732795715,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.634906768798828,
+        "best_ssim": 0.6772719025611877,
+        "final_psnr": 22.590959548950195,
+        "final_ssim": 0.6766096949577332,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.365928649902344,
+        "best_ssim": 0.5902418494224548,
+        "final_psnr": 21.29134178161621,
+        "final_ssim": 0.5867676138877869,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.16960906982422,
+        "best_ssim": 0.47077760100364685,
+        "final_psnr": 19.117259979248047,
+        "final_ssim": 0.46774962544441223,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "wire",
+    "n_images": 5,
+    "avg_best_psnr": 18.63608589172363,
+    "avg_best_ssim": 0.4035662591457367,
+    "avg_final_psnr": 18.407794952392578,
+    "avg_final_ssim": 0.38044112324714663,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.294307708740234,
+        "best_ssim": 0.30273517966270447,
+        "final_psnr": 17.171907424926758,
+        "final_ssim": 0.2943775951862335,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.26068687438965,
+        "best_ssim": 0.30729830265045166,
+        "final_psnr": 16.113954544067383,
+        "final_ssim": 0.2924138605594635,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 21.290325164794922,
+        "best_ssim": 0.5657327175140381,
+        "final_psnr": 21.032716751098633,
+        "final_ssim": 0.5424540638923645,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 20.006832122802734,
+        "best_ssim": 0.4586024284362793,
+        "final_psnr": 19.658220291137695,
+        "final_ssim": 0.42259836196899414,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 18.328277587890625,
+        "best_ssim": 0.38346266746520996,
+        "final_psnr": 18.062175750732422,
+        "final_ssim": 0.35036173462867737,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "gauss",
+    "n_images": 5,
+    "avg_best_psnr": 19.438003540039062,
+    "avg_best_ssim": 0.4721767008304596,
+    "avg_final_psnr": 19.431117248535156,
+    "avg_final_ssim": 0.471636563539505,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.866439819335938,
+        "best_ssim": 0.34639331698417664,
+        "final_psnr": 17.833240509033203,
+        "final_ssim": 0.344713419675827,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.65636444091797,
+        "best_ssim": 0.3504362404346466,
+        "final_psnr": 16.655132293701172,
+        "final_ssim": 0.3498375713825226,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.39774513244629,
+        "best_ssim": 0.636078953742981,
+        "final_psnr": 22.39774513244629,
+        "final_ssim": 0.636078953742981,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.19279670715332,
+        "best_ssim": 0.5712926983833313,
+        "final_psnr": 21.19279670715332,
+        "final_ssim": 0.5712926983833313,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.076671600341797,
+        "best_ssim": 0.4566822946071625,
+        "final_psnr": 19.076671600341797,
+        "final_ssim": 0.45626017451286316,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "finer",
+    "n_images": 5,
+    "avg_best_psnr": 19.54464645385742,
+    "avg_best_ssim": 0.48430355191230773,
+    "avg_final_psnr": 19.515023040771485,
+    "avg_final_ssim": 0.4823683679103851,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.92097282409668,
+        "best_ssim": 0.355949729681015,
+        "final_psnr": 17.83565902709961,
+        "final_ssim": 0.3528059422969818,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.653329849243164,
+        "best_ssim": 0.3533065617084503,
+        "final_psnr": 16.61200714111328,
+        "final_ssim": 0.35032328963279724,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.567562103271484,
+        "best_ssim": 0.6620126366615295,
+        "final_psnr": 22.563684463500977,
+        "final_ssim": 0.6620126366615295,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.374731063842773,
+        "best_ssim": 0.585278332233429,
+        "final_psnr": 21.363880157470703,
+        "final_ssim": 0.5842707753181458,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.206636428833008,
+        "best_ssim": 0.46497049927711487,
+        "final_psnr": 19.19988441467285,
+        "final_ssim": 0.4624291956424713,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "gf",
+    "n_images": 5,
+    "avg_best_psnr": 18.956775283813478,
+    "avg_best_ssim": 0.4150609910488129,
+    "avg_final_psnr": 18.956775283813478,
+    "avg_final_ssim": 0.4150609910488129,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.563312530517578,
+        "best_ssim": 0.3080068826675415,
+        "final_psnr": 17.563312530517578,
+        "final_ssim": 0.3080068826675415,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.40530776977539,
+        "best_ssim": 0.313659131526947,
+        "final_psnr": 16.40530776977539,
+        "final_ssim": 0.313659131526947,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 21.483049392700195,
+        "best_ssim": 0.5348830819129944,
+        "final_psnr": 21.483049392700195,
+        "final_ssim": 0.5348830819129944,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 20.599777221679688,
+        "best_ssim": 0.5095769762992859,
+        "final_psnr": 20.599777221679688,
+        "final_ssim": 0.5095769762992859,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 18.73242950439453,
+        "best_ssim": 0.40917888283729553,
+        "final_psnr": 18.73242950439453,
+        "final_ssim": 0.40917888283729553,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "wf",
+    "n_images": 5,
+    "avg_best_psnr": 19.4563045501709,
+    "avg_best_ssim": 0.47562035322189333,
+    "avg_final_psnr": 19.442048645019533,
+    "avg_final_ssim": 0.4750725269317627,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.82207679748535,
+        "best_ssim": 0.345701664686203,
+        "final_psnr": 17.761137008666992,
+        "final_ssim": 0.3442573845386505,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.648473739624023,
+        "best_ssim": 0.3512376844882965,
+        "final_psnr": 16.638134002685547,
+        "final_ssim": 0.3499765396118164,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.439552307128906,
+        "best_ssim": 0.6450904011726379,
+        "final_psnr": 22.439552307128906,
+        "final_ssim": 0.6450904011726379,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.24315643310547,
+        "best_ssim": 0.5747716426849365,
+        "final_psnr": 21.24315643310547,
+        "final_ssim": 0.5747385621070862,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.128263473510742,
+        "best_ssim": 0.4613003730773926,
+        "final_psnr": 19.128263473510742,
+        "final_ssim": 0.46129974722862244,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "staf",
+    "n_images": 5,
+    "avg_best_psnr": 19.453051376342774,
+    "avg_best_ssim": 0.47522345185279846,
+    "avg_final_psnr": 19.452315521240234,
+    "avg_final_ssim": 0.47522345185279846,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.89434051513672,
+        "best_ssim": 0.34943723678588867,
+        "final_psnr": 17.890661239624023,
+        "final_ssim": 0.34943723678588867,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.567962646484375,
+        "best_ssim": 0.34791243076324463,
+        "final_psnr": 16.567962646484375,
+        "final_ssim": 0.34791243076324463,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.363609313964844,
+        "best_ssim": 0.638160765171051,
+        "final_psnr": 22.363609313964844,
+        "final_ssim": 0.638160765171051,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.296985626220703,
+        "best_ssim": 0.5792341828346252,
+        "final_psnr": 21.296985626220703,
+        "final_ssim": 0.5792341828346252,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.142358779907227,
+        "best_ssim": 0.46137264370918274,
+        "final_psnr": 19.142358779907227,
+        "final_ssim": 0.46137264370918274,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "relu",
+    "n_images": 5,
+    "avg_best_psnr": 15.513001632690429,
+    "avg_best_ssim": 0.35639479458332063,
+    "avg_final_psnr": 15.513001632690429,
+    "avg_final_ssim": 0.35639479458332063,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 14.62523365020752,
+        "best_ssim": 0.21891196072101593,
+        "final_psnr": 14.62523365020752,
+        "final_ssim": 0.21891196072101593,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 14.251479148864746,
+        "best_ssim": 0.2587924003601074,
+        "final_psnr": 14.251479148864746,
+        "final_ssim": 0.2587924003601074,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 16.932186126708984,
+        "best_ssim": 0.5094383955001831,
+        "final_psnr": 16.932186126708984,
+        "final_ssim": 0.5094383955001831,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 15.802499771118164,
+        "best_ssim": 0.412047415971756,
+        "final_psnr": 15.802499771118164,
+        "final_ssim": 0.412047415971756,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 15.953609466552734,
+        "best_ssim": 0.38278380036354065,
+        "final_psnr": 15.953609466552734,
+        "final_ssim": 0.38278380036354065,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "incode",
+    "n_images": 5,
+    "avg_best_psnr": 19.613898086547852,
+    "avg_best_ssim": 0.4874213218688965,
+    "avg_final_psnr": 19.60253028869629,
+    "avg_final_ssim": 0.48580966591835023,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.98784637451172,
+        "best_ssim": 0.35947322845458984,
+        "final_psnr": 17.965137481689453,
+        "final_ssim": 0.3586130142211914,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.73994255065918,
+        "best_ssim": 0.3595263957977295,
+        "final_psnr": 16.72145652770996,
+        "final_ssim": 0.35661086440086365,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.6180419921875,
+        "best_ssim": 0.6609041690826416,
+        "final_psnr": 22.6180419921875,
+        "final_ssim": 0.6609041690826416,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.473785400390625,
+        "best_ssim": 0.5894408226013184,
+        "final_psnr": 21.466854095458984,
+        "final_ssim": 0.5878468155860901,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.249874114990234,
+        "best_ssim": 0.4677619934082031,
+        "final_psnr": 19.241161346435547,
+        "final_ssim": 0.46507346630096436,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "sl2a",
+    "n_images": 5,
+    "avg_best_psnr": 19.45555763244629,
+    "avg_best_ssim": 0.46654304265975954,
+    "avg_final_psnr": 19.448017120361328,
+    "avg_final_ssim": 0.4650184571743011,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 17.947389602661133,
+        "best_ssim": 0.35148724913597107,
+        "final_psnr": 17.935150146484375,
+        "final_ssim": 0.35090479254722595,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 16.64827537536621,
+        "best_ssim": 0.3438589572906494,
+        "final_psnr": 16.637874603271484,
+        "final_ssim": 0.3419722318649292,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 22.339168548583984,
+        "best_ssim": 0.6232317090034485,
+        "final_psnr": 22.33588981628418,
+        "final_ssim": 0.6232317090034485,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 21.196800231933594,
+        "best_ssim": 0.5630102753639221,
+        "final_psnr": 21.19065284729004,
+        "final_ssim": 0.560276210308075,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 19.146154403686523,
+        "best_ssim": 0.4511270225048065,
+        "final_psnr": 19.140518188476562,
+        "final_ssim": 0.44870734214782715,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "high_5",
+    "method": "cosmo",
+    "n_images": 5,
+    "avg_best_psnr": 17.32779903411865,
+    "avg_best_ssim": 0.2491194099187851,
+    "avg_final_psnr": 17.217607498168945,
+    "avg_final_ssim": 0.23048377633094788,
+    "per_image": [
+      {
+        "name": "0182",
+        "best_psnr": 16.42789077758789,
+        "best_ssim": 0.20529697835445404,
+        "final_psnr": 16.357215881347656,
+        "final_ssim": 0.1995464563369751,
+        "scale_factor": 8,
+        "H_hr": 1248,
+        "W_hr": 2040
+      },
+      {
+        "name": "0463",
+        "best_psnr": 15.325766563415527,
+        "best_ssim": 0.1861981898546219,
+        "final_psnr": 15.276237487792969,
+        "final_ssim": 0.1798805594444275,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0465",
+        "best_psnr": 19.029251098632812,
+        "best_ssim": 0.3212348520755768,
+        "final_psnr": 18.91767692565918,
+        "final_ssim": 0.28650176525115967,
+        "scale_factor": 8,
+        "H_hr": 1152,
+        "W_hr": 2040
+      },
+      {
+        "name": "0601",
+        "best_psnr": 18.464616775512695,
+        "best_ssim": 0.2896243631839752,
+        "final_psnr": 18.293842315673828,
+        "final_ssim": 0.2645881474018097,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0778",
+        "best_psnr": 17.391469955444336,
+        "best_ssim": 0.24324266612529755,
+        "final_psnr": 17.243064880371094,
+        "final_ssim": 0.22190195322036743,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "siren",
+    "n_images": 5,
+    "avg_best_psnr": 22.59805221557617,
+    "avg_best_ssim": 0.6678491115570069,
+    "avg_final_psnr": 22.569708633422852,
+    "avg_final_ssim": 0.6672166466712952,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.417556762695312,
+        "best_ssim": 0.5880182385444641,
+        "final_psnr": 23.35315704345703,
+        "final_ssim": 0.585731029510498,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.984195709228516,
+        "best_ssim": 0.7322201132774353,
+        "final_psnr": 22.94866943359375,
+        "final_ssim": 0.7320349216461182,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.602144241333008,
+        "best_ssim": 0.7652199864387512,
+        "final_psnr": 24.600622177124023,
+        "final_ssim": 0.7652199864387512,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.882043838500977,
+        "best_ssim": 0.6713953018188477,
+        "final_psnr": 20.86966323852539,
+        "final_ssim": 0.671180248260498,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.104320526123047,
+        "best_ssim": 0.5823919177055359,
+        "final_psnr": 21.076431274414062,
+        "final_ssim": 0.5819170475006104,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "wire",
+    "n_images": 5,
+    "avg_best_psnr": 21.601098251342773,
+    "avg_best_ssim": 0.5822329640388488,
+    "avg_final_psnr": 21.39588623046875,
+    "avg_final_ssim": 0.5619577586650848,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 22.37725067138672,
+        "best_ssim": 0.512507438659668,
+        "final_psnr": 22.048259735107422,
+        "final_ssim": 0.4852701723575592,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.341211318969727,
+        "best_ssim": 0.6669521331787109,
+        "final_psnr": 22.201337814331055,
+        "final_ssim": 0.6519978046417236,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 22.933536529541016,
+        "best_ssim": 0.6563857793807983,
+        "final_psnr": 22.715778350830078,
+        "final_ssim": 0.636175811290741,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 19.977947235107422,
+        "best_ssim": 0.5680028796195984,
+        "final_psnr": 19.765207290649414,
+        "final_ssim": 0.5414276123046875,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 20.375545501708984,
+        "best_ssim": 0.5073165893554688,
+        "final_psnr": 20.24884796142578,
+        "final_ssim": 0.4949173927307129,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "gauss",
+    "n_images": 5,
+    "avg_best_psnr": 22.42794532775879,
+    "avg_best_ssim": 0.6541990518569947,
+    "avg_final_psnr": 22.42794532775879,
+    "avg_final_ssim": 0.6541990518569947,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.180889129638672,
+        "best_ssim": 0.5725957751274109,
+        "final_psnr": 23.180889129638672,
+        "final_ssim": 0.5725957751274109,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.866958618164062,
+        "best_ssim": 0.7240638732910156,
+        "final_psnr": 22.866958618164062,
+        "final_ssim": 0.7240638732910156,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.304214477539062,
+        "best_ssim": 0.7500462532043457,
+        "final_psnr": 24.304214477539062,
+        "final_ssim": 0.7500462532043457,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.756624221801758,
+        "best_ssim": 0.6512321829795837,
+        "final_psnr": 20.756624221801758,
+        "final_ssim": 0.6512321829795837,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.03104019165039,
+        "best_ssim": 0.5730571746826172,
+        "final_psnr": 21.03104019165039,
+        "final_ssim": 0.5730571746826172,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "finer",
+    "n_images": 5,
+    "avg_best_psnr": 22.57869758605957,
+    "avg_best_ssim": 0.6630929946899414,
+    "avg_final_psnr": 22.578697204589844,
+    "avg_final_ssim": 0.6630929946899414,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.422204971313477,
+        "best_ssim": 0.5841638445854187,
+        "final_psnr": 23.422204971313477,
+        "final_ssim": 0.5841638445854187,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 23.013874053955078,
+        "best_ssim": 0.7291750907897949,
+        "final_psnr": 23.013874053955078,
+        "final_ssim": 0.7291750907897949,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.49047088623047,
+        "best_ssim": 0.7590201497077942,
+        "final_psnr": 24.49047088623047,
+        "final_ssim": 0.7590201497077942,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.900306701660156,
+        "best_ssim": 0.6653669476509094,
+        "final_psnr": 20.900306701660156,
+        "final_ssim": 0.6653669476509094,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.066631317138672,
+        "best_ssim": 0.5777389407157898,
+        "final_psnr": 21.06662940979004,
+        "final_ssim": 0.5777389407157898,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "gf",
+    "n_images": 5,
+    "avg_best_psnr": 21.650730895996094,
+    "avg_best_ssim": 0.5718496024608613,
+    "avg_final_psnr": 21.650730895996094,
+    "avg_final_ssim": 0.5718496024608613,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 22.55012321472168,
+        "best_ssim": 0.5133282542228699,
+        "final_psnr": 22.55012321472168,
+        "final_ssim": 0.5133282542228699,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.1073055267334,
+        "best_ssim": 0.623314619064331,
+        "final_psnr": 22.1073055267334,
+        "final_ssim": 0.623314619064331,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 23.340042114257812,
+        "best_ssim": 0.670835018157959,
+        "final_psnr": 23.340042114257812,
+        "final_ssim": 0.670835018157959,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.012845993041992,
+        "best_ssim": 0.5588669776916504,
+        "final_psnr": 20.012845993041992,
+        "final_ssim": 0.5588669776916504,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 20.243337631225586,
+        "best_ssim": 0.4929031431674957,
+        "final_psnr": 20.243337631225586,
+        "final_ssim": 0.4929031431674957,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "wf",
+    "n_images": 5,
+    "avg_best_psnr": 22.462270736694336,
+    "avg_best_ssim": 0.6570095181465149,
+    "avg_final_psnr": 22.462270736694336,
+    "avg_final_ssim": 0.6570095181465149,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.232385635375977,
+        "best_ssim": 0.5750159025192261,
+        "final_psnr": 23.232385635375977,
+        "final_ssim": 0.5750159025192261,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.909820556640625,
+        "best_ssim": 0.7267715930938721,
+        "final_psnr": 22.909820556640625,
+        "final_ssim": 0.7267715930938721,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.361927032470703,
+        "best_ssim": 0.7524088025093079,
+        "final_psnr": 24.361927032470703,
+        "final_ssim": 0.7524088025093079,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.784427642822266,
+        "best_ssim": 0.6567884087562561,
+        "final_psnr": 20.784427642822266,
+        "final_ssim": 0.6567884087562561,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.02279281616211,
+        "best_ssim": 0.5740628838539124,
+        "final_psnr": 21.02279281616211,
+        "final_ssim": 0.5740628838539124,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "staf",
+    "n_images": 5,
+    "avg_best_psnr": 22.20406723022461,
+    "avg_best_ssim": 0.6475895285606384,
+    "avg_final_psnr": 22.20406723022461,
+    "avg_final_ssim": 0.6475895285606384,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 22.85464096069336,
+        "best_ssim": 0.5601308345794678,
+        "final_psnr": 22.85464096069336,
+        "final_ssim": 0.5601308345794678,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.723257064819336,
+        "best_ssim": 0.7208524346351624,
+        "final_psnr": 22.723257064819336,
+        "final_ssim": 0.7208524346351624,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 23.821475982666016,
+        "best_ssim": 0.7374380230903625,
+        "final_psnr": 23.821475982666016,
+        "final_ssim": 0.7374380230903625,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.667856216430664,
+        "best_ssim": 0.6494735479354858,
+        "final_psnr": 20.667856216430664,
+        "final_ssim": 0.6494735479354858,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 20.953105926513672,
+        "best_ssim": 0.5700528025627136,
+        "final_psnr": 20.953105926513672,
+        "final_ssim": 0.5700528025627136,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "relu",
+    "n_images": 5,
+    "avg_best_psnr": 19.226546478271484,
+    "avg_best_ssim": 0.593950068950653,
+    "avg_final_psnr": 19.226546478271484,
+    "avg_final_ssim": 0.593950068950653,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 20.435985565185547,
+        "best_ssim": 0.509022057056427,
+        "final_psnr": 20.435985565185547,
+        "final_ssim": 0.509022057056427,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 20.067445755004883,
+        "best_ssim": 0.6907866597175598,
+        "final_psnr": 20.067445755004883,
+        "final_ssim": 0.6907866597175598,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 20.500289916992188,
+        "best_ssim": 0.6771211624145508,
+        "final_psnr": 20.500289916992188,
+        "final_ssim": 0.6771211624145508,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 16.740217208862305,
+        "best_ssim": 0.5681145191192627,
+        "final_psnr": 16.740217208862305,
+        "final_ssim": 0.5681145191192627,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 18.3887939453125,
+        "best_ssim": 0.5247059464454651,
+        "final_psnr": 18.3887939453125,
+        "final_ssim": 0.5247059464454651,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "incode",
+    "n_images": 5,
+    "avg_best_psnr": 22.602681350708007,
+    "avg_best_ssim": 0.6637929201126098,
+    "avg_final_psnr": 22.602681350708007,
+    "avg_final_ssim": 0.6637929201126098,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.478790283203125,
+        "best_ssim": 0.5862084031105042,
+        "final_psnr": 23.478790283203125,
+        "final_ssim": 0.5862084031105042,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.999780654907227,
+        "best_ssim": 0.7295754551887512,
+        "final_psnr": 22.999780654907227,
+        "final_ssim": 0.7295754551887512,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.50985336303711,
+        "best_ssim": 0.7579922080039978,
+        "final_psnr": 24.50985336303711,
+        "final_ssim": 0.7579922080039978,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.897968292236328,
+        "best_ssim": 0.6662307381629944,
+        "final_psnr": 20.897968292236328,
+        "final_ssim": 0.6662307381629944,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 21.12701416015625,
+        "best_ssim": 0.5789577960968018,
+        "final_psnr": 21.12701416015625,
+        "final_ssim": 0.5789577960968018,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "sl2a",
+    "n_images": 5,
+    "avg_best_psnr": 22.427283477783202,
+    "avg_best_ssim": 0.6410336494445801,
+    "avg_final_psnr": 22.427278900146483,
+    "avg_final_ssim": 0.640524959564209,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 23.31661605834961,
+        "best_ssim": 0.5728962421417236,
+        "final_psnr": 23.316593170166016,
+        "final_ssim": 0.572641134262085,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 22.875408172607422,
+        "best_ssim": 0.7087993025779724,
+        "final_psnr": 22.875408172607422,
+        "final_ssim": 0.7079377174377441,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 24.289318084716797,
+        "best_ssim": 0.7363557815551758,
+        "final_psnr": 24.289318084716797,
+        "final_ssim": 0.7362928986549377,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 20.71550750732422,
+        "best_ssim": 0.6318088173866272,
+        "final_psnr": 20.71550750732422,
+        "final_ssim": 0.631325900554657,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 20.93956756591797,
+        "best_ssim": 0.5553081035614014,
+        "final_psnr": 20.93956756591797,
+        "final_ssim": 0.5544271469116211,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "mid_5",
+    "method": "cosmo",
+    "n_images": 5,
+    "avg_best_psnr": 19.997579956054686,
+    "avg_best_ssim": 0.365115886926651,
+    "avg_final_psnr": 19.89676742553711,
+    "avg_final_ssim": 0.34392550885677337,
+    "per_image": [
+      {
+        "name": "0016",
+        "best_psnr": 20.61969757080078,
+        "best_ssim": 0.31208762526512146,
+        "final_psnr": 20.479944229125977,
+        "final_ssim": 0.2944486439228058,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0209",
+        "best_psnr": 21.161972045898438,
+        "best_ssim": 0.45738542079925537,
+        "final_psnr": 21.1207275390625,
+        "final_ssim": 0.44218412041664124,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0548",
+        "best_psnr": 21.36345672607422,
+        "best_ssim": 0.4662459194660187,
+        "final_psnr": 21.250064849853516,
+        "final_ssim": 0.43763479590415955,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0635",
+        "best_psnr": 17.65533447265625,
+        "best_ssim": 0.26351428031921387,
+        "final_psnr": 17.55428695678711,
+        "final_ssim": 0.24558903276920319,
+        "scale_factor": 8,
+        "H_hr": 1368,
+        "W_hr": 2040
+      },
+      {
+        "name": "0756",
+        "best_psnr": 19.18743896484375,
+        "best_ssim": 0.32634618878364563,
+        "final_psnr": 19.078813552856445,
+        "final_ssim": 0.29977095127105713,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "siren",
+    "n_images": 5,
+    "avg_best_psnr": 30.43991470336914,
+    "avg_best_ssim": 0.8506653189659119,
+    "avg_final_psnr": 30.43991470336914,
+    "avg_final_ssim": 0.8506518244743347,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 31.583972930908203,
+        "best_ssim": 0.8759159445762634,
+        "final_psnr": 31.583972930908203,
+        "final_ssim": 0.8759159445762634,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 28.993701934814453,
+        "best_ssim": 0.8658454418182373,
+        "final_psnr": 28.993701934814453,
+        "final_ssim": 0.8658454418182373,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 30.28994369506836,
+        "best_ssim": 0.8588292002677917,
+        "final_psnr": 30.28994369506836,
+        "final_ssim": 0.8588083386421204,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 33.23968505859375,
+        "best_ssim": 0.8914289474487305,
+        "final_psnr": 33.23968505859375,
+        "final_ssim": 0.8914289474487305,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 28.092269897460938,
+        "best_ssim": 0.7613070607185364,
+        "final_psnr": 28.092269897460938,
+        "final_ssim": 0.761260449886322,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "wire",
+    "n_images": 5,
+    "avg_best_psnr": 28.500553131103516,
+    "avg_best_ssim": 0.7824957966804504,
+    "avg_final_psnr": 28.19080810546875,
+    "avg_final_ssim": 0.7602118015289306,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 29.719005584716797,
+        "best_ssim": 0.821783721446991,
+        "final_psnr": 29.444252014160156,
+        "final_ssim": 0.8087010979652405,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 27.411479949951172,
+        "best_ssim": 0.8214028477668762,
+        "final_psnr": 27.290508270263672,
+        "final_ssim": 0.8193435668945312,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 28.140953063964844,
+        "best_ssim": 0.7468592524528503,
+        "final_psnr": 27.7474308013916,
+        "final_ssim": 0.7192155718803406,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 30.97787094116211,
+        "best_ssim": 0.853473961353302,
+        "final_psnr": 30.659053802490234,
+        "final_ssim": 0.8329699635505676,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 26.253456115722656,
+        "best_ssim": 0.6689592003822327,
+        "final_psnr": 25.812795639038086,
+        "final_ssim": 0.6208288073539734,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "gauss",
+    "n_images": 5,
+    "avg_best_psnr": 29.959862518310548,
+    "avg_best_ssim": 0.8427528142929077,
+    "avg_final_psnr": 29.959862518310548,
+    "avg_final_ssim": 0.8427528142929077,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 31.145538330078125,
+        "best_ssim": 0.8714733123779297,
+        "final_psnr": 31.145538330078125,
+        "final_ssim": 0.8714733123779297,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 28.417203903198242,
+        "best_ssim": 0.8464087843894958,
+        "final_psnr": 28.417203903198242,
+        "final_ssim": 0.8464087843894958,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 29.776199340820312,
+        "best_ssim": 0.8548020720481873,
+        "final_psnr": 29.776199340820312,
+        "final_ssim": 0.8548020720481873,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 32.720558166503906,
+        "best_ssim": 0.8861677050590515,
+        "final_psnr": 32.720558166503906,
+        "final_ssim": 0.8861677050590515,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 27.73981285095215,
+        "best_ssim": 0.7549121975898743,
+        "final_psnr": 27.73981285095215,
+        "final_ssim": 0.7549121975898743,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "finer",
+    "n_images": 5,
+    "avg_best_psnr": 30.2480411529541,
+    "avg_best_ssim": 0.8464949607849122,
+    "avg_final_psnr": 30.2480411529541,
+    "avg_final_ssim": 0.8464949607849122,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 31.39847183227539,
+        "best_ssim": 0.8734171390533447,
+        "final_psnr": 31.39847183227539,
+        "final_ssim": 0.8734171390533447,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 28.833980560302734,
+        "best_ssim": 0.8561432957649231,
+        "final_psnr": 28.833980560302734,
+        "final_ssim": 0.8561432957649231,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 29.96589469909668,
+        "best_ssim": 0.8555989861488342,
+        "final_psnr": 29.96589469909668,
+        "final_ssim": 0.8555989861488342,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 33.11705017089844,
+        "best_ssim": 0.8893584609031677,
+        "final_psnr": 33.11705017089844,
+        "final_ssim": 0.8893584609031677,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 27.924808502197266,
+        "best_ssim": 0.7579569220542908,
+        "final_psnr": 27.924808502197266,
+        "final_ssim": 0.7579569220542908,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "gf",
+    "n_images": 5,
+    "avg_best_psnr": 27.913959884643553,
+    "avg_best_ssim": 0.729377019405365,
+    "avg_final_psnr": 27.913959884643553,
+    "avg_final_ssim": 0.729377019405365,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 28.58881187438965,
+        "best_ssim": 0.7564835548400879,
+        "final_psnr": 28.58881187438965,
+        "final_ssim": 0.7564835548400879,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 26.95924949645996,
+        "best_ssim": 0.7114421725273132,
+        "final_psnr": 26.95924949645996,
+        "final_ssim": 0.7114421725273132,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 27.87264060974121,
+        "best_ssim": 0.7416520118713379,
+        "final_psnr": 27.87264060974121,
+        "final_ssim": 0.7416520118713379,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 29.871498107910156,
+        "best_ssim": 0.7823767066001892,
+        "final_psnr": 29.871498107910156,
+        "final_ssim": 0.7823767066001892,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 26.277599334716797,
+        "best_ssim": 0.6549306511878967,
+        "final_psnr": 26.277599334716797,
+        "final_ssim": 0.6549306511878967,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "wf",
+    "n_images": 5,
+    "avg_best_psnr": 30.11893310546875,
+    "avg_best_ssim": 0.8452452182769775,
+    "avg_final_psnr": 30.11893310546875,
+    "avg_final_ssim": 0.8452452182769775,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 31.39143180847168,
+        "best_ssim": 0.8737414479255676,
+        "final_psnr": 31.39143180847168,
+        "final_ssim": 0.8737414479255676,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 28.768096923828125,
+        "best_ssim": 0.8537824749946594,
+        "final_psnr": 28.768096923828125,
+        "final_ssim": 0.8537824749946594,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 29.66640281677246,
+        "best_ssim": 0.8544495701789856,
+        "final_psnr": 29.66640281677246,
+        "final_ssim": 0.8544495701789856,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 32.897823333740234,
+        "best_ssim": 0.887148380279541,
+        "final_psnr": 32.897823333740234,
+        "final_ssim": 0.887148380279541,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 27.87091064453125,
+        "best_ssim": 0.757104218006134,
+        "final_psnr": 27.87091064453125,
+        "final_ssim": 0.757104218006134,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "staf",
+    "n_images": 5,
+    "avg_best_psnr": 29.335874557495117,
+    "avg_best_ssim": 0.8385793685913085,
+    "avg_final_psnr": 29.335874557495117,
+    "avg_final_ssim": 0.8385793685913085,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 30.499372482299805,
+        "best_ssim": 0.8677690625190735,
+        "final_psnr": 30.499372482299805,
+        "final_ssim": 0.8677690625190735,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 27.607608795166016,
+        "best_ssim": 0.8379464745521545,
+        "final_psnr": 27.607608795166016,
+        "final_ssim": 0.8379464745521545,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 29.05107307434082,
+        "best_ssim": 0.8531882762908936,
+        "final_psnr": 29.05107307434082,
+        "final_ssim": 0.8531882762908936,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 32.13379669189453,
+        "best_ssim": 0.8832462430000305,
+        "final_psnr": 32.13379669189453,
+        "final_ssim": 0.8832462430000305,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 27.387521743774414,
+        "best_ssim": 0.7507467865943909,
+        "final_psnr": 27.387521743774414,
+        "final_ssim": 0.7507467865943909,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "relu",
+    "n_images": 5,
+    "avg_best_psnr": 26.79350166320801,
+    "avg_best_ssim": 0.83054119348526,
+    "avg_final_psnr": 26.79350166320801,
+    "avg_final_ssim": 0.83054119348526,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 26.080398559570312,
+        "best_ssim": 0.8562765121459961,
+        "final_psnr": 26.080398559570312,
+        "final_ssim": 0.8562765121459961,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 25.260974884033203,
+        "best_ssim": 0.8270255923271179,
+        "final_psnr": 25.260974884033203,
+        "final_ssim": 0.8270255923271179,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 28.21881866455078,
+        "best_ssim": 0.8532612323760986,
+        "final_psnr": 28.21881866455078,
+        "final_ssim": 0.8532612323760986,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 29.268720626831055,
+        "best_ssim": 0.8777807354927063,
+        "final_psnr": 29.268720626831055,
+        "final_ssim": 0.8777807354927063,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 25.138595581054688,
+        "best_ssim": 0.7383618950843811,
+        "final_psnr": 25.138595581054688,
+        "final_ssim": 0.7383618950843811,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  },
+  {
+    "group": "low_5",
+    "method": "sl2a",
+    "n_images": 5,
+    "avg_best_psnr": 30.13754806518555,
+    "avg_best_ssim": 0.8380186438560486,
+    "avg_final_psnr": 30.13754806518555,
+    "avg_final_ssim": 0.8380186438560486,
+    "per_image": [
+      {
+        "name": "0040",
+        "best_psnr": 31.37438201904297,
+        "best_ssim": 0.870175838470459,
+        "final_psnr": 31.37438201904297,
+        "final_ssim": 0.870175838470459,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0048",
+        "best_psnr": 28.339540481567383,
+        "best_ssim": 0.8308629393577576,
+        "final_psnr": 28.339540481567383,
+        "final_ssim": 0.8308629393577576,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0138",
+        "best_psnr": 30.137956619262695,
+        "best_ssim": 0.8508188128471375,
+        "final_psnr": 30.137956619262695,
+        "final_ssim": 0.8508188128471375,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0425",
+        "best_psnr": 32.967079162597656,
+        "best_ssim": 0.8866448402404785,
+        "final_psnr": 32.967079162597656,
+        "final_ssim": 0.8866448402404785,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      },
+      {
+        "name": "0662",
+        "best_psnr": 27.86878204345703,
+        "best_ssim": 0.7515907883644104,
+        "final_psnr": 27.86878204345703,
+        "final_ssim": 0.7515907883644104,
+        "scale_factor": 8,
+        "H_hr": 1352,
+        "W_hr": 2040
+      }
+    ]
+  }
+]

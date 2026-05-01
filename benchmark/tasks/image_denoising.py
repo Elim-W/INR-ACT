@@ -139,6 +139,9 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
     total_time = 0.0
     best_psnr = -float('inf')
     best_ssim = -float('inf')
+    best_pred_img = None     # cached prediction at best-PSNR checkpoint
+    best_epoch = None        # epoch at which best_psnr was achieved
+    best_state = None        # cached state_dict at best-PSNR checkpoint
 
     for epoch in range(1, num_epochs + 1):
         t0 = time.time()
@@ -175,6 +178,12 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
 
             if psnr_val > best_psnr:
                 best_psnr = psnr_val
+                best_epoch = epoch
+                # Cache the prediction (CPU copy) so we can dump it as _best.png
+                # later. Also snapshot the model weights for `best_state`.
+                best_pred_img = pred_img.detach().cpu().clone()
+                best_state = {k: v.detach().cpu().clone()
+                              for k, v in model.state_dict().items()}
             if ssim_val > best_ssim:
                 best_ssim = ssim_val
 
@@ -204,6 +213,11 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
                     os.path.join(save_dir, f"{meta['name']}_noisy.png"))
         _save_image(clean, H, W, C,
                     os.path.join(save_dir, f"{meta['name']}_clean.png"))
+        # Best-checkpoint image (denoise often peaks mid-training because of
+        # overfitting to noise; this is the image that matches `best_psnr`).
+        if best_pred_img is not None:
+            _save_image(best_pred_img.reshape(-1, C), H, W, C,
+                        os.path.join(save_dir, f"{meta['name']}_best.png"))
 
     return {
         'name':          meta['name'],
@@ -214,8 +228,10 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
         'final_ssim':    final_ssim,
         'best_psnr':     best_psnr,
         'best_ssim':     best_ssim,
+        'best_epoch':    best_epoch,
         'total_time_s':  total_time,
-        'model_state':   final_state,
+        'model_state':   final_state,    # last-iter weights (for resume / fine-tune)
+        'best_state':    best_state,     # weights at peak PSNR (matches best_psnr)
         'noise_info':    noise_info,
         'noisy_input_psnr': noisy_psnr,
     }

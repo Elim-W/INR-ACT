@@ -1,0 +1,38 @@
+task: image_denoising
+method: staf
+dataset: div2k
+data_root: data/validation
+image_indices: []
+downscale: 4
+device: auto
+model:
+  in_features: 2
+  hidden_features: 256
+  hidden_layers: 3
+  out_features: 3
+  tau: 5
+  skip_conn: false
+  first_omega_0: 15.523751416150342
+  hidden_omega_0: 5.526002401211933
+training:
+  noise_type: poisson_gaussian
+  noise_seed: 0
+  noise_tau: 20.0
+  noise_readout_snr: 2.0
+  scheduler: cosine
+  lr: 0.00016629190174868765
+  num_epochs: 4000
+  log_every: 400
+  save_every: 4000
+output:
+  save_dir: results/image_denoising_3mean/staf
+  save_model: true
+  save_images: true
+_search:
+  tag: multi_den_div2k_214_221_527_pg_t20_r2p0_mean
+  results_dir: benchmark/search_hyper_multi
+  image_indices:
+  - 214
+  - 221
+  - 527
+  best_score: 23.2843

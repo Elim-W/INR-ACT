@@ -26,7 +26,7 @@ incode best PSNR: 77.96 dB
       params: {'lr': 0.0002494207250635992, 'first_omega_0': 39.26791095809397, 'hidden_omega_0': 53.18115097310768}
 
 sl2a best PSNR: 65.74 dB
-      params: {'lr': 0.0033939009451406177, 'degree': 64, 'rank': 128}
+      params: {'lr': 0.0033939009451406177, 'degree': 128, 'rank': 128}
 
 
 
