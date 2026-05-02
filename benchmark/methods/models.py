@@ -95,6 +95,9 @@ BENCHMARK_DEFAULTS = {
     'incode': dict(
         hidden_features=256, hidden_layers=3,
         first_omega_0=30.0, hidden_omega_0=30.0,
+        # Aux ReLU(-coef) penalty weights from upstream train_*.ipynb defaults
+        # (image / sr / denoising / inpainting / sdf / ct all use the same).
+        reg_weights=(0.1993, 0.0196, 0.0588, 0.0269),
         lr=1e-4, scheduler='cosine',
     ),
     'sl2a': dict(

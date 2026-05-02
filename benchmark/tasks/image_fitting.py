@@ -88,6 +88,9 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
             pred = model(coords[idx])
             loss = torch.mean((pred - pixels[idx]) ** 2)
 
+        if hasattr(model, 'aux_loss'):
+            loss = loss + model.aux_loss()
+
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()

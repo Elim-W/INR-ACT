@@ -74,14 +74,21 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
     M = keep_idx.numel()
     print(f"  mask: keeping {M}/{N} pixels ({100*M/N:.1f}%)")
 
-    # INCODE: harmonizer gets the PARTIAL observation as a 2D image (missing=0).
-    # We reshape the masked pixels back into a full (1,C,H,W) tensor, zeroing
-    # out the dropped ones — that's what the resnet harmonizer can consume.
+    # Harmonizer feed depends on which method's set_gt this is:
+    #   * INCODE (task='inpainting') → Custom1DFeatureExtractor expects
+    #     a 1D sequence (1, C, M) of OBSERVED pixels, matching upstream
+    #     train_inpainting.ipynb: 'GT': img_train[None, ...].permute(0, 2, 1).
+    #   * Other methods (e.g. cosmo) wire their Harmonizer to a 2D ResNet —
+    #     feed the masked-image (zero-filled) (1, C, H, W) tensor instead.
     if hasattr(model, 'set_gt'):
-        masked_img = torch.zeros_like(pixels)
-        masked_img[keep_idx] = train_pixels
-        gt_img = masked_img.reshape(H, W, C).permute(2, 0, 1).unsqueeze(0)
-        model.set_gt(gt_img)
+        if getattr(model, 'task', None) == 'inpainting':
+            seq = train_pixels.permute(1, 0).unsqueeze(0)         # (1, C, M)
+            model.set_gt(seq)
+        else:
+            masked_img = torch.zeros_like(pixels)
+            masked_img[keep_idx] = train_pixels
+            gt_img = masked_img.reshape(H, W, C).permute(2, 0, 1).unsqueeze(0)
+            model.set_gt(gt_img)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=cfg_train['lr'])
     scheduler = _make_scheduler(optimizer, cfg_train)
@@ -106,6 +113,9 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
             sub = torch.randperm(M, device=device)[:batch_size]
             pred = model(train_coords[sub])
             loss = torch.mean((pred - train_pixels[sub]) ** 2)
+
+        if hasattr(model, 'aux_loss'):
+            loss = loss + model.aux_loss()
 
         optimizer.zero_grad()
         loss.backward()

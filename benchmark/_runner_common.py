@@ -83,18 +83,43 @@ def get_device(cfg):
 # Model factory from config
 # ---------------------------------------------------------------------------
 
+# Project-level task name (cfg['task']) → upstream INCODE task string used
+# inside benchmark/methods/incode.py to switch feature_extractor / LayerNorm.
+# All entries match what the upstream notebooks pass as MLP_configs['task'].
+_INCODE_TASK_MAP = {
+    'image_fitting':           'image',
+    'image_super_resolution':  'image',
+    'image_denoising':         'denoising',
+    'image_inpainting':        'inpainting',
+    'image_ct_reconstruction': 'image',
+    'sdf':                     'shape',
+    'shape_occupancy':         'shape',
+}
+
+
 def build_model(cfg):
     """
     Build an INR by reading cfg['method'] and cfg['model'].  Model hyper-
     parameters beyond the four standard ones are forwarded as **kwargs to
     the method's INR.__init__ (e.g. first_omega_0, scale, tau, ...).
+
+    For INCODE specifically, the project task name (cfg['task']) is mapped
+    to the upstream task string and injected into model kwargs so the
+    Harmonizer picks the right feature_extractor / LayerNorm path. Callers
+    can override by setting `model.task` explicitly in the YAML.
     """
     # Lazy import so `import benchmark._runner_common` has no heavy deps.
     from benchmark.methods.models import get_INR
 
     method = cfg['method']
-    mcfg = cfg.get('model', {})
+    mcfg = dict(cfg.get('model', {}))
     standard = ('in_features', 'hidden_features', 'hidden_layers', 'out_features')
+
+    if method == 'incode' and 'task' not in mcfg:
+        proj_task = cfg.get('task')
+        if proj_task in _INCODE_TASK_MAP:
+            mcfg['task'] = _INCODE_TASK_MAP[proj_task]
+
     return get_INR(
         method=method,
         in_features=mcfg.get('in_features', 2),

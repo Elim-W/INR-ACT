@@ -135,6 +135,9 @@ def run(model, coords, pixels, meta, cfg, device, save_dir=None):
         sinogram_pred = _radon(pred_img, thetas)
         loss = torch.mean((sinogram_pred - sinogram_gt) ** 2)
 
+        if hasattr(model, 'aux_loss'):
+            loss = loss + model.aux_loss()
+
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()

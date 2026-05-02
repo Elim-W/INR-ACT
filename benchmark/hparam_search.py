@@ -133,6 +133,8 @@ def run_trial(method, params, signal, coords, device, iters, batch_size, seed):
         model_kw.setdefault('linear_init_type', 'kaiming_uniform')
 
     in_features = 3 if is_3d else 2
+    if method == 'incode' and 'task' not in model_kw:
+        model_kw['task'] = 'shape' if is_3d else 'image'
     model = get_INR(
         method=method,
         in_features=in_features,

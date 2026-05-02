@@ -360,6 +360,8 @@ def train_one(model, coords, signal_flat, signal_shape, train_cfg,
         else:
             pred = model(coords).squeeze(-1)
             loss = loss_fn(pred, gt_norm)
+        if hasattr(model, 'aux_loss'):
+            loss = loss + model.aux_loss()
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
@@ -631,11 +633,14 @@ def main():
                     if not os.path.exists(gt_img_path):
                         save_gt_image(sig, gt_img_path, is_3d)
 
-                    # Build model
+                    # Build model — INCODE needs task='shape' for 3D, 'image' for 2D
+                    method_kw = dict(model_kw)
+                    if method == 'incode' and 'task' not in method_kw:
+                        method_kw['task'] = 'shape' if is_3d else 'image'
                     model = get_INR(
                         method=method, in_features=ndim,
                         hidden_features=hf, hidden_layers=hl, out_features=1,
-                        **model_kw,
+                        **method_kw,
                     ).to(device)
                     n_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
                     print(f'  params={n_params:,}  lr={train_cfg["lr"]}')
